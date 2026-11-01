@@ -1,0 +1,42 @@
+[project]
+name = "recircuito-api"
+version = "0.1.0"
+description = "API do ReCircuito: pontos de coleta de lixo eletrônico em Belém (PA)."
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "httpx>=0.27",
+    "pydantic>=2.9",
+    "tzdata>=2024.1",  # base de fusos horários para o Windows, que não traz uma própria
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "ruff>=0.8",
+]
+
+# Permite `pip install -e ".[dev]"` para quem usa venv em vez do uv.
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3",
+    "ruff>=0.8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["aplicacao"]
+
+[tool.pytest.ini_options]
+testpaths = ["testes"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

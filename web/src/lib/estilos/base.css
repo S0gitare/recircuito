@@ -1,0 +1,116 @@
+/*
+ * Reset mínimo e estilos globais. Fica pequeno de propósito: o visual de cada
+ * seção mora no próprio componente (CSS com escopo do Svelte).
+ */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+body {
+	min-height: 100svh;
+	background: var(--bg);
+	color: var(--ink);
+	font-family: var(--font-leitura);
+	font-size: 1.125rem;
+	line-height: 1.55;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+img,
+svg,
+video,
+canvas {
+	display: block;
+	max-width: 100%;
+}
+
+/* Controles herdam a fonte; por padrão o navegador usa outra. */
+input,
+button,
+select,
+textarea {
+	font: inherit;
+	color: inherit;
+}
+
+/* Tudo que é "usado" (botões, campos) usa a fonte de interface. */
+button,
+input,
+select,
+label {
+	font-family: var(--font-interface);
+}
+
+button {
+	cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 500;
+	line-height: 1.15;
+	text-wrap: balance;
+}
+
+p {
+	text-wrap: pretty;
+}
+
+a {
+	color: var(--green);
+	text-decoration: underline;
+	text-underline-offset: 0.15em;
+}
+
+/*
+ * Foco visível só para quem navega pelo teclado (:focus-visible), sem
+ * aparecer no clique do mouse. Nunca remova o contorno sem pôr outro no lugar:
+ * é exigência do WCAG 2.1 AA (RNF01).
+ */
+:focus-visible {
+	outline: 2px solid var(--ink);
+	outline-offset: 3px;
+}
+
+/* Texto lido só por leitores de tela. */
+.visualmente-oculto {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/*
+ * Rede de segurança para prefers-reduced-motion (RNF02). As animações GSAP
+ * também checam essa preferência em lib/animacao/movimentoReduzido.ts.
+ */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

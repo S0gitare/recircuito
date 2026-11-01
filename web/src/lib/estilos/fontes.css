@@ -1,0 +1,51 @@
+/*
+ * Fontes servidas pelo próprio site (SPEC §6): sem depender do Google Fonts,
+ * o que evita uma conexão extra e não envia o IP da pessoa a terceiros (LGPD).
+ *
+ * Os arquivos .woff2 ainda não estão no repositório: baixe-os do Google Fonts
+ * (ou do google-webfonts-helper) e coloque em web/static/fontes/ com os nomes abaixo.
+ * Enquanto faltarem, o navegador usa as fontes reserva definidas em tokens.css.
+ *
+ * font-display: swap mostra o texto na hora com a fonte reserva e troca quando
+ * a fonte carrega. Isso evita texto invisível e ajuda no LCP (RNF04).
+ */
+
+@font-face {
+	font-family: 'Newsreader';
+	src: url('/fontes/newsreader-regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Newsreader';
+	src: url('/fontes/newsreader-medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Plus Jakarta Sans';
+	src: url('/fontes/plus-jakarta-sans-regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Plus Jakarta Sans';
+	src: url('/fontes/plus-jakarta-sans-medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Plus Jakarta Sans';
+	src: url('/fontes/plus-jakarta-sans-semibold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}

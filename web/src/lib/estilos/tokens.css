@@ -1,0 +1,42 @@
+/*
+ * Tokens de design (SPEC §6). Toda cor do site sai daqui: se precisar de uma
+ * cor nova, crie um token em vez de escrever o hexadecimal no componente.
+ *
+ * Atenção ao contraste (WCAG AA exige 4,5:1 em texto normal):
+ * - texto branco sobre --green dá só 3,5:1, por isso botões usam --green-strong;
+ * - --muted é o cinza mais claro aceito para texto sobre fundo branco.
+ */
+:root {
+	/* Texto e traço */
+	--ink: #0f1a14;
+	--ink-2: #3f4f45;
+	--muted: #5b6b61;
+
+	/* Linhas */
+	--line: #c9d3cc;
+	--line-soft: #dce3dd;
+
+	/* Verdes */
+	--green: #1f9d55; /* detalhes, faixas com texto ≥ 24px e links */
+	--green-strong: #157a41; /* fundo de botão com texto branco (5,4:1) */
+	--green-dark-mode: #3fbf73; /* verde sobre fundo escuro (rodapé) */
+
+	/* Fundos */
+	--bg-hero: #e8f1ea;
+	--bg-alt: #f5f7f2;
+	--bg: #ffffff;
+	--footer: #0b2a1a;
+
+	/* Famílias: Newsreader para o que é lido, Plus Jakarta Sans para o que é usado. */
+	--font-leitura: 'Newsreader', Georgia, 'Times New Roman', serif;
+	--font-interface: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+	/* Margem lateral das seções (48px no desktop, 20px no mobile). */
+	--margem-lateral: 20px;
+}
+
+@media (min-width: 768px) {
+	:root {
+		--margem-lateral: 48px;
+	}
+}

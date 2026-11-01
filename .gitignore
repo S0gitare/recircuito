@@ -1,0 +1,43 @@
+# Sistema e editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+
+# Arquivos locais de ferramentas de IA (plugins do Claude Code)
+.claude-flow/
+.swarm/
+ruvector.db
+
+# Variáveis de ambiente (manter só os .env.example)
+.env
+.env.*
+!.env.example
+
+# --- web (SvelteKit) ---
+web/node_modules/
+web/.svelte-kit/
+web/build/
+web/.vercel/
+web/.netlify/
+web/vite.config.ts.timestamp-*
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# --- api (FastAPI) ---
+api/.venv/
+api/venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Cache de geocodificação gerado em tempo de execução
+api/.cache/
