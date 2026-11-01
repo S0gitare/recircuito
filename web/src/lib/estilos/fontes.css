@@ -1,51 +1,36 @@
 /*
- * Fontes servidas pelo próprio site (SPEC §6): sem depender do Google Fonts,
- * o que evita uma conexão extra e não envia o IP da pessoa a terceiros (LGPD).
+ * Fontes do site, servidas pelo próprio site (pasta static/fontes).
  *
- * Os arquivos .woff2 ainda não estão no repositório: baixe-os do Google Fonts
- * (ou do google-webfonts-helper) e coloque em web/static/fontes/ com os nomes abaixo.
- * Enquanto faltarem, o navegador usa as fontes reserva definidas em tokens.css.
+ * Por que não carregar do Google Fonts: é uma conexão a menos (o texto aparece
+ * mais rápido) e o IP de quem visita não é enviado ao Google, o que combina com
+ * o cuidado de LGPD do banner de cookies (SPEC §5, RNF06).
  *
- * font-display: swap mostra o texto na hora com a fonte reserva e troca quando
- * a fonte carrega. Isso evita texto invisível e ajuda no LCP (RNF04).
+ * Os arquivos são FONTES VARIÁVEIS: um único arquivo cobre todos os pesos.
+ * Por isso o `font-weight` abaixo é um intervalo (200 800) e não um número só.
+ * Para usar um peso no CSS, basta `font-weight: 500` (Medium), `600` (SemiBold)…
+ *
+ * Origem: Fontsource (fontsource.org), subconjunto "latin", que já inclui os
+ * acentos do português (á, ã, ç, é, ô…). Licença: SIL Open Font License.
+ *
+ * `font-display: swap` mostra o texto na hora com uma fonte do sistema e troca
+ * pela fonte certa quando ela termina de carregar. Assim ninguém fica olhando
+ * uma página sem texto enquanto a fonte baixa.
  */
 
+/* Newsreader: tudo que é para LER (títulos, parágrafos, logo, números grandes). */
 @font-face {
 	font-family: 'Newsreader';
-	src: url('/fontes/newsreader-regular.woff2') format('woff2');
-	font-weight: 400;
+	src: url('/fontes/newsreader-variavel.woff2') format('woff2-variations');
+	font-weight: 200 800;
 	font-style: normal;
 	font-display: swap;
 }
 
-@font-face {
-	font-family: 'Newsreader';
-	src: url('/fontes/newsreader-medium.woff2') format('woff2');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
-
+/* Plus Jakarta Sans: tudo que é para USAR (menu, botões, busca, filtros, rótulos). */
 @font-face {
 	font-family: 'Plus Jakarta Sans';
-	src: url('/fontes/plus-jakarta-sans-regular.woff2') format('woff2');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Plus Jakarta Sans';
-	src: url('/fontes/plus-jakarta-sans-medium.woff2') format('woff2');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Plus Jakarta Sans';
-	src: url('/fontes/plus-jakarta-sans-semibold.woff2') format('woff2');
-	font-weight: 600;
+	src: url('/fontes/plus-jakarta-sans-variavel.woff2') format('woff2-variations');
+	font-weight: 200 800;
 	font-style: normal;
 	font-display: swap;
 }
