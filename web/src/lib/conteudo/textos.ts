@@ -110,6 +110,7 @@ export const pontosDeColeta = {
 	],
 	abertoAgora: 'Aberto agora',
 	fechadoAgora: 'Fechado agora',
+	horarioNaoInformado: 'Horário não informado',
 	comoChegar: 'Como chegar',
 	sugerirPergunta: 'Conhece um ponto que não está aqui?',
 	sugerirLink: 'Sugerir um ponto',

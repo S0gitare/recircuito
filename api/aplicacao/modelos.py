@@ -113,7 +113,9 @@ class PontoNaResposta(PontoDeColeta):
 
     # Só existe quando a busca informa lat/lon.
     distancia_km: float | None = None
-    aberto_agora: bool
+    # None = horário não informado (lista `horarios` vazia). Não é o mesmo que
+    # False: "fechado" é uma afirmação, e para esses pontos não sabemos.
+    aberto_agora: bool | None
 
 
 class RespostaPontos(BaseModel):

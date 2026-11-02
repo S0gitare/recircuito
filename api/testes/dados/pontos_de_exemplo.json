@@ -1,0 +1,64 @@
+[
+  {
+    "id": "exemplo-ecoponto-a",
+    "nome": "Ecoponto de Exemplo A",
+    "tipo_local": "ecoponto",
+    "endereco": {
+      "logradouro": "Rua Fictícia de Exemplo",
+      "numero": "100",
+      "bairro": "Campina",
+      "cep": "66000-000"
+    },
+    "coordenadas": { "lat": -1.4550, "lon": -48.4900 },
+    "tipos_aceitos": ["celulares_tablets", "pilhas_baterias", "computadores_perifericos", "cabos_carregadores"],
+    "horarios": [
+      { "dias": [1, 2, 3, 4, 5], "abre": "08:00", "fecha": "18:00" },
+      { "dias": [6], "abre": "08:00", "fecha": "12:00" }
+    ],
+    "contato": { "telefone": null, "site": null },
+    "fonte": "EXEMPLO",
+    "verificado_em": null,
+    "observacoes": "Ponto FICTÍCIO, só para desenvolvimento. Não existe."
+  },
+  {
+    "id": "exemplo-loja-b",
+    "nome": "Loja de Exemplo B",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Fictícia de Exemplo",
+      "numero": "200",
+      "bairro": "Marco",
+      "cep": "66000-000"
+    },
+    "coordenadas": { "lat": -1.4300, "lon": -48.4600 },
+    "tipos_aceitos": ["pilhas_baterias", "cabos_carregadores"],
+    "horarios": [
+      { "dias": [1, 2, 3, 4, 5, 6], "abre": "10:00", "fecha": "22:00" },
+      { "dias": [0], "abre": "14:00", "fecha": "20:00" }
+    ],
+    "contato": { "telefone": null, "site": null },
+    "fonte": "EXEMPLO",
+    "verificado_em": null,
+    "observacoes": "Ponto FICTÍCIO, só para desenvolvimento. Não existe."
+  },
+  {
+    "id": "exemplo-cooperativa-c",
+    "nome": "Cooperativa de Exemplo C",
+    "tipo_local": "cooperativa",
+    "endereco": {
+      "logradouro": "Travessa Fictícia de Exemplo",
+      "numero": "300",
+      "bairro": "Guamá",
+      "cep": "66000-000"
+    },
+    "coordenadas": { "lat": -1.4650, "lon": -48.4550 },
+    "tipos_aceitos": ["computadores_perifericos", "celulares_tablets"],
+    "horarios": [
+      { "dias": [2, 4], "abre": "09:00", "fecha": "16:00" }
+    ],
+    "contato": { "telefone": null, "site": null },
+    "fonte": "EXEMPLO",
+    "verificado_em": null,
+    "observacoes": "Ponto FICTÍCIO, só para desenvolvimento. Não existe."
+  }
+]

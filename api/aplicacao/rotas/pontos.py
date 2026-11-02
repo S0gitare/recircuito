@@ -28,6 +28,17 @@ def carregar_pontos(caminho: Path = configuracoes.arquivo_pontos) -> tuple[Ponto
     return tuple(PontoDeColeta.model_validate(item) for item in dados)
 
 
+def _aberto_agora(ponto: PontoDeColeta) -> bool | None:
+    """True/False pelo horário do ponto; None quando o horário não é conhecido.
+
+    Sem faixas cadastradas, esta_aberto_agora() devolveria False, e o site
+    mostraria "Fechado agora" para quem só não tem horário informado.
+    """
+    if not ponto.horarios:
+        return None
+    return esta_aberto_agora(ponto.horarios)
+
+
 def _ler_tipos(texto: str | None) -> set[TipoResiduo]:
     """Converte "pilhas_baterias,cabos_carregadores" em um conjunto de tipos."""
     if not texto:
@@ -93,7 +104,7 @@ def listar_pontos(
             PontoNaResposta(
                 **ponto.model_dump(),
                 distancia_km=distancia,
-                aberto_agora=esta_aberto_agora(ponto.horarios),
+                aberto_agora=_aberto_agora(ponto),
             )
         )
 
@@ -113,9 +124,7 @@ def listar_pontos(
 def obter_ponto(id_ponto: str) -> PontoNaResposta:
     for ponto in carregar_pontos():
         if ponto.id == id_ponto:
-            return PontoNaResposta(
-                **ponto.model_dump(), aberto_agora=esta_aberto_agora(ponto.horarios)
-            )
+            return PontoNaResposta(**ponto.model_dump(), aberto_agora=_aberto_agora(ponto))
     raise HTTPException(
         status_code=404,
         detail={

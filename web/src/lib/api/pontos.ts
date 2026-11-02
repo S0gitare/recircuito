@@ -47,7 +47,8 @@ export interface PontoDeColeta {
 	observacoes: string | null;
 	/** Só vem preenchido quando a busca informa `lat` e `lon`. */
 	distancia_km: number | null;
-	aberto_agora: boolean;
+	/** `null` = horário não informado (não é o mesmo que fechado). */
+	aberto_agora: boolean | null;
 }
 
 export interface RespostaPontos {

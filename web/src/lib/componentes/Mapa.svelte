@@ -193,12 +193,17 @@
 
 		const status = document.createElement('p');
 		status.className = 'balao-status';
-		if (ponto.aberto_agora) {
+		// Bolinha verde só para "aberto"; "fechado" e "horário não informado" ficam sem ela.
+		if (ponto.aberto_agora === true) {
 			const bolinha = document.createElement('span');
 			bolinha.className = 'balao-bolinha';
 			status.append(bolinha);
 		}
-		status.append(ponto.aberto_agora ? textos.abertoAgora : textos.fechadoAgora);
+		if (ponto.aberto_agora === null) {
+			status.append(textos.horarioNaoInformado);
+		} else {
+			status.append(ponto.aberto_agora ? textos.abertoAgora : textos.fechadoAgora);
+		}
 
 		caixa.append(nome, status);
 		return caixa;

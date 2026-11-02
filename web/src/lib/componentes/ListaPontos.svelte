@@ -52,8 +52,12 @@
 					<span class="nome">{ponto.nome}</span>
 					<span class="endereco">{enderecoEmUmaLinha(ponto)}</span>
 					<span class="detalhes">
-						<span class="status" class:aberto={ponto.aberto_agora}>
-							{ponto.aberto_agora ? textos.abertoAgora : textos.fechadoAgora}
+						<span class="status" class:aberto={ponto.aberto_agora === true}>
+							{#if ponto.aberto_agora === null}
+								{textos.horarioNaoInformado}
+							{:else}
+								{ponto.aberto_agora ? textos.abertoAgora : textos.fechadoAgora}
+							{/if}
 						</span>
 						<span class="tipos">{nomesDosTipos(ponto)}</span>
 					</span>

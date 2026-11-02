@@ -78,7 +78,7 @@ Menções a "projeto de extensão": só na seção "O projeto" e nos créditos d
 | RF02 | O botão "Usar minha localização" pede permissão ao navegador e faz o mesmo que o RF01 com a posição do aparelho. A localização nunca é enviada para armazenamento. |
 | RF03 | Sem busca, o mapa mostra Belém inteira com todos os pontos, e a lista fica em ordem alfabética. |
 | RF04 | O filtro por tipo de resíduo (celulares e tablets, pilhas e baterias, computadores e periféricos, cabos e carregadores) mostra só os pontos que aceitam os tipos marcados. Pode marcar mais de um. "Todos" vem marcado por padrão, e desmarcar todos os tipos volta para "Todos". |
-| RF05 | Cada ponto na lista mostra nome, endereço, distância (quando houver busca), tipos aceitos e se está **aberto agora**, calculado pelo horário de funcionamento no fuso de Belém. |
+| RF05 | Cada ponto na lista mostra nome, endereço, distância (quando houver busca), tipos aceitos e se está **aberto agora**, calculado pelo horário de funcionamento no fuso de Belém; quando o ponto não tem horário conhecido, mostra **"Horário não informado"** em vez de "Fechado agora". |
 | RF06 | Clicar num ponto da lista destaca o ponto no mapa e abre o balão, e vice-versa. |
 | RF07 | O botão "Como chegar" abre a rota até o ponto no Google Maps ou no OpenStreetMap, em nova aba. |
 | RF08 | O link "Sugerir um ponto" abre o Google Forms de sugestão em nova aba. |
@@ -242,6 +242,8 @@ Base: `/api`. Respostas em JSON. Só leitura, sem autenticação. CORS liberado 
 
 Resposta: `{ "pontos": [ { ...ponto, "distancia_km": 1.2, "aberto_agora": true } ], "total": 12 }`
 
+`aberto_agora` é `true` ou `false` pelo horário de funcionamento no fuso de Belém, ou `null` quando o ponto não tem horário cadastrado (`horarios` vazio): o horário é desconhecido, e isso não equivale a "fechado".
+
 **`GET /api/pontos/{id}`**: um ponto. Retorna 404 se não existir.
 
 **`GET /api/geocodificar?q=`**: transforma CEP ou bairro em coordenada.
@@ -319,7 +321,7 @@ recircuito/
 ## 14. Pendências e riscos
 
 **Pendências**
-- Levantar os pontos de coleta reais de Belém, com fonte e data.
+- Confirmar os 8 pontos de coleta cadastrados em `api/dados/pontos.json` (levantamento em `docs/pesquisa-pontos-de-coleta.md`): todos estão **NÃO CONFIRMADOS** (confiança média ou baixa, sem fonte oficial), com coordenadas aproximadas obtidas pelo Nominatim. Ligar para cada local, conferir endereço, horário e itens aceitos, ajustar as coordenadas no Google Maps e só então preencher `verificado_em`. Procurar também pontos nos localizadores da Abree e da Green Eletron.
 - Trocar os números fictícios do Impacto por dados reais, ou tirar a seção até haver dados.
 - Nome da instituição e contatos reais no rodapé.
 - Criar os dois Google Forms (sugestão de ponto e avaliação).

@@ -1,64 +1,254 @@
 [
   {
-    "id": "exemplo-ecoponto-a",
-    "nome": "Ecoponto de Exemplo A",
-    "tipo_local": "ecoponto",
-    "endereco": {
-      "logradouro": "Rua Fictícia de Exemplo",
-      "numero": "100",
-      "bairro": "Campina",
-      "cep": "66000-000"
-    },
-    "coordenadas": { "lat": -1.4550, "lon": -48.4900 },
-    "tipos_aceitos": ["celulares_tablets", "pilhas_baterias", "computadores_perifericos", "cabos_carregadores"],
-    "horarios": [
-      { "dias": [1, 2, 3, 4, 5], "abre": "08:00", "fecha": "18:00" },
-      { "dias": [6], "abre": "08:00", "fecha": "12:00" }
-    ],
-    "contato": { "telefone": null, "site": null },
-    "fonte": "EXEMPLO",
-    "verificado_em": null,
-    "observacoes": "Ponto FICTÍCIO, só para desenvolvimento. Não existe."
-  },
-  {
-    "id": "exemplo-loja-b",
-    "nome": "Loja de Exemplo B",
-    "tipo_local": "varejo",
-    "endereco": {
-      "logradouro": "Avenida Fictícia de Exemplo",
-      "numero": "200",
-      "bairro": "Marco",
-      "cep": "66000-000"
-    },
-    "coordenadas": { "lat": -1.4300, "lon": -48.4600 },
-    "tipos_aceitos": ["pilhas_baterias", "cabos_carregadores"],
-    "horarios": [
-      { "dias": [1, 2, 3, 4, 5, 6], "abre": "10:00", "fecha": "22:00" },
-      { "dias": [0], "abre": "14:00", "fecha": "20:00" }
-    ],
-    "contato": { "telefone": null, "site": null },
-    "fonte": "EXEMPLO",
-    "verificado_em": null,
-    "observacoes": "Ponto FICTÍCIO, só para desenvolvimento. Não existe."
-  },
-  {
-    "id": "exemplo-cooperativa-c",
-    "nome": "Cooperativa de Exemplo C",
+    "id": "descarte-correto-marco",
+    "nome": "Descarte Correto (Marco)",
     "tipo_local": "cooperativa",
     "endereco": {
-      "logradouro": "Travessa Fictícia de Exemplo",
-      "numero": "300",
-      "bairro": "Guamá",
-      "cep": "66000-000"
+      "logradouro": "Travessa Barão do Triunfo",
+      "numero": "4596",
+      "bairro": "Marco",
+      "cep": null
     },
-    "coordenadas": { "lat": -1.4650, "lon": -48.4550 },
-    "tipos_aceitos": ["computadores_perifericos", "celulares_tablets"],
-    "horarios": [
-      { "dias": [2, 4], "abre": "09:00", "fecha": "16:00" }
+    "coordenadas": {
+      "lat": -1.4329128,
+      "lon": -48.462018
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
     ],
-    "contato": { "telefone": null, "site": null },
-    "fonte": "EXEMPLO",
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "09:00",
+        "fecha": "17:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": null
+    },
+    "fonte": "https://diariodopara.com.br/para/o-que-fazer-com-aqueles-eletronicos-que-nao-servem-mais/",
     "verificado_em": null,
-    "observacoes": "Ponto FICTÍCIO, só para desenvolvimento. Não existe."
+    "observacoes": "NÃO CONFIRMADO (confiança média). Matéria do Diário do Pará de 05/07/2025, lida em 2026-11-01. Gratuito, entrega presencial. Aceita também TVs e eletrodomésticos pequenos; não aceita geladeiras, cartuchos de tinta nem resíduos químicos. O site da empresa lista só um endereço em Manaus. Confirmar por telefone. O Nominatim só localizou a rua, não o número 4596: posição aproximada. Coordenadas aproximadas, obtidas pelo endereço no Nominatim (OpenStreetMap) em 2026-11-01: conferir no Google Maps."
+  },
+  {
+    "id": "horto-municipal-belem",
+    "nome": "Horto Municipal de Belém (Semma)",
+    "tipo_local": "orgao_publico",
+    "endereco": {
+      "logradouro": "Rua dos Mundurucus (Praça Milton Trindade)",
+      "numero": null,
+      "bairro": "Batista Campos",
+      "cep": null
+    },
+    "coordenadas": {
+      "lat": -1.4579479,
+      "lon": -48.4870942
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          0
+        ],
+        "abre": "09:00",
+        "fecha": "14:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": null
+    },
+    "fonte": "https://diariodopara.com.br/para/horto-municipal-conta-com-ponto-de-coleta-de-lixo-eletronico/",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO (confiança baixa). Matéria do Diário do Pará de 21/06/2023, lida em 2026-11-01, sem confirmação de que o ponto segue ativo. Segunda sem coleta. Outra matéria (DOL, 08/09/2023) diz \"horário comercial\": horários divergentes. Ligar para a Semma antes de publicar. Coordenadas aproximadas, obtidas pelo endereço no Nominatim (OpenStreetMap) em 2026-11-01: conferir no Google Maps."
+  },
+  {
+    "id": "boulevard-coletor-drive-thru",
+    "nome": "Boulevard Shopping: coletor de eletrônicos (drive-thru)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Visconde de Souza Franco",
+      "numero": "776",
+      "bairro": "Reduto",
+      "cep": null
+    },
+    "coordenadas": {
+      "lat": -1.4463292,
+      "lon": -48.4897197
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": null,
+      "site": null
+    },
+    "fonte": "https://diariodopara.com.br/varejo-sustentavel/shopping-de-belem-recicla-150-toneladas-de-lixo-por-mes-e-zera-envio-a-aterros/",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO (confiança média). Matéria do Diário do Pará de 26/07/2025, lida em 2026-11-01. Subsolo G1 do estacionamento, entrega do carro, gratuito para clientes. Aceita também impressoras e micro-ondas. Horário e gestora não informados; o site do shopping deu erro 403. O endereço vem da lista da TIM (2022) e o bairro, do OpenStreetMap. Coordenadas aproximadas, obtidas pelo endereço no Nominatim (OpenStreetMap) em 2026-11-01: conferir no Google Maps."
+  },
+  {
+    "id": "boulevard-pilhas-espaco-cliente",
+    "nome": "Boulevard Shopping: pilhas e baterias (Espaço Cliente)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Visconde de Souza Franco",
+      "numero": "776",
+      "bairro": "Reduto",
+      "cep": null
+    },
+    "coordenadas": {
+      "lat": -1.4463292,
+      "lon": -48.4897197
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": null,
+      "site": null
+    },
+    "fonte": "https://diariodopara.com.br/varejo-sustentavel/shopping-de-belem-recicla-150-toneladas-de-lixo-por-mes-e-zera-envio-a-aterros/",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO (confiança média). Mesma matéria de 26/07/2025, lida em 2026-11-01. Local exato dentro do shopping e horário não informados. O endereço vem da lista da TIM (2022) e o bairro, do OpenStreetMap. Coordenadas aproximadas, obtidas pelo endereço no Nominatim (OpenStreetMap) em 2026-11-01: conferir no Google Maps."
+  },
+  {
+    "id": "descarte-correto-joao-paulo-ii",
+    "nome": "Descarte Correto: Av. João Paulo II (a confirmar)",
+    "tipo_local": "cooperativa",
+    "endereco": {
+      "logradouro": "Avenida João Paulo II",
+      "numero": "1134",
+      "bairro": "Marco",
+      "cep": null
+    },
+    "coordenadas": {
+      "lat": -1.439077,
+      "lon": -48.4562905
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias",
+      "celulares_tablets",
+      "computadores_perifericos"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": null,
+      "site": null
+    },
+    "fonte": "https://dol.com.br/noticias/para/826792/de-pilha-a-computador-onde-descartar-seu-lixo-eletronico?d=1",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO (confiança baixa). Matéria do DOL de 08/09/2023, lida em 2026-11-01, que diz só \"João Paulo, Nº1134\" e \"horário comercial\". POSSÍVEL ENDEREÇO ANTIGO ou duplicata do Descarte Correto (Marco). Não publicar sem confirmar. O bairro vem do OpenStreetMap. Coordenadas aproximadas, obtidas pelo endereço no Nominatim (OpenStreetMap) em 2026-11-01: conferir no Google Maps."
+  },
+  {
+    "id": "tim-boulevard-shopping",
+    "nome": "TIM: Boulevard Shopping Belém",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Avenida Visconde de Souza Franco",
+      "numero": "776",
+      "bairro": "Reduto",
+      "cep": null
+    },
+    "coordenadas": {
+      "lat": -1.4463292,
+      "lon": -48.4897197
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": null,
+      "site": null
+    },
+    "fonte": "https://tecnoblog.net/noticias/tim-deixa-voce-descartar-celulares-e-pcs-antigos-em-150-lojas-veja-lista/",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO (confiança baixa). Urna de um programa da TIM de 2022; matéria de 15/03/2022, lida em 2026-11-01. A lista da matéria é geral, não específica de Belém; não se sabe se a urna continua. Horário não informado. Confirmar na loja. Lojas 105, 106 e 107. Coordenadas aproximadas, obtidas pelo endereço no Nominatim (OpenStreetMap) em 2026-11-01: conferir no Google Maps."
+  },
+  {
+    "id": "tim-parque-shopping-belem",
+    "nome": "TIM: Parque Shopping Belém",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Rodovia Augusto Montenegro",
+      "numero": "4300",
+      "bairro": "Parque Verde",
+      "cep": null
+    },
+    "coordenadas": {
+      "lat": -1.371311,
+      "lon": -48.4472259
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": null,
+      "site": null
+    },
+    "fonte": "https://tecnoblog.net/noticias/tim-deixa-voce-descartar-celulares-e-pcs-antigos-em-150-lojas-veja-lista/",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO (confiança baixa). Urna de um programa da TIM de 2022; matéria de 15/03/2022, lida em 2026-11-01. A lista da matéria é geral, não específica de Belém; não se sabe se a urna continua. Horário não informado. Confirmar na loja. Loja 1004. Coordenadas aproximadas, obtidas pelo endereço no Nominatim (OpenStreetMap) em 2026-11-01: conferir no Google Maps."
+  },
+  {
+    "id": "tim-shopping-patio-belem",
+    "nome": "TIM: Shopping Pátio Belém",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Travessa Padre Eutíquio",
+      "numero": "1078",
+      "bairro": "Batista Campos",
+      "cep": null
+    },
+    "coordenadas": {
+      "lat": -1.458131,
+      "lon": -48.4948548
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": null,
+      "site": null
+    },
+    "fonte": "https://tecnoblog.net/noticias/tim-deixa-voce-descartar-celulares-e-pcs-antigos-em-150-lojas-veja-lista/",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO (confiança baixa). Urna de um programa da TIM de 2022; matéria de 15/03/2022, lida em 2026-11-01. A lista da matéria é geral, não específica de Belém; não se sabe se a urna continua. Horário não informado. Confirmar na loja. Lojas 105 e 106, 1º piso. Coordenadas aproximadas, obtidas pelo endereço no Nominatim (OpenStreetMap) em 2026-11-01: conferir no Google Maps."
   }
 ]

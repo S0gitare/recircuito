@@ -1,12 +1,35 @@
 """Testes das rotas da API com o TestClient do FastAPI.
 
 O TestClient chama a aplicação direto na memória, sem subir servidor nem usar a
-rede. Os testes usam os pontos FICTÍCIOS de dados/pontos.json.
+rede. Os testes usam 3 pontos FICTÍCIOS fixos (testes/dados/pontos_de_exemplo.json),
+e não o dados/pontos.json de verdade. Assim, adicionar ou corrigir um ponto real
+nunca quebra estes testes. A validade do pontos.json real é checada em
+test_dados_reais.py.
 """
 
+import json
+from pathlib import Path
+
+import pytest
 from fastapi.testclient import TestClient
 
+from aplicacao.modelos import PontoDeColeta
 from aplicacao.principal import app
+
+ARQUIVO_DE_EXEMPLO = Path(__file__).parent / "dados" / "pontos_de_exemplo.json"
+
+
+@pytest.fixture(autouse=True)
+def usar_pontos_de_exemplo(monkeypatch):
+    """Troca, em todos os testes deste arquivo, a leitura do pontos.json pelos pontos de exemplo.
+
+    O autouse=True aplica a fixture sozinha, sem cada teste precisar pedi-la.
+    O monkeypatch desfaz a troca ao fim de cada teste.
+    """
+    dados = json.loads(ARQUIVO_DE_EXEMPLO.read_text(encoding="utf-8"))
+    pontos = tuple(PontoDeColeta.model_validate(item) for item in dados)
+    monkeypatch.setattr("aplicacao.rotas.pontos.carregar_pontos", lambda: pontos)
+
 
 cliente = TestClient(app)
 
@@ -34,6 +57,7 @@ def test_sem_posicao_lista_em_ordem_alfabetica_e_sem_distancia():
     assert nomes == sorted(nomes, key=str.casefold)
     assert corpo["total"] == 3
     assert all(ponto["distancia_km"] is None for ponto in corpo["pontos"])
+    # Os 3 pontos de exemplo têm horário, então o status é sempre true ou false.
     assert all(isinstance(ponto["aberto_agora"], bool) for ponto in corpo["pontos"])
 
 
@@ -112,3 +136,46 @@ def test_cors_libera_o_site_em_desenvolvimento():
 def test_cors_nao_libera_outros_sites():
     resposta = cliente.get("/api/saude", headers={"Origin": "https://site-qualquer.com"})
     assert "access-control-allow-origin" not in resposta.headers
+
+
+def _trocar_pontos(monkeypatch, alterar):
+    """Refaz a lista de pontos de exemplo aplicando `alterar` a cada dado bruto."""
+    dados = json.loads(ARQUIVO_DE_EXEMPLO.read_text(encoding="utf-8"))
+    for item in dados:
+        alterar(item)
+    pontos = tuple(PontoDeColeta.model_validate(item) for item in dados)
+    monkeypatch.setattr("aplicacao.rotas.pontos.carregar_pontos", lambda: pontos)
+
+
+def test_sem_horarios_aberto_agora_e_nulo(monkeypatch):
+    _trocar_pontos(monkeypatch, lambda item: item.update(horarios=[]))
+
+    corpo = cliente.get("/api/pontos").json()
+    assert all(ponto["aberto_agora"] is None for ponto in corpo["pontos"])
+
+    ponto = cliente.get("/api/pontos/exemplo-ecoponto-a").json()
+    assert ponto["aberto_agora"] is None
+
+
+@pytest.mark.parametrize("esperado", [True, False])
+def test_com_horarios_aberto_agora_continua_booleano(monkeypatch, esperado):
+    # Fixamos o resultado do cálculo para o teste não depender da hora em que roda.
+    monkeypatch.setattr("aplicacao.rotas.pontos.esta_aberto_agora", lambda horarios: esperado)
+
+    corpo = cliente.get("/api/pontos").json()
+    assert all(ponto["aberto_agora"] is esperado for ponto in corpo["pontos"])
+
+    assert cliente.get("/api/pontos/exemplo-ecoponto-a").json()["aberto_agora"] is esperado
+
+
+def test_mistura_de_pontos_com_e_sem_horario(monkeypatch):
+    def esvaziar_so_o_ecoponto(item):
+        if item["id"] == "exemplo-ecoponto-a":
+            item["horarios"] = []
+
+    _trocar_pontos(monkeypatch, esvaziar_so_o_ecoponto)
+    monkeypatch.setattr("aplicacao.rotas.pontos.esta_aberto_agora", lambda horarios: True)
+
+    status = {p["id"]: p["aberto_agora"] for p in cliente.get("/api/pontos").json()["pontos"]}
+    assert status["exemplo-ecoponto-a"] is None
+    assert status["exemplo-loja-b"] is True
