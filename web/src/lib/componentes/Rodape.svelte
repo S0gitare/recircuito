@@ -13,7 +13,7 @@
 <footer>
 	<div class="conteudo">
 		<div class="marca">
-			<img src="{base}/logos/logo-horizontal-escuro-site.svg" alt={cabecalho.nomeDoSite} width="200" height="32" />
+			<img src="{base}/logos/logo-simbolo-no-c-escuro-site.svg" alt={cabecalho.nomeDoSite} width="172" height="26" />
 			<p>{rodape.frase}</p>
 		</div>
 
@@ -66,7 +66,7 @@
 	}
 
 	.marca img {
-		height: 28px;
+		height: 24px;
 		width: auto;
 	}
 
@@ -141,7 +141,7 @@
 		}
 
 		.marca img {
-			height: 32px;
+			height: 26px;
 		}
 
 		.colunas {

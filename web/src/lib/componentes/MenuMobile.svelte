@@ -37,7 +37,7 @@
 
 <dialog bind:this={janela} class="menu" aria-label={rodape.tituloNavegacao}>
 	<div class="topo">
-		<img src="{base}/logos/logo-horizontal-site.svg" alt={cabecalho.nomeDoSite} width="175" height="28" />
+		<img src="{base}/logos/logo-simbolo-no-c-site.svg" alt={cabecalho.nomeDoSite} width="159" height="24" />
 		<button class="fechar" type="button" aria-label={cabecalho.fecharMenu} onclick={fechar}>
 			<IconeFechar />
 		</button>
@@ -86,7 +86,7 @@
 	}
 
 	.topo img {
-		height: 28px;
+		height: 24px;
 		width: auto;
 	}
 

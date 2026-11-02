@@ -18,7 +18,7 @@
 
 <div class="cabecalho">
 	<a class="logo" href="{base}/" aria-label={cabecalho.nomeDoSite}>
-		<img src="{base}/logos/logo-horizontal-site.svg" alt="" width="200" height="32" />
+		<img src="{base}/logos/logo-simbolo-no-c-site.svg" alt="" width="172" height="26" />
 	</a>
 
 	<nav class="links" aria-label={rodape.tituloNavegacao}>
@@ -48,7 +48,7 @@
 	}
 
 	.logo img {
-		height: 28px;
+		height: 24px;
 		width: auto;
 	}
 
@@ -88,7 +88,7 @@
 		}
 
 		.logo img {
-			height: 32px;
+			height: 26px;
 		}
 
 		.links {

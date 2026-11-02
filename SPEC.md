@@ -133,7 +133,9 @@ Menções a "projeto de extensão": só na seção "O projeto" e nos créditos d
 - Fundos alternando entre `--bg` e `--bg-alt`, com o topo em `--bg-hero`.
 - Margem lateral de 48px no desktop e de 20px no mobile.
 
-**Logo:** trilha de circuito em octógono aberto, com furo vazado em cima e ponto verde embaixo, ao lado do nome em Newsreader Medium. Versões em `logos/final/`:
+**Logo:** o nome em Newsreader Medium em que o símbolo (trilha de circuito em octógono aberto, com furo vazado em cima e ponto verde embaixo) **substitui o "C"** de Circuito. O símbolo usa o corte grosso (traço 60), que casa com o peso das letras. O símbolo sozinho continua sendo o ícone (favicon, redes sociais), porque em tamanho pequeno o "C" dentro da palavra não se lê. Arquivos em `logos/final/` (fora do repositório; os do site estão em `web/static/logos/`):
+- `logo-simbolo-no-c-site.svg` e `logo-simbolo-no-c-escuro-site.svg`: recorte justo, usados no menu e no rodapé (o escuro, sobre o fundo verde-escuro);
+- `logo-simbolo-no-c.svg`: com margem, para divulgação (página 5 do design "Logo ReCircuito" no Canva);
 - `-site.svg`: sem margem, para menu e rodapé;
 - `logo-horizontal`, `logo-vertical` e `-escuro`: para divulgação;
 - `simbolo-favicon`: traço grosso, para ícone da aba e redes sociais.
