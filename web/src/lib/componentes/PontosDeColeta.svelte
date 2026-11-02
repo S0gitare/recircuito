@@ -8,11 +8,9 @@
 		buscarPontos,
 		foiCancelado,
 		geocodificar,
-		type PontoDeColeta,
-		type TipoResiduo
+		type PontoDeColeta
 	} from '$lib/api/pontos';
 	import Busca from './Busca.svelte';
-	import FiltroTipos from './FiltroTipos.svelte';
 	import ListaPontos from './ListaPontos.svelte';
 	import Mapa from './Mapa.svelte';
 
@@ -21,8 +19,6 @@
 
 	// ---- Estado da seção ---------------------------------------------------
 	let textoDaBusca = $state('');
-	/** Lista vazia = "Todos" (RF04). */
-	let tiposSelecionados = $state<TipoResiduo[]>([]);
 	/** De onde medir as distâncias. `null` = sem busca: lista alfabética e mapa com todos os pontos. */
 	let referencia = $state<{ lat: number; lon: number; rotulo: string } | null>(null);
 	let selecionadoId = $state<string | null>(null);
@@ -40,11 +36,10 @@
 	let elementoDoMapa = $state<HTMLElement>();
 
 	// ---- Carga dos pontos --------------------------------------------------
-	// O efeito roda sempre que o filtro, a referência ou a tentativa mudam. A função de
+	// O efeito roda sempre que a referência ou a tentativa mudam. A função de
 	// limpeza (o `return`) cancela a requisição anterior: sem isso, uma resposta lenta de
 	// uma busca antiga poderia chegar depois da nova e sobrescrever a lista.
 	$effect(() => {
-		const tipos = [...tiposSelecionados];
 		const lat = referencia?.lat;
 		const lon = referencia?.lon;
 		void tentativa;
@@ -55,10 +50,9 @@
 		erroDaLista = null;
 		const aviso = setTimeout(() => (demorando = true), MS_ATE_AVISAR_DEMORA);
 
-		buscarPontos({ lat, lon, tipos, sinal: controle.signal })
+		buscarPontos({ lat, lon, sinal: controle.signal })
 			.then((resposta) => {
 				pontos = resposta.pontos;
-				// Se o ponto selecionado saiu da lista (por causa do filtro), desfaz a seleção.
 				if (selecionadoId && !pontos.some((p) => p.id === selecionadoId)) selecionadoId = null;
 				carregando = false;
 			})
@@ -139,19 +133,6 @@
 		mensagemDaBusca = null;
 	}
 
-	// ---- Filtro (RF04) -----------------------------------------------------
-	function alternarTipo(tipo: TipoResiduo | null) {
-		if (tipo === null) {
-			tiposSelecionados = []; // "Todos" limpa os tipos
-			return;
-		}
-		const proximos = tiposSelecionados.includes(tipo)
-			? tiposSelecionados.filter((t) => t !== tipo)
-			: [...tiposSelecionados, tipo];
-		// Desmarcar o último tipo volta para "Todos": a lista vazia é exatamente isso.
-		tiposSelecionados = proximos;
-	}
-
 	// ---- Seleção sincronizada entre lista e mapa (RF06) --------------------
 	async function selecionarPelaLista(id: string | null) {
 		selecionadoId = id;
@@ -177,8 +158,6 @@
 				aoBuscar={buscarPorTexto}
 				aoUsarLocalizacao={usarMinhaLocalizacao}
 			/>
-
-			<FiltroTipos selecionados={tiposSelecionados} aoAlternar={alternarTipo} />
 		</div>
 
 		<div class="mapa" bind:this={elementoDoMapa}>

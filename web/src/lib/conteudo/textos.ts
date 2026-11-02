@@ -99,15 +99,6 @@ export const pontosDeColeta = {
 	titulo: 'Onde descartar perto de você',
 	campoBusca: 'Digite seu CEP ou bairro',
 	usarLocalizacao: 'Usar minha localização',
-	// Ordem do filtro definida no protótipo: as palavras curtas ficam na linha
-	// de cima (3 botões) e as longas na de baixo (2 botões mais largos).
-	filtro: [
-		{ tipo: null, rotulo: 'Todos' },
-		{ tipo: 'cabos_carregadores', rotulo: 'Cabos' },
-		{ tipo: 'pilhas_baterias', rotulo: 'Pilhas' },
-		{ tipo: 'computadores_perifericos', rotulo: 'Computadores' },
-		{ tipo: 'celulares_tablets', rotulo: 'Celulares' }
-	],
 	abertoAgora: 'Aberto agora',
 	fechadoAgora: 'Fechado agora',
 	horarioNaoInformado: 'Horário não informado',
@@ -116,14 +107,13 @@ export const pontosDeColeta = {
 	sugerirLink: 'Sugerir um ponto',
 	// Mensagens de estado (RF12): nunca deixar a pessoa diante de uma lista vazia sem explicação.
 	carregando: 'Buscando pontos de coleta…',
-	semResultados: 'Nenhum ponto encontrado com esses filtros. Tente marcar outros tipos de resíduo.',
+	semResultados: 'Nenhum ponto de coleta encontrado.',
 	naoEncontrado: 'Não encontramos esse CEP ou bairro em Belém. Confira e tente de novo.',
 	erroDeRede: 'Não foi possível carregar os pontos agora. Verifique sua conexão e tente de novo.',
 	localizacaoNegada:
 		'Sem permissão para usar sua localização. Você ainda pode buscar pelo CEP ou pelo bairro.',
 	// Textos de apoio (leitores de tela, estados e avisos).
 	botaoBuscar: 'Buscar',
-	rotuloDoFiltro: 'Filtrar por tipo de resíduo',
 	rotuloDaLista: 'Pontos de coleta',
 	rotuloDoMapa: 'Mapa dos pontos de coleta',
 	primeiraBuscaDemora: 'A primeira busca pode demorar um pouco. Já estamos buscando.',
@@ -161,10 +151,9 @@ export const rodape = {
 	frase: 'Descarte certo de lixo eletrônico.',
 	tituloNavegacao: 'Navegação',
 	tituloContato: 'Contato',
-	// Contatos ainda provisórios (SPEC §14).
-	email: 'contato@recircuito.org',
+	email: 'alecsander.hslima@gmail.com',
 	redeSocial: '@recircuito',
-	instituicao: '[Nome da instituição]',
+	instituicao: 'Uninter',
 	avaliarSite: 'Avaliar o site',
 	creditos: 'Projeto de Extensão II · 2026'
 } as const;
