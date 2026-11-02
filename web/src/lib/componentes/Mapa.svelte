@@ -242,7 +242,7 @@
 	});
 </script>
 
-<div class="mapa" role="region" aria-label={textos.rotuloDoMapa}>
+<div class="mapa" role="region" aria-label={textos.rotuloDoMapa} data-lenis-prevent>
 	<div class="tela" bind:this={conteiner}></div>
 </div>
 

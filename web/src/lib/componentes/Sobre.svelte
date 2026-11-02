@@ -34,7 +34,7 @@
 		section {
 			grid-template-columns: minmax(0, 780px) 392px;
 			justify-content: space-between;
-			align-items: end;
+			align-items: center;
 			gap: 48px;
 			padding-block: 120px;
 		}

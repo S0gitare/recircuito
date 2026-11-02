@@ -17,7 +17,7 @@ Complemento da `SPEC.md`: medidas do protótipo (FigCraft), geometria dos desenh
 ## 1. Contratos entre as peças
 
 **`$lib/animacao/` (dona: sessão de ilustrações e animações).** Os arquivos `lenis.ts`, `revelar.ts` e `contador.ts` hoje são stubs com a assinatura final:
-- `iniciarLenis(): () => void` liga a rolagem suave (GSAP ticker + ScrollTrigger) e devolve a função que desliga. Com movimento reduzido, não liga nada.
+- `iniciarLenis(): () => void` liga a rolagem suave (GSAP ticker + ScrollTrigger) com `virtualScroll: ({ event }) => !event.defaultPrevented` (isolando o scroll de contêineres com `data-lenis-prevent`, como o mapa) e devolve a função que desliga. Com movimento reduzido, não liga nada.
 - `rolarPara(alvo: string): void` rola até uma âncora (`'#sobre'`); com Lenis, `lenis.scrollTo`; senão `scrollIntoView`.
 - `revelar` é uma *action* Svelte: `<h2 use:revelar>` ou `use:revelar={{ atraso: 0.1 }}`. Sobe 16px enquanto aparece, uma vez, ao entrar na tela (0,6s).
 - `contarAte` é uma *action*: `<span use:contarAte={{ valor: 1240 }}></span>`. Escreve o número formatado em pt-BR e conta de 0 até o valor (1,2s, uma vez, ao entrar na tela).
@@ -79,7 +79,7 @@ Chamadas e rótulos (somente desktop; coordenadas no bloco de 1212×491; use por
 - Esquerda: linha de x=315 a x=435, bolinha de 7px em x≈314.5; rótulos alinhados à direita, caixa de x=0 a x=300. Linhas em y: **Tela 214, Placa 342**. Bolinha de Placa `--green`.
 - Rótulo: duas linhas, nome (PJS SemiBold 15px `--ink`) e destino (PJS Regular 14px `--ink-2`), `line-height: 24px`.
 
-Animação: ao carregar, começa **montado** (rótulos, chamadas e guias com opacidade 0); após 0,5s as camadas vão para as posições do explodido em 1,4s (`power2.out`), e guias, chamadas (linhas desenhando com DrawSVG) e rótulos aparecem junto, escalonados. Acontece uma vez. Com movimento reduzido: já explodido.
+Animação: ao carregar no topo da página (`window.scrollY <= 5`), ocorre um efeito fixo de **implosão** (~1,2s, atraso 0,25s, `power2.out`), no qual as 5 camadas começam em `yExplodido` e animam até `yMontado` (guias, chamadas e rótulos ocultos). Ao rolar a página para baixo, a seção Hero fica fixada na tela (`pin: true`, gatilho no `<header class="hero">`, `start: 'top top'`, `end: '+=100%'`, `scrub: 0.6`); de 0% a 80% do scroll, as camadas separam de `yMontado` para `yExplodido`, guias pontilhadas surgem e, no desktop, as linhas de chamada se desenham com DrawSVG, as bolinhas surgem e os rótulos entram; de 80% a 100% do scroll, há uma pausa para leitura com o celular totalmente explodido e estável antes de desfixar o Hero. Se o usuário rolar enquanto a implosão de entrada ainda estiver rodando, ela é imediatamente interrompida (`kill()`). Com movimento reduzido (RNF02): sem pin/animações, exibindo o estado explodido estático final.
 
 ### PassoSepare (300×300)
 Itens, em repouso: celular `<rect x=84 y=66 width=46 height=84 rx=9>` girado −12° (em torno do centro); bobina `<circle cx=148 cy=104 r=20>` + miolo `<circle cx=148 cy=104 r=9>` (traço 1.5); pilha `<rect x=180 y=86 width=28 height=62 rx=6>` girada 10°. Todos sem preenchimento. Caixa `<rect x=75 y=140 width=150 height=96>` com **preenchimento branco** (cobre a base dos itens) e abas `M75 140 L53 114 M225 140 L247 114`; seta `M150 172 V204 M138 192 L150 204 L162 192`. Ordem: itens, caixa, abas, seta.

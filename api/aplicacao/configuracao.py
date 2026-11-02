@@ -33,6 +33,11 @@ class Configuracoes:
             PASTA_API / os.getenv("RECIRCUITO_ARQUIVO_PONTOS", "dados/pontos.json")
         )
     )
+    arquivo_avaliacoes: Path = field(
+        default_factory=lambda: (
+            PASTA_API / os.getenv("RECIRCUITO_ARQUIVO_AVALIACOES", "dados/avaliacoes.json")
+        )
+    )
     # Identificação enviada ao Nominatim (a política de uso exige um contato real).
     # Em produção, defina RECIRCUITO_CONTATO com o e-mail do projeto.
     agente_http: str = field(

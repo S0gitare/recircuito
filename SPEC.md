@@ -60,7 +60,7 @@ A ordem é a mesma no desktop e no mobile. Os itens do menu levam às âncoras c
 
 | # | Seção | Âncora | Conteúdo | Comportamento |
 |---|---|---|---|---|
-| 1 | Topo (hero) | — | Logo, menu, vista explodida de um celular com 5 anotações ("Vidro", "Tela", "Bateria", "Placa", "Carcaça"), título "Seu lixo eletrônico tem destino.", texto de apoio e botão "Ver pontos de coleta" | Ocupa a altura da tela (`100svh`). O celular começa montado e se desmonta. **Mobile:** menu vira ícone ☰ e as anotações ficam ocultas |
+| 1 | Topo (hero) | — | Logo, menu, vista explodida de um celular com 5 anotações ("Vidro", "Tela", "Bateria", "Placa", "Carcaça"), título "Seu lixo eletrônico tem destino.", texto de apoio e botão "Ver pontos de coleta" | Ocupa a altura da tela (`100svh`). Ao carregar no topo, as 5 camadas realizam uma implosão (~1,2s) até montar o aparelho. Ao rolar, o Hero é fixado (`pin: true`) durante 1 tela (`+=100%`); de 0% a 80%, as camadas explodem e as anotações surgem; de 80% a 100%, pausa para leitura antes de desfixar. **Mobile:** menu vira ícone ☰ e as anotações ficam ocultas |
 | 2 | O projeto | `#sobre` | Frase de impacto e parágrafo explicando a iniciativa de extensão universitária | Estática, com entrada suave |
 | 3 | Como descartar | `#como-descartar` | 4 passos: Separe, Apague os dados, Ache um ponto, Entregue. Cada um com faixa verde, número, ilustração em traço e descrição | Ilustrações em loop. **Desktop:** 4 colunas. **Mobile:** empilhado |
 | 4 | O que descartar | `#o-que-descartar` | Título centralizado e grade 2×2: celulares e tablets, pilhas e baterias, computadores e periféricos, cabos e carregadores | Movimento leve em cada ilustração |
@@ -146,8 +146,8 @@ Feitas com GSAP (ScrollTrigger, DrawSVG). A rolagem suave é feita com Lenis, si
 
 | Onde | Animação | Disparo | Duração |
 |---|---|---|---|
-| Topo | Celular montado se desmonta em 5 camadas; linhas-guia e anotações aparecem | Ao carregar, depois de 0,5s | 1,4s, desaceleração suave |
-| Topo (alternativa) | Traços das camadas se "desenhando" (DrawSVG) antes de desmontar | Ao carregar | A testar no desenvolvimento |
+| Topo (entrada) | Implosão: 5 camadas começam separadas e se juntam até o celular montado; guias e chamadas ocultas | Ao carregar no topo (`window.scrollY <= 5`) | 1,2s (atraso de 0,25s), `power2.out` |
+| Topo (scroll) | Hero fixado (`pin: true`, scrub 0,6). De 0% a 80%: camadas separam (explosão), guias surgem e no desktop linhas desenham (DrawSVG) e rótulos entram. De 80% a 100%: pausa para leitura | Ao rolar a página | 1 tela de rolagem (`+=100%`) |
 | Passo 01 | Itens caem dentro da caixa e a seta aparece | Seção visível, em loop | 0,9s + pausa de 1,8s |
 | Passo 02 | Barra de quadrados enche | Seção visível, em loop | 1,8s + pausa de 0,9s |
 | Passo 03 | Anel verde se expande e some (radar) | Seção visível, em loop | 1,6s |

@@ -17,7 +17,9 @@ export function iniciarLenis(): () => void {
 	// Movimento reduzido: rolagem nativa, sem inércia.
 	if (prefereMovimentoReduzido() || lenis) return () => {};
 
-	const instancia = new Lenis();
+	const instancia = new Lenis({
+		virtualScroll: ({ event }) => !event.defaultPrevented
+	});
 	lenis = instancia;
 
 	instancia.on('scroll', ScrollTrigger.update);

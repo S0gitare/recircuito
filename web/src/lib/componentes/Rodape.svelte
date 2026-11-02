@@ -2,7 +2,13 @@
 	import { base } from '$app/paths';
 	import { cabecalho, navegacao, rodape } from '$lib/conteudo/textos';
 	import { rolarPara } from '$lib/animacao/lenis';
-	import { urlFormularioAvaliacao } from '$lib/configuracao';
+	import ModalAvaliacao from '$lib/componentes/ModalAvaliacao.svelte';
+
+	let modalAberto = $state(false);
+
+	function abrirModalAvaliacao() {
+		modalAberto = true;
+	}
 
 	function irPara(evento: MouseEvent, ancora: string) {
 		evento.preventDefault();
@@ -31,17 +37,16 @@
 				<h2>{rodape.tituloContato}</h2>
 				<ul>
 					<li><a href="mailto:{rodape.email}">{rodape.email}</a></li>
-					<li>{rodape.redeSocial}</li>
-					<li>{rodape.instituicao}</li>
+					<li><a href="tel:{rodape.telefoneRaw}">{rodape.telefone}</a></li>
 					<li>
-						<!-- Enquanto o formulário não existe (SPEC §14), não há link quebrado: só um texto apagado. -->
-						{#if urlFormularioAvaliacao}
-							<a class="avaliar" href={urlFormularioAvaliacao} target="_blank" rel="noopener noreferrer">
-								{rodape.avaliarSite}<span class="visualmente-oculto"> (abre em nova aba)</span>
-							</a>
-						{:else}
-							<span class="em-breve">{rodape.avaliarSite} (em breve)</span>
-						{/if}
+						<a href={rodape.linkedinUrl} target="_blank" rel="noopener noreferrer">
+							{rodape.linkedinTexto}<span class="visualmente-oculto"> (abre em nova aba)</span>
+						</a>
+					</li>
+					<li>
+						<button type="button" class="avaliar" onclick={abrirModalAvaliacao}>
+							{rodape.avaliarSite}
+						</button>
 					</li>
 				</ul>
 			</div>
@@ -49,6 +54,8 @@
 	</div>
 
 	<p class="creditos">{rodape.creditos}</p>
+
+	<ModalAvaliacao bind:aberto={modalAberto} />
 </footer>
 
 <style>
@@ -107,14 +114,21 @@
 		text-decoration: underline;
 	}
 
-	footer a.avaliar {
+	footer button.avaliar {
+		font-family: inherit;
+		font-size: inherit;
 		font-weight: 600;
 		text-decoration: underline;
 		color: var(--green-dark-mode);
+		background: none;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+		text-align: left;
 	}
 
-	.em-breve {
-		color: #7e9c89;
+	footer button.avaliar:hover {
+		color: #fff;
 	}
 
 	/* Divisória e créditos. */

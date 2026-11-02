@@ -6,7 +6,9 @@ linha do problema, em vez de responder dados quebrados para o site.
 """
 
 import re
+from datetime import datetime
 from enum import StrEnum
+from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
@@ -148,3 +150,46 @@ class Erro(BaseModel):
 
     erro: str
     mensagem: str
+
+
+class NovaAvaliacao(BaseModel):
+    """Dados de uma nova avaliação do site enviada pelo usuário."""
+
+    nota: int = Field(ge=1, le=5, description="Nota de 1 a 5 dada ao site")
+    encontrou_ponto: Literal["sim", "parcialmente", "nao"] = Field(
+        description="Se o usuário conseguiu encontrar o ponto de coleta desejado"
+    )
+    comentario: str | None = Field(
+        default=None, max_length=1000, description="Comentário opcional do usuário"
+    )
+    data: str | None = Field(
+        default=None, description="Data ISO informada pelo cliente ou gerada pelo servidor"
+    )
+
+    @field_validator("data")
+    @classmethod
+    def validar_data_iso(cls, valor: str | None) -> str | None:
+        if valor is None:
+            return None
+        texto = valor.strip()
+        if not texto:
+            raise ValueError("data não pode ser vazia; use formato ISO")
+        try:
+            datetime.fromisoformat(texto)
+        except ValueError as erro:
+            raise ValueError(f"data em formato inválido: {valor!r} (use formato ISO)") from erro
+        return texto
+
+    @field_validator("comentario")
+    @classmethod
+    def validar_comentario(cls, valor: str | None) -> str | None:
+        if valor is None:
+            return None
+        texto = valor.strip()
+        return texto if texto else None
+
+
+class AvaliacaoRegistrada(NovaAvaliacao):
+    """Avaliação gravada em disco com data ISO garantida."""
+
+    data: str

@@ -10,7 +10,7 @@
  * cancelada, o erro tem `tipo === 'cancelado'` e o componente deve ignorá-lo.
  */
 import { urlDaApi } from '$lib/configuracao';
-import { pontosDeColeta as textos } from '$lib/conteudo/textos';
+import { pontosDeColeta as textos, modalAvaliacao } from '$lib/conteudo/textos';
 
 export type TipoResiduo =
 	| 'celulares_tablets'
@@ -149,3 +149,62 @@ export function buscarPontos({ lat, lon, tipos, sinal }: ParametrosDaBusca = {})
 export function geocodificar(texto: string, sinal?: AbortSignal): Promise<Localizacao> {
 	return pedir<Localizacao>('/api/geocodificar', new URLSearchParams({ q: texto.trim() }), sinal);
 }
+
+export interface DadosDaAvaliacao {
+	nota: number;
+	encontrou_ponto: 'sim' | 'parcialmente' | 'nao';
+	comentario?: string | null;
+	data?: string | null;
+}
+
+export interface RespostaAvaliacao {
+	nota: number;
+	encontrou_ponto: 'sim' | 'parcialmente' | 'nao';
+	comentario: string | null;
+	data: string;
+}
+
+/** POST /api/avaliacoes. Envia a avaliação do site para o servidor. */
+export async function enviarAvaliacao(
+	dados: DadosDaAvaliacao,
+	sinal?: AbortSignal
+): Promise<RespostaAvaliacao> {
+	const url = `${urlDaApi}/api/avaliacoes`;
+
+	let resposta: Response;
+	try {
+		resposta = await fetch(url, {
+			method: 'POST',
+			signal: sinal,
+			headers: {
+				'Content-Type': 'application/json',
+				Accept: 'application/json'
+			},
+			body: JSON.stringify(dados)
+		});
+	} catch (erro) {
+		if (erro instanceof DOMException && erro.name === 'AbortError') {
+			throw new ErroDaApi('cancelado', 'Requisição cancelada.');
+		}
+		throw new ErroDaApi('rede', modalAvaliacao.erroEnvio);
+	}
+
+	if (resposta.ok) {
+		try {
+			return (await resposta.json()) as RespostaAvaliacao;
+		} catch {
+			if (sinal?.aborted) throw new ErroDaApi('cancelado', 'Requisição cancelada.');
+			throw new ErroDaApi('servidor', modalAvaliacao.erroEnvio);
+		}
+	}
+
+	let mensagem: string = modalAvaliacao.erroEnvio;
+	try {
+		const corpo = (await resposta.json()) as { mensagem?: string };
+		mensagem = corpo.mensagem ?? mensagem;
+	} catch {
+		// Mantém mensagem de erro padrão
+	}
+	throw new ErroDaApi('servidor', mensagem);
+}
+

@@ -51,7 +51,7 @@ export const sobre = {
 	frase:
 		'Celulares, pilhas e cabos esquecidos na gaveta viram risco quando vão para o lixo comum. A gente mostra o caminho certo.',
 	texto:
-		'Uma iniciativa de extensão universitária que leva informação a escolas, bairros e comércios, e mapeia onde cada resíduo pode ser entregue.'
+		'Desenvolvido por Alecsander Lima como uma iniciativa de extensão universitária da Uninter que leva informação a escolas, bairros e comércios, e mapeia onde cada resíduo pode ser entregue.'
 } as const;
 
 export const comoDescartar = {
@@ -152,8 +152,10 @@ export const rodape = {
 	tituloNavegacao: 'Navegação',
 	tituloContato: 'Contato',
 	email: 'alecsander.hslima@gmail.com',
-	redeSocial: '@recircuito',
-	instituicao: 'Uninter',
+	telefone: '(91) 98805-4024',
+	telefoneRaw: '+5591988054024',
+	linkedinTexto: 'LinkedIn',
+	linkedinUrl: 'https://www.linkedin.com/in/alec-undefined-231a31428/',
 	avaliarSite: 'Avaliar o site',
 	creditos: 'Projeto de Extensão II · 2026'
 } as const;
@@ -167,3 +169,29 @@ export const bannerCookies = {
 	recusar: 'Recusar',
 	aceitar: 'Aceitar'
 } as const;
+
+export const modalAvaliacao = {
+	rotuloDialogo: 'Avaliação do site',
+	titulo: 'Avaliar o ReCircuito',
+	fechar: 'Fechar modal',
+	apoio: 'Sua opinião ajuda a melhorar o guia de descarte para Belém.',
+	perguntaNota: 'Como você avalia a sua experiência?',
+	perguntaObjetivo: 'Conseguiu encontrar o ponto de coleta que precisava?',
+	opcoesObjetivo: [
+		{ valor: 'sim', rotulo: 'Sim' },
+		{ valor: 'parcialmente', rotulo: 'Parcialmente' },
+		{ valor: 'nao', rotulo: 'Não' }
+	],
+	perguntaComentario: 'Sugestões, dúvidas ou críticas (opcional)',
+	placeholderComentario: 'Deixe aqui seu comentário...',
+	botaoCancelar: 'Cancelar',
+	botaoEnviar: 'Enviar avaliação',
+	enviando: 'Enviando avaliação…',
+	tituloSucesso: 'Obrigado pela sua avaliação!',
+	mensagemSucesso:
+		'Sua contribuição ajuda a construir uma Belém mais sustentável e aprimorar o ReCircuito.',
+	botaoFechar: 'Fechar',
+	erroEnvio: 'Não foi possível enviar a avaliação agora. Verifique sua conexão e tente de novo.',
+	avisoSelecaoObrigatoria: 'Selecione uma nota e se encontrou o ponto antes de enviar.'
+} as const;
+

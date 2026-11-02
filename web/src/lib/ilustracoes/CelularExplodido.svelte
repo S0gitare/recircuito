@@ -4,13 +4,20 @@
 
   Como funciona a animação:
   - O markup já descreve o estado FINAL (explodido, com tudo visível). É o que vê quem
-    prefere movimento reduzido, e o que o HTML pré-renderizado guarda.
-  - No `onMount`, o GSAP volta as camadas para "montado", esconde guias, chamadas e
-    rótulos, e depois de 0,5s espalha tudo.
+    prefere movimento reduzido (RNF02), e o que o HTML pré-renderizado guarda.
+  - Ao carregar no topo: efeito fixo de IMPLOSÃO (~1,2s), levando as camadas de yExplodido
+    para yMontado com guias, chamadas e rótulos ocultos.
+  - Ao rolar a página: ScrollTrigger fixa a seção Hero (pin: true), e conforme o usuário
+    rola (0% a 80%), as camadas explodem de yMontado para yExplodido, as guias surgem e,
+    no desktop, as linhas de chamada se desenham com DrawSVG, as bolinhas surgem e os
+    rótulos entram.
+  - De 80% a 100% da rolagem: pausa para leitura com o celular totalmente explodido antes
+    de desfixar a seção Hero.
+  - Se o usuário rolar durante a implosão inicial, ela é imediatamente interrompida (kill).
 -->
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { gsap, DrawSVGPlugin } from '$lib/animacao/gsap';
+	import { gsap, ScrollTrigger, DrawSVGPlugin } from '$lib/animacao/gsap';
 	import { prefereMovimentoReduzido } from '$lib/animacao/movimentoReduzido';
 	import { hero } from '$lib/conteudo/textos';
 
@@ -45,41 +52,138 @@
 			return;
 		}
 
-		gsap.registerPlugin(DrawSVGPlugin);
+		gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
 
-		// Camadas e guias (valem para mobile e desktop).
-		const contexto = gsap.context(() => {
-			const camadas = gsap.utils.toArray<SVGGElement>('.camada');
-			// A ordem no DOM é Carcaça…Vidro; o índice vem do atributo data-i.
+		const elementoHero = bloco.closest<HTMLElement>('.hero') ?? bloco;
+		let implosao: gsap.core.Tween | null = null;
+
+		const midia = gsap.matchMedia();
+
+		midia.add(
+			{
+				isDesktop: '(min-width: 768px)',
+				isMobile: '(max-width: 767px)'
+			},
+			(contexto) => {
+				const { isDesktop } = contexto.conditions as { isDesktop: boolean; isMobile: boolean };
+				const camadas = gsap.utils.toArray<SVGGElement>('.camada', bloco);
+				const guias = gsap.utils.toArray<SVGLineElement>('.guia', bloco);
+				const linhasChamada = gsap.utils.toArray<SVGLineElement>('.chamada-linha', bloco);
+				const pontosChamada = gsap.utils.toArray<SVGCircleElement>('.chamada-ponto', bloco);
+				const rotulos = gsap.utils.toArray<HTMLElement>('.rotulo', bloco);
+				const indice = (c: SVGGElement) => Number(c.dataset.i);
+
+				// Guias, chamadas e rótulos sempre começam ocultos antes da explosão no scroll
+				gsap.set(guias, { opacity: 0 });
+				if (isDesktop) {
+					gsap.set(linhasChamada, { drawSVG: '0%' });
+					gsap.set(pontosChamada, { opacity: 0, scale: 0, transformOrigin: '50% 50%' });
+					gsap.set(rotulos, { opacity: 0, y: 8 });
+				}
+
+				// Estado de separação das camadas controlado pelo scroll (0 = montado, 1 = explodido)
+				const estado = { explosao: 0 };
+
+				const atualizarCamadas = () => {
+					if (implosao) return;
+					gsap.set(camadas, {
+						y: (_i, c: SVGGElement) => {
+							const i = indice(c);
+							return yMontado(i) + (yExplodido(i) - yMontado(i)) * estado.explosao;
+						}
+					});
+				};
+
+				// Linha do tempo vinculada à rolagem: fixa o Hero por 1 tela (+=100%)
+				const linhaScroll = gsap.timeline({
+					scrollTrigger: {
+						trigger: elementoHero,
+						pin: true,
+						start: 'top top',
+						end: '+=100%',
+						scrub: 0.6,
+						onUpdate: (self) => {
+							// Se a pessoa rolar enquanto a implosão de abertura estiver ativa, interrompe-a
+							if (implosao && (self.scroll() > 5 || window.scrollY > 5)) {
+								implosao.kill();
+								implosao = null;
+								atualizarCamadas();
+							}
+						}
+					}
+				});
+
+				// De 0% a 80% do scroll: camadas separam de yMontado para yExplodido e guias surgem
+				linhaScroll
+					.to(
+						estado,
+						{
+							explosao: 1,
+							duration: 0.8,
+							ease: 'power1.out',
+							onUpdate: atualizarCamadas
+						},
+						0
+					)
+					.fromTo(
+						guias,
+						{ opacity: 0 },
+						{ opacity: 1, duration: 0.35, stagger: 0.06, ease: 'power1.out' },
+						0.2
+					);
+
+				// No desktop: desenha linhas de chamada com DrawSVG, revela bolinhas e rótulos
+				if (isDesktop) {
+					linhaScroll
+						.fromTo(
+							linhasChamada,
+							{ drawSVG: '0%' },
+							{ drawSVG: '100%', duration: 0.3, stagger: 0.04, ease: 'power1.out' },
+							0.3
+						)
+						.fromTo(
+							pontosChamada,
+							{ opacity: 0, scale: 0 },
+							{ opacity: 1, scale: 1, duration: 0.18, stagger: 0.04, ease: 'back.out(2)' },
+							0.45
+						)
+						.fromTo(
+							rotulos,
+							{ opacity: 0, y: 8 },
+							{ opacity: 1, y: 0, duration: 0.24, stagger: 0.04, ease: 'power1.out' },
+							0.4
+						);
+				}
+
+				// De 80% a 100% do scroll: pausa para leitura com celular totalmente explodido
+				linhaScroll.to({}, { duration: 0.2 }, 0.8);
+			},
+			bloco
+		);
+
+		// Animação fixa de entrada ao carregar a página (se estiver no topo)
+		if (window.scrollY <= 5) {
+			const camadas = gsap.utils.toArray<SVGGElement>('.camada', bloco);
 			const indice = (c: SVGGElement) => Number(c.dataset.i);
 
-			gsap.set(camadas, { y: (_i: number, c: SVGGElement) => yMontado(indice(c)) });
-			gsap.set('.guia', { opacity: 0 });
+			gsap.set(camadas, { y: (_i: number, c: SVGGElement) => yExplodido(indice(c)) });
 
-			const linha = gsap.timeline({ delay: 0.5 });
-			linha
-				.to(camadas, { y: (_i: number, c: SVGGElement) => yExplodido(indice(c)), duration: 1.4, ease: 'power2.out' }, 0)
-				.to('.guia', { opacity: 1, duration: 0.7, stagger: 0.15, ease: 'power1.out' }, 0.6);
-		}, bloco);
-
-		// Chamadas e rótulos: só existem de verdade no desktop.
-		const midia = gsap.matchMedia();
-		midia.add('(min-width: 768px)', () => {
-			gsap.set('.chamada-linha', { drawSVG: '0%' });
-			gsap.set('.chamada-ponto', { opacity: 0, scale: 0, transformOrigin: '50% 50%' });
-			gsap.set('.rotulo', { opacity: 0, y: 8 });
-
-			const linha = gsap.timeline({ delay: 0.5 });
-			linha
-				.to('.chamada-linha', { drawSVG: '100%', duration: 0.7, stagger: 0.12, ease: 'power2.out' }, 0.8)
-				.to('.chamada-ponto', { opacity: 1, scale: 1, duration: 0.4, stagger: 0.12, ease: 'back.out(2)' }, 1.2)
-				.to('.rotulo', { opacity: 1, y: 0, duration: 0.6, stagger: 0.12, ease: 'power2.out' }, 1.0);
-		}, bloco);
+			implosao = gsap.to(camadas, {
+				y: (_i: number, c: SVGGElement) => yMontado(indice(c)),
+				duration: 1.2,
+				delay: 0.25,
+				ease: 'power2.out',
+				onComplete: () => {
+					implosao = null;
+				}
+			});
+		}
 
 		pronto = true;
+
 		return () => {
+			implosao?.kill();
 			midia.revert();
-			contexto.revert();
 		};
 	});
 </script>
