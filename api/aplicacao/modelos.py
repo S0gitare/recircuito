@@ -130,6 +130,17 @@ class RespostaTipos(BaseModel):
     tipos: list[Tipo]
 
 
+class Localizacao(BaseModel):
+    """Resultado de GET /api/geocodificar: onde fica o CEP ou bairro buscado."""
+
+    lat: float
+    lon: float
+    # Texto curto para mostrar à pessoa, ex.: "Campina, Belém - PA".
+    rotulo: str
+    # De onde veio a coordenada: "viacep+nominatim" ou "nominatim".
+    fonte: str
+
+
 class Erro(BaseModel):
     """Formato único de erro da API (SPEC §10)."""
 

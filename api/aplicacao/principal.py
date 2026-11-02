@@ -10,7 +10,7 @@ from fastapi.responses import JSONResponse
 from starlette.exceptions import HTTPException
 
 from aplicacao.configuracao import configuracoes
-from aplicacao.rotas import pontos, saude, tipos
+from aplicacao.rotas import geocodificacao, pontos, saude, tipos
 
 app = FastAPI(
     title="ReCircuito API",
@@ -30,7 +30,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-for modulo in (saude, tipos, pontos):
+for modulo in (saude, tipos, pontos, geocodificacao):
     app.include_router(modulo.roteador, prefix="/api")
 
 

@@ -40,3 +40,9 @@
 		--margem-lateral: 48px;
 	}
 }
+
+/* Ilustrações (guia §3): lateral das camadas do celular e linhas-guia tracejadas. */
+:root {
+	--verde-espessura: #cfe3d5;
+	--verde-guia: #9dbfa8;
+}

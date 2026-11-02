@@ -5,7 +5,7 @@ Projeto de Atividade Extensionista II (UNINTER, Ciência da Computação).
 
 | | |
 |---|---|
-| **Status** | Design aprovado; desenvolvimento ainda não começou |
+| **Status** | Site e API implementados (seções, desenhos animados, mapa, busca, cookies); falta dados reais, formulários, Analytics com ID real, testes de acessibilidade e publicação |
 | **Protótipo** | `ReCircuito - Prototipo.figcraft` (FigCraft): frames "Home — Desktop", "Home — Mobile", "Menu aberto — Mobile" e "Banner de cookies" (desktop e mobile) |
 | **Logo** | Canva, design "Logo ReCircuito"; arquivos em `logos/final/` |
 | **Proposta enviada** | `Proposta de Tema - Alecsander Lima - Guia de Descarte Eletronico.pdf` |

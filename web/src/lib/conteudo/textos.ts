@@ -119,7 +119,30 @@ export const pontosDeColeta = {
 	naoEncontrado: 'Não encontramos esse CEP ou bairro em Belém. Confira e tente de novo.',
 	erroDeRede: 'Não foi possível carregar os pontos agora. Verifique sua conexão e tente de novo.',
 	localizacaoNegada:
-		'Sem permissão para usar sua localização. Você ainda pode buscar pelo CEP ou pelo bairro.'
+		'Sem permissão para usar sua localização. Você ainda pode buscar pelo CEP ou pelo bairro.',
+	// Textos de apoio (leitores de tela, estados e avisos).
+	botaoBuscar: 'Buscar',
+	rotuloDoFiltro: 'Filtrar por tipo de resíduo',
+	rotuloDaLista: 'Pontos de coleta',
+	rotuloDoMapa: 'Mapa dos pontos de coleta',
+	primeiraBuscaDemora: 'A primeira busca pode demorar um pouco. Já estamos buscando.',
+	tentarDeNovo: 'Tentar de novo',
+	localizacaoIndisponivel: 'Não foi possível descobrir sua localização agora. Tente buscar pelo CEP ou pelo bairro.',
+	localizando: 'Descobrindo sua localização…',
+	referenciaAtual: 'Distâncias a partir de',
+	suaLocalizacao: 'sua localização',
+	limparReferencia: 'Limpar busca',
+	sugerirEmBreve: '(em breve)',
+	// Rótulo lido por leitores de tela no "Como chegar" de cada ponto: "Como chegar até <nome>".
+	comoChegarAte: 'Como chegar até',
+	selecionar: 'Selecionar no mapa',
+	// Nomes de exibição dos tipos aceitos (mesmos códigos da API).
+	nomesDosTipos: {
+		celulares_tablets: 'Celulares e tablets',
+		pilhas_baterias: 'Pilhas e baterias',
+		computadores_perifericos: 'Computadores e periféricos',
+		cabos_carregadores: 'Cabos e carregadores'
+	}
 } as const;
 
 /** Os `valor` são FICTÍCIOS: trocar pelos dados reais antes de publicar (SPEC §14). */

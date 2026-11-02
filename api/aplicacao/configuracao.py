@@ -33,6 +33,22 @@ class Configuracoes:
             PASTA_API / os.getenv("RECIRCUITO_ARQUIVO_PONTOS", "dados/pontos.json")
         )
     )
+    # Identificação enviada ao Nominatim (a política de uso exige um contato real).
+    # Em produção, defina RECIRCUITO_CONTATO com o e-mail do projeto.
+    agente_http: str = field(
+        default_factory=lambda: (
+            "ReCircuito/0.1 (projeto de extensao UNINTER; contato: "
+            + os.getenv("RECIRCUITO_CONTATO", "nao-informado")
+            + ")"
+        )
+    )
+    # Cache de geocodificação em disco. Pasta api/.cache/ já é ignorada pelo Git.
+    arquivo_cache_geocodificacao: Path = field(
+        default_factory=lambda: (
+            PASTA_API
+            / os.getenv("RECIRCUITO_ARQUIVO_CACHE", ".cache/geocodificacao.json")
+        )
+    )
     # Fuso usado no "aberto agora". Belém não tem horário de verão (UTC-3 o ano todo).
     fuso_horario: str = "America/Belem"
 

@@ -1,29 +1,72 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import BannerCookies from '$lib/componentes/BannerCookies.svelte';
+	import Hero from '$lib/componentes/Hero.svelte';
+	import Sobre from '$lib/componentes/Sobre.svelte';
+	import ComoDescartar from '$lib/componentes/ComoDescartar.svelte';
+	import OQueDescartar from '$lib/componentes/OQueDescartar.svelte';
+	import PontosDeColeta from '$lib/componentes/PontosDeColeta.svelte';
+	import Impacto from '$lib/componentes/Impacto.svelte';
+	import Rodape from '$lib/componentes/Rodape.svelte';
+	import { hero } from '$lib/conteudo/textos';
+
+	// Texto do link de atalho. Ainda não está em textos.ts (arquivo de outra frente).
+	const pularParaConteudo = 'Pular para o conteúdo';
+
+	const titulo = 'ReCircuito · Descarte de lixo eletrônico em Belém';
+	const descricao =
+		'Saiba como descartar lixo eletrônico em Belém e encontre o ponto de coleta mais próximo.';
 </script>
 
 <svelte:head>
-	<title>ReCircuito · Descarte de lixo eletrônico em Belém</title>
-	<meta
-		name="description"
-		content="Saiba como descartar lixo eletrônico em Belém e encontre o ponto de coleta mais próximo."
-	/>
+	<title>{titulo}</title>
+	<meta name="description" content={descricao} />
+	<meta property="og:type" content="website" />
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:site_name" content="ReCircuito" />
+	<meta property="og:title" content={titulo} />
+	<meta property="og:description" content={hero.texto} />
 </svelte:head>
 
-<!-- Página provisória: só confirma que estilos, fontes e logo carregam.
-     As seções reais (Hero, Sobre, ComoDescartar...) entram na etapa de estrutura. -->
-<main class="provisoria">
-	<img src="{base}/logos/logo-horizontal-site.svg" alt="ReCircuito" width="320" height="51" />
-	<p>Site em construção.</p>
+<!-- Ordem de tabulação: atalho, aviso de cookies, depois a página. -->
+<a class="pular" href="#conteudo">{pularParaConteudo}</a>
+
+<BannerCookies />
+
+<Hero />
+
+<main id="conteudo" tabindex="-1">
+	<Sobre />
+	<ComoDescartar />
+	<OQueDescartar />
+	<!-- O próprio PontosDeColeta já traz a seção com id="pontos-de-coleta". -->
+	<PontosDeColeta />
+	<Impacto />
 </main>
 
+<Rodape />
+
 <style>
-	.provisoria {
-		min-height: 100svh;
-		display: grid;
-		place-content: center;
-		gap: 1.5rem;
-		justify-items: center;
-		background: var(--bg-hero);
+	/* Só aparece quando recebe foco pelo teclado. */
+	.pular {
+		position: fixed;
+		top: 8px;
+		left: 8px;
+		z-index: 100;
+		padding: 12px 16px;
+		background: var(--ink);
+		color: #fff;
+		font-family: var(--font-interface);
+		font-weight: 600;
+		font-size: 15px;
+		transform: translateY(-200%);
+	}
+
+	.pular:focus {
+		transform: none;
+		outline-color: #fff;
+	}
+
+	main:focus {
+		outline: none;
 	}
 </style>
