@@ -41,3 +41,9 @@ htmlcov/
 
 # Cache de geocodificação gerado em tempo de execução
 api/.cache/
+
+# Respostas enviadas pelas pessoas no site (avaliações e sugestões de pontos).
+# Ficam só no servidor: não vão para o repositório, que é público (RNF06).
+# A API cria os arquivos sozinha no primeiro envio.
+api/dados/avaliacoes.json
+api/dados/sugestoes.json

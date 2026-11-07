@@ -5,6 +5,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#E8F1EA" />
 		<link rel="icon" type="image/svg+xml" href="%sveltekit.assets%/favicon.svg" />
+		<script>
+			// Abertura animada (Abertura.svelte): decide ANTES de a página ser pintada,
+			// para a cortina já cobrir a tela no primeiro quadro (sem "piscar" o site).
+			// Só toca com JavaScript ligado, sem preferência por movimento reduzido
+			// (RNF02) e quando a URL não aponta para uma seção (#pontos-de-coleta etc.).
+			// Toca em todo carregamento, inclusive no F5. Para isso o navegador não
+			// pode devolver a pessoa ao ponto onde ela estava: a abertura entrega a
+			// tela para o topo (Hero), então a página sempre recomeça do início.
+			if (!matchMedia('(prefers-reduced-motion: reduce)').matches && !location.hash) {
+				document.documentElement.classList.add('com-abertura');
+				history.scrollRestoration = 'manual';
+				window.scrollTo(0, 0);
+			}
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

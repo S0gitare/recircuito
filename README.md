@@ -62,7 +62,12 @@ A API sobe em http://localhost:8000. A documentação interativa fica em http://
 | `GET /api/pontos/{id}` | Um ponto; 404 se não existir |
 | `GET /api/geocodificar?q=` | Transforma um CEP ou bairro de Belém em coordenada (ver abaixo) |
 | `GET /api/tipos` | Tipos de resíduo com nome de exibição |
+| `POST /api/sugestoes` | Recebe a sugestão de um ponto de coleta ("Sugerir um ponto") e grava em `dados/sugestoes.json` para revisão |
 | `GET /api/saude` | Verificação para a hospedagem |
+
+### Respostas do site
+
+As avaliações e as sugestões de pontos ficam em `api/dados/avaliacoes.json` e `api/dados/sugestoes.json`. Esses arquivos **não vão para o Git** (estão no `.gitignore`): são respostas de pessoas, e o repositório é público. A API cria cada arquivo no primeiro envio.
 
 ### Variáveis de ambiente
 

@@ -3,7 +3,10 @@
 	import { revelar } from '$lib/animacao/revelar';
 </script>
 
-<section id="sobre" aria-label={navegacao[0].rotulo}>
+<!-- O título fica só para leitores de tela: quem navega pelos títulos (h2)
+     encontra a seção; na tela, a frase de impacto já abre a seção. -->
+<section id="sobre" aria-labelledby="titulo-sobre">
+	<h2 id="titulo-sobre" class="visualmente-oculto">{navegacao[0].rotulo}</h2>
 	<p class="frase" use:revelar>{sobre.frase}</p>
 	<p class="texto" use:revelar={{ atraso: 0.1 }}>{sobre.texto}</p>
 </section>

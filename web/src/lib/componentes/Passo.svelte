@@ -103,8 +103,11 @@
 			color: var(--muted);
 		}
 
+		/* Até 300px (protótipo), mas encolhe com a coluna: em telas de ~1000px
+		   as 4 colunas têm menos de 300px cada e a página vazava para o lado. */
 		.ilustracao {
-			width: 300px;
+			width: 100%;
+			max-width: 300px;
 			margin-top: 48px;
 		}
 

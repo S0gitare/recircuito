@@ -193,3 +193,57 @@ class AvaliacaoRegistrada(NovaAvaliacao):
     """Avaliação gravada em disco com data ISO garantida."""
 
     data: str
+
+
+def _texto_limpo(valor: str | None) -> str | None:
+    """Tira espaços das pontas; texto vazio vira None."""
+    if valor is None:
+        return None
+    texto = valor.strip()
+    return texto or None
+
+
+class NovaSugestao(BaseModel):
+    """Ponto de coleta indicado por alguém pelo site ("Sugerir um ponto", RF08).
+
+    De propósito, não há campo de contato (e-mail, telefone): seria dado
+    pessoal, e o site promete não coletar nenhum além do Analytics (RNF06).
+    """
+
+    nome: str = Field(
+        min_length=2, max_length=120, description="Nome do local (ex.: loja, ecoponto)"
+    )
+    endereco: str = Field(
+        min_length=3, max_length=200, description="Endereço ou bairro do local em Belém"
+    )
+    tipos: list[TipoResiduo] = Field(
+        min_length=1, description="Tipos de resíduo que o local recebe"
+    )
+    observacao: str | None = Field(
+        default=None,
+        max_length=500,
+        description="Como a pessoa sabe do ponto, horário, observações (opcional)",
+    )
+
+    @field_validator("nome", "endereco", mode="before")
+    @classmethod
+    def limpar_obrigatorio(cls, valor: object) -> object:
+        # Limpa antes de validar o tamanho: "   " não pode passar como nome.
+        return valor.strip() if isinstance(valor, str) else valor
+
+    @field_validator("observacao")
+    @classmethod
+    def limpar_observacao(cls, valor: str | None) -> str | None:
+        return _texto_limpo(valor)
+
+    @field_validator("tipos")
+    @classmethod
+    def sem_tipos_repetidos(cls, valor: list[TipoResiduo]) -> list[TipoResiduo]:
+        # Mantém a ordem da primeira ocorrência.
+        return list(dict.fromkeys(valor))
+
+
+class SugestaoRegistrada(NovaSugestao):
+    """Sugestão gravada em disco, com a data em que chegou (sempre do servidor)."""
+
+    data: str

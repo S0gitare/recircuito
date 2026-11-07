@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { pontosDeColeta as textos } from '$lib/conteudo/textos';
 	import type { PontoDeColeta } from '$lib/api/pontos';
+	import { flip } from 'svelte/animate';
+	import { quintOut } from 'svelte/easing';
+	import { PONTOS, atrasoEmCascata } from '$lib/animacao/movimento';
+	import { prefereMovimentoReduzido } from '$lib/animacao/movimentoReduzido';
 
 	interface Props {
 		pontos: PontoDeColeta[];
@@ -31,6 +35,30 @@
 		return `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`;
 	}
 
+	// ---- Animação ao filtrar ----
+	// `quintOut` é a curva de saída do Svelte mais próxima de --curva-saida.
+	// Só os itens que entram ou saem se animam; os que ficam deslizam (FLIP)
+	// para o novo lugar. No primeiro carregamento nada se anima: o Svelte só
+	// roda `in:` em itens adicionados depois que a lista já existe.
+	const semMovimento = () => prefereMovimentoReduzido();
+
+	/** Item novo: sobe 8px enquanto aparece, em cascata curta com os outros novos. */
+	function entrar(_no: Element, { ordem }: { ordem: number }) {
+		if (semMovimento()) return { duration: 0 };
+		return {
+			duration: PONTOS.entrada,
+			delay: atrasoEmCascata(ordem),
+			easing: quintOut,
+			css: (t: number) => `opacity: ${t}; transform: translateY(${(1 - t) * 8}px)`
+		};
+	}
+
+	/** Item que saiu do filtro: só esmaece, rápido, sem se deslocar. */
+	function sair(_no: Element) {
+		if (semMovimento()) return { duration: 0 };
+		return { duration: PONTOS.saida, easing: quintOut, css: (t: number) => `opacity: ${t}` };
+	}
+
 	function nomesDosTipos(ponto: PontoDeColeta): string {
 		return ponto.tipos_aceitos.map((tipo) => textos.nomesDosTipos[tipo]).join(', ');
 	}
@@ -39,7 +67,13 @@
 <ul aria-label={textos.rotuloDaLista}>
 	{#each pontos as ponto, i (ponto.id)}
 		{@const selecionado = ponto.id === selecionadoId}
-		<li class:selecionado>
+		<li
+			class:selecionado
+			data-ponto-id={ponto.id}
+			in:entrar={{ ordem: i }}
+			out:sair
+			animate:flip={{ duration: semMovimento() ? 0 : PONTOS.reorganizar, easing: quintOut }}
+		>
 			<button
 				type="button"
 				class="corpo"
@@ -92,6 +126,11 @@
 	li {
 		padding: 20px 4px 12px;
 		border-bottom: 1px solid var(--line-soft);
+	}
+
+	li:last-child {
+		/* O contêiner pai (.itens) já possui borda inferior; remove do último item para não duplicar traços. */
+		border-bottom: 0;
 	}
 
 	.corpo {
@@ -184,5 +223,31 @@
 		color: var(--green-strong);
 		text-decoration: underline;
 		text-underline-offset: 3px;
+	}
+
+	/* Desktop com mouse: itens mais baixos para caber mais pontos ao lado do mapa.
+	   No toque, o "Como chegar" mantém os 44px de área (RNF01). */
+	@media (min-width: 768px) {
+		li {
+			padding: 14px 4px 4px;
+		}
+
+		.nome {
+			font-size: 1rem;
+		}
+
+		.endereco {
+			font-size: 0.875rem;
+		}
+
+		.detalhes {
+			font-size: 0.8125rem;
+		}
+	}
+
+	@media (min-width: 768px) and (pointer: fine) {
+		.rota {
+			min-height: 32px;
+		}
 	}
 </style>

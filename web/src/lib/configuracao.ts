@@ -13,9 +13,6 @@ const ler = (valor: string | undefined, padrao = ''): string => (valor ?? padrao
 /** Endereço da API (FastAPI). Sem barra no final. */
 export const urlDaApi = ler(import.meta.env.VITE_URL_DA_API, 'http://localhost:8010').replace(/\/$/, '');
 
-/** Google Forms "Sugerir um ponto" (RF08). Vazio enquanto o formulário não existe (SPEC §14). */
-export const urlFormularioSugestao = ler(import.meta.env.VITE_URL_FORMULARIO_SUGESTAO);
-
 /** Google Forms "Avaliar o site" (RF11). Vazio enquanto o formulário não existe (SPEC §14). */
 export const urlFormularioAvaliacao = ler(import.meta.env.VITE_URL_FORMULARIO_AVALIACAO);
 

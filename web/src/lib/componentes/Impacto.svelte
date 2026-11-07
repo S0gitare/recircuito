@@ -44,13 +44,16 @@
 	}
 
 	li {
+		min-width: 0;
 		padding-top: 14px;
 		border-top: 1px solid var(--line);
 	}
 
 	.numero {
 		font-weight: 500;
-		font-size: 44px;
+		/* No celular a coluna tem ~165px: "1.240 kg" a 44px encostava no vizinho.
+		   Acompanha a largura da tela, entre 32px e 44px. */
+		font-size: clamp(32px, 9vw, 44px);
 		line-height: 1.1;
 		letter-spacing: -0.02em;
 		/* Algarismos de mesma largura: o número não "treme" enquanto conta. */

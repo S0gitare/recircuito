@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { base } from '$app/paths';
 	import { bannerCookies } from '$lib/conteudo/textos';
 	import {
 		carregarGoogleAnalytics,
@@ -31,7 +32,10 @@
 {#if visivel}
 	<section class="banner" aria-label={bannerCookies.rotuloDaRegiao}>
 		<p class="titulo">{bannerCookies.titulo}</p>
-		<p class="texto">{bannerCookies.texto}</p>
+		<p class="texto">
+			{bannerCookies.texto}
+			<a href="{base}/privacidade">{bannerCookies.saibaMais}</a>
+		</p>
 		<!-- Os dois botões têm o mesmo tamanho e a mesma cor: recusar não pode ser mais difícil (RF10). -->
 		<div class="botoes">
 			<button type="button" onclick={() => escolher('recusado')}>{bannerCookies.recusar}</button>
@@ -94,5 +98,12 @@
 			border: 1px solid var(--line);
 			padding: 24px;
 		}
+	}
+
+	.texto a {
+		font-weight: 600;
+		color: var(--green-strong);
+		text-decoration: underline;
+		text-underline-offset: 3px;
 	}
 </style>

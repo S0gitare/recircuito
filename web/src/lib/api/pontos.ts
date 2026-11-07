@@ -10,7 +10,7 @@
  * cancelada, o erro tem `tipo === 'cancelado'` e o componente deve ignorá-lo.
  */
 import { urlDaApi } from '$lib/configuracao';
-import { pontosDeColeta as textos, modalAvaliacao } from '$lib/conteudo/textos';
+import { pontosDeColeta as textos, modalAvaliacao, modalSugestao } from '$lib/conteudo/textos';
 
 export type TipoResiduo =
 	| 'celulares_tablets'
@@ -164,16 +164,20 @@ export interface RespostaAvaliacao {
 	data: string;
 }
 
-/** POST /api/avaliacoes. Envia a avaliação do site para o servidor. */
-export async function enviarAvaliacao(
-	dados: DadosDaAvaliacao,
+/**
+ * POST com corpo JSON (avaliações, sugestões). `mensagemDeErro` é o texto
+ * mostrado quando não há rede ou a resposta veio quebrada; quando a API recusa
+ * os dados, vale a `mensagem` que ela mesma devolve.
+ */
+async function enviar<T>(
+	caminho: string,
+	dados: unknown,
+	mensagemDeErro: string,
 	sinal?: AbortSignal
-): Promise<RespostaAvaliacao> {
-	const url = `${urlDaApi}/api/avaliacoes`;
-
+): Promise<T> {
 	let resposta: Response;
 	try {
-		resposta = await fetch(url, {
+		resposta = await fetch(`${urlDaApi}${caminho}`, {
 			method: 'POST',
 			signal: sinal,
 			headers: {
@@ -186,25 +190,53 @@ export async function enviarAvaliacao(
 		if (erro instanceof DOMException && erro.name === 'AbortError') {
 			throw new ErroDaApi('cancelado', 'Requisição cancelada.');
 		}
-		throw new ErroDaApi('rede', modalAvaliacao.erroEnvio);
+		throw new ErroDaApi('rede', mensagemDeErro);
 	}
 
 	if (resposta.ok) {
 		try {
-			return (await resposta.json()) as RespostaAvaliacao;
+			return (await resposta.json()) as T;
 		} catch {
 			if (sinal?.aborted) throw new ErroDaApi('cancelado', 'Requisição cancelada.');
-			throw new ErroDaApi('servidor', modalAvaliacao.erroEnvio);
+			throw new ErroDaApi('servidor', mensagemDeErro);
 		}
 	}
 
-	let mensagem: string = modalAvaliacao.erroEnvio;
+	let mensagem = mensagemDeErro;
 	try {
 		const corpo = (await resposta.json()) as { mensagem?: string };
 		mensagem = corpo.mensagem ?? mensagem;
 	} catch {
-		// Mantém mensagem de erro padrão
+		// Mantém a mensagem padrão.
 	}
 	throw new ErroDaApi('servidor', mensagem);
+}
+
+/** POST /api/avaliacoes. Envia a avaliação do site para o servidor. */
+export function enviarAvaliacao(
+	dados: DadosDaAvaliacao,
+	sinal?: AbortSignal
+): Promise<RespostaAvaliacao> {
+	return enviar<RespostaAvaliacao>('/api/avaliacoes', dados, modalAvaliacao.erroEnvio, sinal);
+}
+
+export interface DadosDaSugestao {
+	nome: string;
+	endereco: string;
+	tipos: TipoResiduo[];
+	observacao?: string | null;
+}
+
+export interface RespostaSugestao extends DadosDaSugestao {
+	observacao: string | null;
+	data: string;
+}
+
+/** POST /api/sugestoes. Indica um ponto de coleta que ainda não está no mapa (RF08). */
+export function enviarSugestao(
+	dados: DadosDaSugestao,
+	sinal?: AbortSignal
+): Promise<RespostaSugestao> {
+	return enviar<RespostaSugestao>('/api/sugestoes', dados, modalSugestao.erroEnvio, sinal);
 }
 

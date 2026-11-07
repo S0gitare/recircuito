@@ -12,6 +12,23 @@ import { prefereMovimentoReduzido } from './movimentoReduzido';
 
 let lenis: Lenis | null = null;
 
+// A abertura do site trava a rolagem enquanto cobre a tela. Ela pode pedir
+// isso antes de o Lenis existir (o onMount da página roda antes do onMount do
+// layout), então guardamos o pedido e aplicamos quando o Lenis nascer.
+let rolagemTravada = false;
+
+/** Impede a rolagem (com ou sem Lenis) até `liberarRolagem()`. */
+export function travarRolagem(): void {
+	rolagemTravada = true;
+	lenis?.stop();
+}
+
+/** Devolve a rolagem travada por `travarRolagem()`. */
+export function liberarRolagem(): void {
+	rolagemTravada = false;
+	lenis?.start();
+}
+
 /** Liga a rolagem suave. Devolve a função que desliga (use no onMount/onDestroy). */
 export function iniciarLenis(): () => void {
 	// Movimento reduzido: rolagem nativa, sem inércia.
@@ -21,6 +38,7 @@ export function iniciarLenis(): () => void {
 		virtualScroll: ({ event }) => !event.defaultPrevented
 	});
 	lenis = instancia;
+	if (rolagemTravada) instancia.stop();
 
 	instancia.on('scroll', ScrollTrigger.update);
 

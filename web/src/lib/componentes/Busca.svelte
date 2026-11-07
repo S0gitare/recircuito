@@ -142,4 +142,23 @@
 		padding-left: 12px;
 		border-left: 2px solid var(--green);
 	}
+
+	/* Desktop: campo um pouco mais baixo para a seção caber na tela ao lado do mapa. */
+	@media (min-width: 768px) {
+		input {
+			height: 48px;
+			padding-right: 52px;
+		}
+
+		.lupa {
+			width: 48px;
+			height: 48px;
+		}
+	}
+
+	@media (min-width: 768px) and (pointer: fine) {
+		.localizacao {
+			min-height: 32px;
+		}
+	}
 </style>

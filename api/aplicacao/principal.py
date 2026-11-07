@@ -10,7 +10,7 @@ from fastapi.responses import JSONResponse
 from starlette.exceptions import HTTPException
 
 from aplicacao.configuracao import configuracoes
-from aplicacao.rotas import avaliacoes, geocodificacao, pontos, saude, tipos
+from aplicacao.rotas import avaliacoes, geocodificacao, pontos, saude, sugestoes, tipos
 
 app = FastAPI(
     title="ReCircuito API",
@@ -22,7 +22,7 @@ app = FastAPI(
     redoc_url=None,
 )
 
-# Libera GET para consultas e POST para envio de avaliações.
+# Libera GET para consultas e POST para envio de avaliações e sugestões.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=configuracoes.origens_permitidas,
@@ -30,7 +30,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-for modulo in (saude, tipos, pontos, geocodificacao, avaliacoes):
+for modulo in (saude, tipos, pontos, geocodificacao, avaliacoes, sugestoes):
     app.include_router(modulo.roteador, prefix="/api")
 
 

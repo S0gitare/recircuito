@@ -3,6 +3,7 @@
 	import type { Map as MapaMapLibre, Marker, Popup } from 'maplibre-gl';
 	import { pontosDeColeta as textos } from '$lib/conteudo/textos';
 	import { prefereMovimentoReduzido } from '$lib/animacao/movimentoReduzido';
+	import { CURVA_CSS, PONTOS, atrasoEmCascata } from '$lib/animacao/movimento';
 	import { estilizarMapa } from '$lib/mapa/estiloDoMapa';
 	import type { PontoDeColeta } from '$lib/api/pontos';
 
@@ -10,11 +11,15 @@
 		pontos: PontoDeColeta[];
 		selecionadoId: string | null;
 		/** Posição buscada (CEP, bairro ou aparelho). Sem ela, o mapa mostra todos os pontos. */
-		referencia: { lat: number; lon: number } | null;
+		referencia: { lat: number; lon: number; rotulo: string } | null;
 		aoSelecionar: (id: string | null) => void;
 	}
 
 	let { pontos, selecionadoId, referencia, aoSelecionar }: Props = $props();
+
+	// Lido fora de um efeito (no evento de resize): com um ponto selecionado, o
+	// mapa está centrado nele e reenquadrar tudo tiraria a pessoa de lá.
+	const selecionadoAtual = () => selecionadoId;
 
 	const URL_DO_ESTILO = 'https://tiles.openfreemap.org/styles/positron';
 	const CENTRO_DE_BELEM: [number, number] = [-48.4902, -1.4558]; // [lon, lat]: a ordem do MapLibre
@@ -35,6 +40,10 @@
 	let marcadorDaReferencia: Marker | null = null;
 	let balao: Popup | null = null;
 	let primeiroEnquadramento = true;
+	/** Último enquadramento pedido, para refazer quando a tela muda de tamanho. */
+	let ultimosLimites: import('maplibre-gl').LngLatBounds | null = null;
+
+	const margemDoEnquadramento = () => (window.innerWidth < 768 ? 36 : 56);
 
 	onMount(() => {
 		let cancelado = false;
@@ -78,8 +87,29 @@
 			}
 		})();
 
+		// Girar o celular ou redimensionar a janela muda o tamanho do mapa: sem
+		// reenquadrar, os pinos podiam ficar fora da área visível. Espera a
+		// pessoa parar de redimensionar (200ms) e reenquadra sem animação.
+		let temporizadorDoTamanho: ReturnType<typeof setTimeout> | undefined;
+		const aoMudarTamanho = () => {
+			clearTimeout(temporizadorDoTamanho);
+			temporizadorDoTamanho = setTimeout(() => {
+				if (!instancia || !ultimosLimites || selecionadoAtual()) return;
+				// Atualiza o tamanho do mapa antes de calcular o enquadramento novo.
+				instancia.resize();
+				instancia.fitBounds(ultimosLimites, {
+					padding: margemDoEnquadramento(),
+					maxZoom: 15,
+					duration: 0
+				});
+			}, 200);
+		};
+		window.addEventListener('resize', aoMudarTamanho);
+
 		return () => {
 			cancelado = true;
+			window.removeEventListener('resize', aoMudarTamanho);
+			clearTimeout(temporizadorDoTamanho);
 			marcadores.clear();
 			instancia?.remove();
 			mapa = null;
@@ -92,7 +122,7 @@
 		botao.type = 'button';
 		botao.className = 'marcador-ponto';
 		botao.setAttribute('aria-label', ponto.nome);
-		for (const classe of ['anel', 'circulo']) {
+		for (const classe of ['anel', 'ping', 'circulo']) {
 			const parte = document.createElement('span');
 			parte.className = classe;
 			botao.append(parte);
@@ -104,35 +134,124 @@
 		return botao;
 	}
 
-	// 1) Marcadores: refeitos sempre que a lista de pontos muda (filtro, busca).
+	/**
+	 * Pino novo: o círculo cresce de 50% e um anel fino se abre uma vez em volta
+	 * ("ping"), marcando onde ele apareceu. As animações rodam nos filhos do
+	 * botão, porque o próprio botão é posicionado pelo MapLibre com `transform`.
+	 */
+	function animarEntrada(botao: HTMLButtonElement, ordem: number) {
+		const atraso = atrasoEmCascata(ordem);
+		botao.querySelector('.circulo')?.animate(
+			[
+				{ opacity: 0, transform: 'scale(0.5)' },
+				{ opacity: 1, transform: 'scale(1)' }
+			],
+			{ duration: PONTOS.entrada, delay: atraso, easing: CURVA_CSS.saida, fill: 'backwards' }
+		);
+		botao.querySelector('.ping')?.animate(
+			[
+				{ opacity: 0.45, transform: 'scale(1)' },
+				{ opacity: 0, transform: 'scale(2.2)' }
+			],
+			{ duration: PONTOS.ping, delay: atraso + 60, easing: CURVA_CSS.saida, fill: 'backwards' }
+		);
+	}
+
+	/** Pino que saiu do filtro: encolhe um pouco e some; só então sai do mapa. */
+	function animarSaida(marcador: Marker, botao: HTMLButtonElement) {
+		botao.disabled = true; // não pode ser clicado enquanto some
+		const circulo = botao.querySelector('.circulo');
+		if (!circulo) {
+			marcador.remove();
+			return;
+		}
+		circulo.animate(
+			[
+				{ opacity: 1, transform: 'scale(1)' },
+				{ opacity: 0, transform: 'scale(0.6)' }
+			],
+			{ duration: PONTOS.saida, easing: CURVA_CSS.saida, fill: 'forwards' }
+		);
+		// Remove pelo relógio, não pelo fim da animação: com a aba em segundo plano
+		// o navegador pausa as animações, e o pino ficaria preso no mapa.
+		setTimeout(() => marcador.remove(), PONTOS.saida);
+	}
+
+	// 1) Marcadores: ao mudar a lista (filtro, busca), compara pelos ids. Quem
+	// continua fica parado; quem saiu some animado; quem chegou entra em cascata.
 	$effect(() => {
 		if (!mapa || !biblioteca) return;
 		const { Marker } = biblioteca;
 		const atual = mapa;
+		const animar = !prefereMovimentoReduzido();
+		const idsAtuais = new Set(pontos.map((p) => p.id));
 
+		for (const [id, { marcador, botao }] of marcadores) {
+			if (idsAtuais.has(id)) continue;
+			marcadores.delete(id);
+			if (animar) animarSaida(marcador, botao);
+			else marcador.remove();
+		}
+
+		let novos = 0;
 		for (const ponto of pontos) {
+			if (marcadores.has(ponto.id)) continue;
 			const botao = criarBotao(ponto);
 			const marcador = new Marker({ element: botao, anchor: 'center' })
 				.setLngLat([ponto.coordenadas.lon, ponto.coordenadas.lat])
 				.addTo(atual);
 			marcadores.set(ponto.id, { marcador, botao });
+			if (animar) animarEntrada(botao, novos++);
 		}
-
-		return () => {
-			for (const { marcador } of marcadores.values()) marcador.remove();
-			marcadores.clear();
-		};
 	});
 
-	// 2) Marcador da posição buscada: um pontinho cheio, só decorativo.
-	$effect(() => {
-		if (!mapa || !biblioteca || !referencia) return;
+	/**
+	 * Texto da etiqueta do ponto de partida. Localização do aparelho vira
+	 * "Você está aqui"; uma busca mostra só a primeira parte do rótulo da API
+	 * ("Nazaré, Belém - PA" → "Nazaré"), que é o que a pessoa digitou.
+	 */
+	function textoDaEtiqueta(rotulo: string): string {
+		if (rotulo === textos.suaLocalizacao) return textos.voceEstaAqui;
+		return rotulo.split(',')[0].trim() || rotulo;
+	}
+
+	/**
+	 * Marcador do ponto de partida. Precisa ser impossível de confundir com um
+	 * ponto de coleta (círculo branco de contorno preto), por isso não depende
+	 * só da forma: tem TEXTO. São três camadas, de fora para dentro:
+	 * - halo: área clara em volta, que destaca o lugar sem esconder as ruas;
+	 * - ponto: preto com anel branco e contorno fino, visível sobre qualquer fundo;
+	 * - etiqueta: plaquinha escura acima, com "Você está aqui" ou o bairro buscado.
+	 */
+	function criarMarcadorDaReferencia(rotulo: string): HTMLDivElement {
+		const texto = textoDaEtiqueta(rotulo);
 		const elemento = document.createElement('div');
 		elemento.className = 'marcador-referencia';
-		elemento.setAttribute('aria-hidden', 'true');
-		marcadorDaReferencia = new biblioteca.Marker({ element: elemento })
+		elemento.setAttribute('role', 'img');
+		elemento.setAttribute('aria-label', `${textos.pontoDePartida}: ${texto}`);
+		if (prefereMovimentoReduzido()) elemento.classList.add('sem-movimento');
+
+		const halo = document.createElement('span');
+		halo.className = 'halo';
+		const ponto = document.createElement('span');
+		ponto.className = 'ponto';
+		const etiqueta = document.createElement('span');
+		etiqueta.className = 'etiqueta';
+		etiqueta.textContent = texto; // textContent: o rótulo vem da API, nunca vira HTML
+
+		elemento.append(halo, ponto, etiqueta);
+		return elemento;
+	}
+
+	// 2) Marcador da posição buscada (CEP, bairro ou aparelho).
+	$effect(() => {
+		if (!mapa || !biblioteca || !referencia) return;
+		const elemento = criarMarcadorDaReferencia(referencia.rotulo);
+		marcadorDaReferencia = new biblioteca.Marker({ element: elemento, anchor: 'center' })
 			.setLngLat([referencia.lon, referencia.lat])
 			.addTo(mapa);
+		// Por cima dos pinos de coleta (que usam 1 e 2).
+		elemento.style.zIndex = '3';
 		return () => {
 			marcadorDaReferencia?.remove();
 			marcadorDaReferencia = null;
@@ -234,8 +353,9 @@
 
 		const animar = !primeiroEnquadramento && !prefereMovimentoReduzido();
 		primeiroEnquadramento = false;
+		ultimosLimites = limites;
 		mapa.fitBounds(limites, {
-			padding: window.innerWidth < 768 ? 36 : 56,
+			padding: margemDoEnquadramento(),
 			maxZoom: 15,
 			duration: animar ? 600 : 0
 		});
@@ -297,6 +417,20 @@
 		display: none;
 	}
 
+	/* Anel do "ping" de entrada: invisível parado; só aparece durante a animação. */
+	:global(.marcador-ponto .ping) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 22px;
+		height: 22px;
+		margin: -11px 0 0 -11px;
+		border: 1.5px solid var(--ink);
+		border-radius: 50%;
+		opacity: 0;
+		pointer-events: none;
+	}
+
 	/* Anel que cresce de 28px a 108px e some, 1,6s em loop (SPEC §7). */
 	:global(.marcador-ponto.selecionado .anel) {
 		display: block;
@@ -340,12 +474,111 @@
 		outline-offset: 3px;
 	}
 
+	/* ---- Ponto de partida (posição buscada ou do aparelho) ----
+	   O elemento tem 44×44 com o ponto no centro (é o centro que o MapLibre
+	   prende na coordenada); halo e etiqueta saem dele com position: absolute.
+	   É decorativo para o clique: os pinos de coleta embaixo continuam clicáveis. */
 	:global(.marcador-referencia) {
-		width: 12px;
-		height: 12px;
+		position: relative;
+		width: 44px;
+		height: 44px;
+		pointer-events: none;
+	}
+
+	:global(.marcador-referencia .halo),
+	:global(.marcador-referencia .ponto) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
 		border-radius: 50%;
+	}
+
+	/* Área clara e fina em volta: marca o lugar sem apagar o mapa. */
+	:global(.marcador-referencia .halo) {
+		width: 56px;
+		height: 56px;
+		margin: -28px 0 0 -28px;
+		background: rgba(15, 26, 20, 0.08);
+		border: 1px solid rgba(15, 26, 20, 0.28);
+	}
+
+	/* Ponto preto com anel branco e contorno fino por fora: contraste sobre
+	   ruas claras, áreas verdes e rótulos do mapa. */
+	:global(.marcador-referencia .ponto) {
+		width: 18px;
+		height: 18px;
+		margin: -9px 0 0 -9px;
 		background: var(--ink);
-		border: 2px solid var(--bg);
+		border: 3px solid var(--bg);
+		box-shadow: 0 0 0 1px var(--ink);
+	}
+
+	/* Plaquinha acima do ponto, com a ponta apontando para ele. */
+	:global(.marcador-referencia .etiqueta) {
+		position: absolute;
+		bottom: calc(50% + 18px);
+		left: 50%;
+		transform: translateX(-50%);
+		max-width: 180px;
+		padding: 5px 10px;
+		background: var(--ink);
+		color: #fff;
+		font-family: var(--font-interface);
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 1.2;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	:global(.marcador-referencia .etiqueta::after) {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin-left: -5px;
+		border: 5px solid transparent;
+		border-top-color: var(--ink);
+	}
+
+	/* Chegada (uma vez): o ponto "pousa", o halo se abre e a etiqueta desce no lugar.
+	   Curta e com pouca amplitude: informa onde é, sem chamar mais atenção que os pinos. */
+	:global(.marcador-referencia .ponto) {
+		animation: referencia-pousar var(--dur-entrada) var(--curva-saida) both;
+	}
+
+	:global(.marcador-referencia .halo) {
+		animation: referencia-halo 480ms var(--curva-saida) 80ms both;
+	}
+
+	:global(.marcador-referencia .etiqueta) {
+		animation: referencia-etiqueta var(--dur-entrada) var(--curva-saida) 140ms both;
+	}
+
+	@keyframes referencia-pousar {
+		from {
+			opacity: 0;
+			transform: translateY(-10px) scale(0.7);
+		}
+	}
+
+	@keyframes referencia-halo {
+		from {
+			opacity: 0;
+			transform: scale(0.4);
+		}
+	}
+
+	@keyframes referencia-etiqueta {
+		from {
+			opacity: 0;
+			transform: translate(-50%, 6px);
+		}
+	}
+
+	:global(.marcador-referencia.sem-movimento :is(.halo, .ponto, .etiqueta)) {
+		animation: none;
 	}
 
 	/* Balão: caixa branca, borda fina, cantos retos, sem sombra e sem a setinha. */

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Abertura from '$lib/componentes/Abertura.svelte';
 	import BannerCookies from '$lib/componentes/BannerCookies.svelte';
 	import Hero from '$lib/componentes/Hero.svelte';
 	import Sobre from '$lib/componentes/Sobre.svelte';
@@ -29,6 +30,8 @@
 
 <!-- Ordem de tabulação: atalho, aviso de cookies, depois a página. -->
 <a class="pular" href="#conteudo">{pularParaConteudo}</a>
+
+<Abertura />
 
 <BannerCookies />
 

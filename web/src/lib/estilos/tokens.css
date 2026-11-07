@@ -41,6 +41,23 @@
 	}
 }
 
+/*
+ * Movimento: curvas e durações das transições em CSS. Espelho de
+ * $lib/animacao/movimento.ts (lá ficam as do GSAP); mude os dois juntos.
+ * - --curva-saida: entrar/sair da tela e responder a clique (rápida no início).
+ * - --curva-mover: algo que já está na tela e muda de lugar.
+ * - Interface fica abaixo de 300ms; nunca curvas "ease-in" (lentas no início).
+ */
+:root {
+	--curva-saida: cubic-bezier(0.23, 1, 0.32, 1);
+	--curva-mover: cubic-bezier(0.77, 0, 0.175, 1);
+
+	--dur-toque: 120ms; /* resposta ao clique (botão afundando) */
+	--dur-rapida: 160ms; /* saídas, trocas de conteúdo */
+	--dur-base: 200ms; /* hover de cor, erro aparecendo */
+	--dur-entrada: 260ms; /* modal entrando */
+}
+
 /* Ilustrações (guia §3): lateral das camadas do celular e linhas-guia tracejadas. */
 :root {
 	--verde-espessura: #cfe3d5;

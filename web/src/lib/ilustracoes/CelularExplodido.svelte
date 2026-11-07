@@ -5,20 +5,26 @@
   Como funciona a animação:
   - O markup já descreve o estado FINAL (explodido, com tudo visível). É o que vê quem
     prefere movimento reduzido (RNF02), e o que o HTML pré-renderizado guarda.
-  - Ao carregar no topo: efeito fixo de IMPLOSÃO (~1,2s), levando as camadas de yExplodido
-    para yMontado com guias, chamadas e rótulos ocultos.
+  - Ao carregar no topo: efeito em CASCATA suave vindo do topo (~1,35s no total).
+    O cabeçalho desce suavemente (0s), seguido pela queda sequencial das 5 camadas do
+    celular de cima (fora de visão) até a posição montada em ordem construtiva da base
+    ao topo (Carcaça, Placa, Bateria, Tela e Vidro; stagger de 0,12s, power2.out),
+    e em seguida o título principal (h1), texto de apoio e botão aterrissam.
   - Ao rolar a página: ScrollTrigger fixa a seção Hero (pin: true), e conforme o usuário
     rola (0% a 80%), as camadas explodem de yMontado para yExplodido, as guias surgem e,
     no desktop, as linhas de chamada se desenham com DrawSVG, as bolinhas surgem e os
     rótulos entram.
   - De 80% a 100% da rolagem: pausa para leitura com o celular totalmente explodido antes
     de desfixar a seção Hero.
-  - Se o usuário rolar durante a implosão inicial, ela é imediatamente interrompida (kill).
+  - Se o usuário rolar durante a cascata de entrada inicial, ela é imediatamente cancelada
+    (kill) e todos os elementos assumem o estado visível/montado, passando o controle direto
+    ao ScrollTrigger.
 -->
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { gsap, ScrollTrigger, DrawSVGPlugin } from '$lib/animacao/gsap';
 	import { prefereMovimentoReduzido } from '$lib/animacao/movimentoReduzido';
+	import { aguardarAbertura } from '$lib/animacao/abertura';
 	import { hero } from '$lib/conteudo/textos';
 
 	let { titulo = hero.descricaoDoDesenho }: { titulo?: string } = $props();
@@ -55,7 +61,99 @@
 		gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
 
 		const elementoHero = bloco.closest<HTMLElement>('.hero') ?? bloco;
-		let implosao: gsap.core.Tween | null = null;
+		const cabecalho = elementoHero.querySelector<HTMLElement>('.cabecalho');
+		const titulo = elementoHero.querySelector<HTMLElement>('h1');
+		const apoio = elementoHero.querySelector<HTMLElement>('.apoio');
+		const camadas = gsap.utils.toArray<SVGGElement>('.camada', bloco);
+		const indice = (c: SVGGElement) => Number(c.dataset.i);
+
+		let linhaEntrada: gsap.core.Timeline | null = null;
+
+		// Ponte para atualizar a separação das camadas quando o scroll assumir o controle
+		let atualizarCamadasScroll: (() => void) | null = null;
+
+		const interromperEntrada = () => {
+			if (!linhaEntrada) return;
+			linhaEntrada.kill();
+			linhaEntrada = null;
+			if (cabecalho) gsap.set(cabecalho, { clearProps: 'transform,opacity' });
+			if (titulo) gsap.set(titulo, { clearProps: 'transform,opacity' });
+			if (apoio) gsap.set(apoio, { clearProps: 'transform,opacity' });
+			gsap.set(camadas, {
+				y: (_i, c: SVGGElement) => yMontado(indice(c)),
+				opacity: 1
+			});
+			atualizarCamadasScroll?.();
+		};
+
+		// Animação fixa de entrada em cascata descendo do topo ao carregar a página (se estiver no topo)
+		if (window.scrollY <= 5) {
+			// Ordem construtiva de baixo para cima:
+			// Carcaça (4), Placa (3), Bateria (2), Tela (1) e Vidro (0)
+			const camadasOrdenadasQueda = [...camadas].sort(
+				(a, b) => indice(b) - indice(a)
+			);
+
+			// Prepara o estado inicial fora de visão / transparente no topo
+			if (cabecalho) gsap.set(cabecalho, { y: -32, opacity: 0 });
+			if (titulo) gsap.set(titulo, { y: -24, opacity: 0 });
+			if (apoio) gsap.set(apoio, { y: -20, opacity: 0 });
+			gsap.set(camadas, { y: -300, opacity: 0 });
+
+			linhaEntrada = gsap.timeline({
+				// Pausada até a abertura do site liberar (a cortina ainda cobre a tela).
+				paused: true,
+				onComplete: () => {
+					linhaEntrada = null;
+					// Remove estilos inline nos elementos irmãos para evitar stacking contexts desnecessários
+					if (cabecalho) gsap.set(cabecalho, { clearProps: 'transform,opacity' });
+					if (titulo) gsap.set(titulo, { clearProps: 'transform,opacity' });
+					if (apoio) gsap.set(apoio, { clearProps: 'transform,opacity' });
+				}
+			});
+
+			// 1. Cabeçalho desce suavemente do topo
+			if (cabecalho) {
+				linhaEntrada.to(
+					cabecalho,
+					{ y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' },
+					0
+				);
+			}
+
+			// 2. Camadas do celular caem uma a uma até se encaixarem na posição montada
+			linhaEntrada.to(
+				camadasOrdenadasQueda,
+				{
+					y: (_i, c: SVGGElement) => yMontado(indice(c)),
+					opacity: 1,
+					duration: 0.45,
+					ease: 'power2.out',
+					stagger: 0.12
+				},
+				0.15
+			);
+
+			// 3. Título principal entra logo após as primeiras camadas assentarem
+			if (titulo) {
+				linhaEntrada.to(
+					titulo,
+					{ y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' },
+					0.7
+				);
+			}
+
+			// 4. Texto de apoio e botão chegam completando a seção Hero
+			if (apoio) {
+				linhaEntrada.to(
+					apoio,
+					{ y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' },
+					0.85
+				);
+			}
+
+			aguardarAbertura().then(() => linhaEntrada?.play());
+		}
 
 		const midia = gsap.matchMedia();
 
@@ -66,12 +164,10 @@
 			},
 			(contexto) => {
 				const { isDesktop } = contexto.conditions as { isDesktop: boolean; isMobile: boolean };
-				const camadas = gsap.utils.toArray<SVGGElement>('.camada', bloco);
 				const guias = gsap.utils.toArray<SVGLineElement>('.guia', bloco);
 				const linhasChamada = gsap.utils.toArray<SVGLineElement>('.chamada-linha', bloco);
 				const pontosChamada = gsap.utils.toArray<SVGCircleElement>('.chamada-ponto', bloco);
 				const rotulos = gsap.utils.toArray<HTMLElement>('.rotulo', bloco);
-				const indice = (c: SVGGElement) => Number(c.dataset.i);
 
 				// Guias, chamadas e rótulos sempre começam ocultos antes da explosão no scroll
 				gsap.set(guias, { opacity: 0 });
@@ -85,7 +181,7 @@
 				const estado = { explosao: 0 };
 
 				const atualizarCamadas = () => {
-					if (implosao) return;
+					if (linhaEntrada) return;
 					gsap.set(camadas, {
 						y: (_i, c: SVGGElement) => {
 							const i = indice(c);
@@ -93,6 +189,8 @@
 						}
 					});
 				};
+
+				atualizarCamadasScroll = atualizarCamadas;
 
 				// Linha do tempo vinculada à rolagem: fixa o Hero por 1 tela (+=100%)
 				const linhaScroll = gsap.timeline({
@@ -103,11 +201,9 @@
 						end: '+=100%',
 						scrub: 0.6,
 						onUpdate: (self) => {
-							// Se a pessoa rolar enquanto a implosão de abertura estiver ativa, interrompe-a
-							if (implosao && (self.scroll() > 5 || window.scrollY > 5)) {
-								implosao.kill();
-								implosao = null;
-								atualizarCamadas();
+							// Se a pessoa rolar enquanto a cascata de entrada estiver ativa, cancela e restabelece os elementos
+							if (linhaEntrada && (self.scroll() > 5 || window.scrollY > 5)) {
+								interromperEntrada();
 							}
 						}
 					}
@@ -157,33 +253,32 @@
 
 				// De 80% a 100% do scroll: pausa para leitura com celular totalmente explodido
 				linhaScroll.to({}, { duration: 0.2 }, 0.8);
+
+				// Se a animação de entrada não estiver em andamento (ex.: página carregada já rolada ou resize de tela),
+				// posiciona imediatamente as camadas na posição correspondente ao scroll atual, evitando saltos visuais.
+				if (!linhaEntrada) {
+					atualizarCamadas();
+				}
 			},
 			bloco
 		);
 
-		// Animação fixa de entrada ao carregar a página (se estiver no topo)
-		if (window.scrollY <= 5) {
-			const camadas = gsap.utils.toArray<SVGGElement>('.camada', bloco);
-			const indice = (c: SVGGElement) => Number(c.dataset.i);
-
-			gsap.set(camadas, { y: (_i: number, c: SVGGElement) => yExplodido(indice(c)) });
-
-			implosao = gsap.to(camadas, {
-				y: (_i: number, c: SVGGElement) => yMontado(indice(c)),
-				duration: 1.2,
-				delay: 0.25,
-				ease: 'power2.out',
-				onComplete: () => {
-					implosao = null;
-				}
-			});
-		}
-
 		pronto = true;
 
+		const aoRolar = () => {
+			if (linhaEntrada && window.scrollY > 5) {
+				interromperEntrada();
+			}
+		};
+		window.addEventListener('scroll', aoRolar, { passive: true });
+
 		return () => {
-			implosao?.kill();
+			window.removeEventListener('scroll', aoRolar);
+			linhaEntrada?.kill();
 			midia.revert();
+			if (cabecalho) gsap.set(cabecalho, { clearProps: 'transform,opacity' });
+			if (titulo) gsap.set(titulo, { clearProps: 'transform,opacity' });
+			if (apoio) gsap.set(apoio, { clearProps: 'transform,opacity' });
 		};
 	});
 </script>

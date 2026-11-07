@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { cabecalho, navegacao, rodape } from '$lib/conteudo/textos';
+	import { cabecalho, navegacao } from '$lib/conteudo/textos';
 	import { rolarPara } from '$lib/animacao/lenis';
 	import IconeMenu from './IconeMenu.svelte';
 	import MenuMobile from './MenuMobile.svelte';
@@ -21,7 +21,7 @@
 		<img src="{base}/logos/logo-simbolo-no-c-site.svg" alt="" width="172" height="26" />
 	</a>
 
-	<nav class="links" aria-label={rodape.tituloNavegacao}>
+	<nav class="links" aria-label={cabecalho.menuPrincipal}>
 		{#each navegacao as item (item.ancora)}
 			<a href="#{item.ancora}" onclick={(e) => irPara(e, item.ancora)}>{item.rotulo}</a>
 		{/each}

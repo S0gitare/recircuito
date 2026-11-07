@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { cabecalho, hero, navegacao, rodape } from '$lib/conteudo/textos';
+	import { cabecalho, hero, navegacao } from '$lib/conteudo/textos';
 	import { rolarPara } from '$lib/animacao/lenis';
 	import IconeFechar from './IconeFechar.svelte';
 	import IconeSeta from './IconeSeta.svelte';
@@ -35,7 +35,7 @@
 
 <svelte:window onresize={aoRedimensionar} />
 
-<dialog bind:this={janela} class="menu" aria-label={rodape.tituloNavegacao}>
+<dialog bind:this={janela} class="menu" aria-label={cabecalho.menuPrincipal}>
 	<div class="topo">
 		<img src="{base}/logos/logo-simbolo-no-c-site.svg" alt={cabecalho.nomeDoSite} width="159" height="24" />
 		<button class="fechar" type="button" aria-label={cabecalho.fecharMenu} onclick={fechar}>
@@ -43,7 +43,7 @@
 		</button>
 	</div>
 
-	<nav aria-label={rodape.tituloNavegacao}>
+	<nav aria-label={cabecalho.menuPrincipal}>
 		<ul>
 			{#each navegacao as item (item.ancora)}
 				<li>

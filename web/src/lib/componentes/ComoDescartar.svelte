@@ -81,7 +81,8 @@
 
 		ol {
 			margin-top: 64px;
-			grid-template-columns: repeat(4, 1fr);
+			/* minmax(0, …): a coluna pode ficar menor que o conteúdo, que se ajusta. */
+			grid-template-columns: repeat(4, minmax(0, 1fr));
 			gap: 0;
 		}
 	}

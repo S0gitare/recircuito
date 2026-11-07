@@ -124,12 +124,13 @@
 
 		/* Desktop: o bloco da vista explodida tem 1212px de largura (proporção 1212×491). */
 		.arte :global(> *) {
-			width: 1212px;
+			width: 100%;
+			max-width: 1212px;
 		}
 
 		.base {
 			display: grid;
-			grid-template-columns: 1fr 392px;
+			grid-template-columns: minmax(0, 1fr) 392px;
 			align-items: end;
 			gap: 48px;
 			padding-bottom: 48px;

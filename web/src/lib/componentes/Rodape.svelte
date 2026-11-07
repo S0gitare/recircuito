@@ -24,8 +24,8 @@
 		</div>
 
 		<div class="colunas">
-			<nav aria-labelledby="rodape-navegacao">
-				<h2 id="rodape-navegacao">{rodape.tituloNavegacao}</h2>
+			<nav aria-label={rodape.menuDoRodape}>
+				<h2>{rodape.tituloNavegacao}</h2>
 				<ul>
 					{#each navegacao as item (item.ancora)}
 						<li><a href="#{item.ancora}" onclick={(e) => irPara(e, item.ancora)}>{item.rotulo}</a></li>
@@ -53,7 +53,9 @@
 		</div>
 	</div>
 
-	<p class="creditos">{rodape.creditos}</p>
+	<p class="creditos">
+		{rodape.creditos} · <a href="{base}/privacidade">{rodape.privacidade}</a>
+	</p>
 
 	<ModalAvaliacao bind:aberto={modalAberto} />
 </footer>
@@ -85,9 +87,20 @@
 		color: #a9c7b4;
 	}
 
+	/* Celular: as colunas empilham. Lado a lado, o e-mail longo espremia a
+	   navegação e quebrava "Como / descartar" em duas linhas. */
 	.colunas {
 		display: flex;
-		gap: 40px;
+		flex-direction: column;
+		gap: 32px;
+	}
+
+	/* A partir de 480px já cabem lado a lado. */
+	@media (min-width: 480px) {
+		.colunas {
+			flex-direction: row;
+			gap: 56px;
+		}
 	}
 
 	h2 {

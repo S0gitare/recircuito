@@ -36,6 +36,20 @@ export function guardarConsentimento(valor: Consentimento): void {
 	}
 }
 
+/**
+ * Esquece a escolha (página de privacidade, "Rever minha escolha"): o banner
+ * volta a aparecer na próxima vez que a página inicial abrir. Se o Analytics
+ * já tinha sido carregado nesta visita, ele só deixa de carregar a partir da
+ * próxima página aberta.
+ */
+export function apagarConsentimento(): void {
+	try {
+		localStorage.removeItem(CHAVE);
+	} catch {
+		// Sem armazenamento: não havia escolha guardada.
+	}
+}
+
 let jaCarregado = false;
 
 /**
