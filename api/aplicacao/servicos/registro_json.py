@@ -14,38 +14,47 @@ from pathlib import Path
 _trava_arquivos = threading.Lock()
 
 
+def _gravar_em_destino(destino: Path, registro: dict) -> None:
+    destino.parent.mkdir(parents=True, exist_ok=True)
+
+    registros: list[dict] = []
+    if destino.exists():
+        try:
+            conteudo = destino.read_text(encoding="utf-8").strip()
+            if conteudo:
+                dados = json.loads(conteudo)
+                if isinstance(dados, list):
+                    registros = dados
+        except (json.JSONDecodeError, OSError):
+            registros = []
+
+    registros.append(registro)
+
+    caminho_temporario = destino.with_name(f"{destino.name}.{uuid.uuid4().hex}.tmp")
+    try:
+        with caminho_temporario.open("w", encoding="utf-8") as arquivo:
+            json.dump(registros, arquivo, ensure_ascii=False, indent=2)
+        caminho_temporario.replace(destino)
+    finally:
+        if caminho_temporario.exists():
+            try:
+                caminho_temporario.unlink()
+            except OSError:
+                pass
+
+
 def anexar_registro(destino: Path, registro: dict) -> None:
     """Acrescenta `registro` ao fim da lista guardada em `destino`.
 
     A gravação é atômica: o conteúdo novo vai para um arquivo temporário na
     mesma pasta, que depois substitui o original de uma vez. Se a API cair no
     meio, o arquivo antigo continua inteiro. Um arquivo ausente, vazio ou
-    corrompido é tratado como lista vazia.
+    corrompido é tratado como lista vazia. Em hospedagens serverless com pasta
+    de código somente leitura (como Vercel), usa /tmp/recircuito como reserva.
     """
-    destino.parent.mkdir(parents=True, exist_ok=True)
-
     with _trava_arquivos:
-        registros: list[dict] = []
-        if destino.exists():
-            try:
-                conteudo = destino.read_text(encoding="utf-8").strip()
-                if conteudo:
-                    dados = json.loads(conteudo)
-                    if isinstance(dados, list):
-                        registros = dados
-            except (json.JSONDecodeError, OSError):
-                registros = []
-
-        registros.append(registro)
-
-        caminho_temporario = destino.with_name(f"{destino.name}.{uuid.uuid4().hex}.tmp")
         try:
-            with caminho_temporario.open("w", encoding="utf-8") as arquivo:
-                json.dump(registros, arquivo, ensure_ascii=False, indent=2)
-            caminho_temporario.replace(destino)
-        finally:
-            if caminho_temporario.exists():
-                try:
-                    caminho_temporario.unlink()
-                except OSError:
-                    pass
+            _gravar_em_destino(destino, registro)
+        except OSError:
+            destino_temporario = Path("/tmp/recircuito") / destino.name
+            _gravar_em_destino(destino_temporario, registro)

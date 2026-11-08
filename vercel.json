@@ -1,0 +1,29 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "api": {
+      "root": "api",
+      "framework": "fastapi",
+      "entrypoint": "aplicacao/principal.py"
+    },
+    "web": {
+      "root": "web",
+      "framework": "sveltekit-1",
+      "outputDirectory": "build"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": {
+        "service": "api"
+      }
+    },
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "web"
+      }
+    }
+  ]
+}
