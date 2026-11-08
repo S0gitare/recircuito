@@ -281,7 +281,7 @@ export const privacidade = {
 		{
 			titulo: 'Hospedagem',
 			texto:
-				'O site e a API ficam em serviços de hospedagem (GitHub Pages e Render) que, como qualquer servidor, podem registrar dados técnicos de acesso, como o endereço IP, conforme as políticas deles.'
+				'O site e a API ficam hospedados na Vercel, que processa e registra dados técnicos de acesso necessários para garantir o funcionamento, a estabilidade e a segurança da plataforma, em conformidade com as políticas de privacidade e segurança digital.'
 		}
 	],
 	tituloEscolha: 'Mudou de ideia sobre os cookies?',
