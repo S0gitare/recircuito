@@ -158,7 +158,7 @@ export const impacto = {
 	numeros: [
 		{ valor: 1240, unidade: 'kg', rotulo: 'de eletrônicos coletados' },
 		{ valor: 18, unidade: '', rotulo: 'escolas visitadas' },
-		{ valor: 32, unidade: '', rotulo: 'pontos de coleta mapeados' },
+		{ valor: 140, unidade: '', rotulo: 'pontos de coleta mapeados' },
 		{ valor: 4500, unidade: '', rotulo: 'pessoas alcançadas' }
 	]
 } as const;

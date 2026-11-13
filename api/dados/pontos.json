@@ -1,5 +1,1568 @@
 [
   {
+    "id": "ecoponto-municipal-sacramenta",
+    "nome": "1º Ecoponto Municipal de Belém (Sacramenta)",
+    "tipo_local": "orgao_publico",
+    "endereco": {
+      "logradouro": "Avenida Pedro Álvares Cabral (em frente ao Casota)",
+      "numero": null,
+      "bairro": "Sacramenta",
+      "cep": null
+    },
+    "coordenadas": {
+      "lat": -1.4265998,
+      "lon": -48.4890011
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "08:00",
+        "fecha": "20:00"
+      },
+      {
+        "dias": [
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 98405-3100",
+      "site": "https://agencia.belem.pa.gov.br/saiba-como-funciona-o-primeiro-ecoponto-de-belem/"
+    },
+    "fonte": "https://agencia.belem.pa.gov.br/saiba-como-funciona-o-primeiro-ecoponto-de-belem/",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Inaugurado em 14/01/2026 (Seinp/Sezel/Semma), com triagem pela cooperativa Cooperbem. Recebe resíduos eletrônicos, eletrodomésticos, volumosos, recicláveis secos, pneus e entulho (limite de 1 m³/pessoa/dia). Confirmar via WhatsApp SEZEL (91) 98405-3100 antes de levar pilhas avulsas. Coordenadas aproximadas na via via Nominatim (OSM)."
+  },
+  {
+    "id": "assistencia-a-b-s-batista-cavalero",
+    "nome": "A B S Batista Cavalero Comércio e Serviços",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rua Euclides da Cunha",
+      "numero": "280",
+      "bairro": "Castanheira",
+      "cep": "66645-130"
+    },
+    "coordenadas": {
+      "lat": -1.4060783,
+      "lon": -48.4285801
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": "(91) 4042-4413",
+      "site": "https://torrefortesolutions.com.br/"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | https://torrefortesolutions.com.br/",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO - alerta de mudança de endereço para Ananindeua: o site oficial da empresa (Torre Forte Solutions, CNPJ 49.283.380/0001-08) informa novo endereço na Rua Jardim Esmeralda, 436 — Guanabara, Ananindeua-PA (CEP 67010-660); R. Euclides da Cunha, 280 consta apenas no cadastro ABREE ID 146034 de 01/02/2024. WhatsApp: (91) 99803-9483. Assistência técnica credenciada na ABREE (ID 146034, porte P+G). Recebe celulares, cabos, computadores, pilhas/baterias e eletroeletrônicos."
+  },
+  {
+    "id": "assai-252-almirante-barroso",
+    "nome": "Assaí Atacadista — Almirante Barroso (252)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Almirante Barroso",
+      "numero": "5386",
+      "bairro": "Castanheira",
+      "cep": "66645-250"
+    },
+    "coordenadas": {
+      "lat": -1.4097605,
+      "lon": -48.4377588
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "07:00",
+        "fecha": "18:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3214-9600",
+      "site": "https://www.assai.com.br/loja/assai-belem-almirante-barroso"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor de pilhas e baterias portáteis (Green Recicla Pilha) + lâmpadas (Reciclus). Não recebe eletroeletrônicos maiores."
+  },
+  {
+    "id": "assai-235-batista-campos",
+    "nome": "Assaí Atacadista — Batista Campos (235)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Conselheiro Furtado",
+      "numero": "76",
+      "bairro": "Batista Campos",
+      "cep": "66025-160"
+    },
+    "coordenadas": {
+      "lat": -1.4639906,
+      "lon": -48.4948512
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "07:00",
+        "fecha": "18:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3210-8100",
+      "site": "https://www.assai.com.br/loja/assai-batista-campos"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor de pilhas e baterias portáteis (Green Recicla Pilha) + lâmpadas (Reciclus). Não recebe eletroeletrônicos maiores."
+  },
+  {
+    "id": "assai-118-mario-covas",
+    "nome": "Assaí Atacadista — Mário Covas (118)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rodovia Mário Covas",
+      "numero": "69",
+      "bairro": "Coqueiro",
+      "cep": "66650-000"
+    },
+    "coordenadas": {
+      "lat": -1.3592205,
+      "lon": -48.4300135
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "07:00",
+        "fecha": "18:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3284-1550",
+      "site": "https://www.assai.com.br/loja/assai-belem"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor interno de pilhas e baterias portáteis (PEV/Green Recicla Pilha) + lâmpadas (Reciclus). Para eletrônicos com placa, há um posto E+ Reciclagem separado no estacionamento (cadastrado à parte)."
+  },
+  {
+    "id": "assistencia-s-r-silva-ferreira",
+    "nome": "Assistência Técnica S R da Silva Ferreira",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rua Antônio Barreto",
+      "numero": "672",
+      "bairro": "Umarizal",
+      "cep": "66055-050"
+    },
+    "coordenadas": {
+      "lat": -1.4445781,
+      "lon": -48.4825292
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "14:00",
+        "fecha": "18:00"
+      },
+      {
+        "dias": [
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3355-4596",
+      "site": "https://abree.org.br/pontos-de-recebimento"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | waze.com, polomap.com, sosserv.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Assistência técnica credenciada na ABREE (ID 165180, atualizado em 2026-09-03, porte P+G). Recebe celulares, cabos, periféricos, computadores, pilhas/baterias e eletroeletrônicos. Tels. alternativos: (91) 3230-2430 / WhatsApp (91) 98579-5477."
+  },
+  {
+    "id": "atacadao-153-icoaraci",
+    "nome": "Atacadão Belém Icoaraci (153)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rodovia Augusto Montenegro (ao lado da UPA)",
+      "numero": "Km 11",
+      "bairro": "Agulha",
+      "cep": "66811-000"
+    },
+    "coordenadas": {
+      "lat": -1.314776,
+      "lon": -48.4568648
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "06:00",
+        "fecha": "23:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "08:00",
+        "fecha": "20:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.partiureciclar.com.br"
+    },
+    "fonte": "https://www.partiureciclar.com.br/api/pontos-de-coleta",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor ativo de pilhas e baterias portáteis (Green Recicla Pilha / Partiu Reciclar). Também possui coletor Reciclus para lâmpadas. Não recebe eletroeletrônicos maiores."
+  },
+  {
+    "id": "atacadao-215-portal",
+    "nome": "Atacadão Belém Portal (215)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rua do Arsenal",
+      "numero": "380",
+      "bairro": "Cidade Velha",
+      "cep": "66023-110"
+    },
+    "coordenadas": {
+      "lat": -1.4665502,
+      "lon": -48.5031326
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "06:00",
+        "fecha": "23:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "08:00",
+        "fecha": "20:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.partiureciclar.com.br"
+    },
+    "fonte": "https://www.partiureciclar.com.br/api/pontos-de-coleta",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor ativo de pilhas e baterias portáteis (Green Recicla Pilha / Partiu Reciclar). Também possui coletor Reciclus para lâmpadas. Não recebe eletroeletrônicos maiores."
+  },
+  {
+    "id": "boulevard-coletor-drive-thru",
+    "nome": "Boulevard Shopping: coletor de eletrônicos (drive-thru)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Visconde de Souza Franco (Estacionamento Subsolo G1)",
+      "numero": "776",
+      "bairro": "Reduto",
+      "cep": "66053-000"
+    },
+    "coordenadas": {
+      "lat": -1.4463292,
+      "lon": -48.4897197
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "13:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://boulevardbelem.com.br/fique-por-dentro/descarte-de-residuos-eletronicos.htm"
+    },
+    "fonte": "https://diariodopara.com.br/varejo-sustentavel/shopping-de-belem-recicla-150-toneladas-de-lixo-por-mes-e-zera-envio-a-aterros/",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO diretamente no localizador oficial (o site boulevardbelem.com.br retornou WAF 403 em consulta automatizada). Confirmado em matéria do Diário do Pará de 26/07/2025: drive-thru gratuito para clientes no subsolo G1 (computadores, notebooks, celulares, impressoras, micro-ondas e carregadores). Confirmar no Espaço Cliente."
+  },
+  {
+    "id": "boulevard-pilhas-espaco-cliente",
+    "nome": "Boulevard Shopping: pilhas e baterias (Espaço Cliente)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Visconde de Souza Franco (Boulevard Shopping, Espaço Cliente)",
+      "numero": "776",
+      "bairro": "Reduto",
+      "cep": "66053-000"
+    },
+    "coordenadas": {
+      "lat": -1.4463292,
+      "lon": -48.4897197
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "13:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://boulevardbelem.com.br/fique-por-dentro/descarte-de-residuos-eletronicos.htm"
+    },
+    "fonte": "https://diariodopara.com.br/varejo-sustentavel/shopping-de-belem-recicla-150-toneladas-de-lixo-por-mes-e-zera-envio-a-aterros/",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO diretamente no localizador oficial (WAF 403 no site boulevardbelem.com.br). Matéria do Diário do Pará de 26/07/2025 relata coletor de pilhas, baterias e óleo de cozinha no Espaço Cliente. Confirmar disponibilidade no local."
+  },
+  {
+    "id": "casas-bahia-campina",
+    "nome": "Casas Bahia — Campina (Santo Antônio)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rua Santo Antônio",
+      "numero": "153",
+      "bairro": "Campina",
+      "cep": "66010-095"
+    },
+    "coordenadas": {
+      "lat": -1.4506177,
+      "lon": -48.4994547
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "18:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.casasbahia.com.br"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/ | https://www.tiendeo.com.br/Lojas/belem/rua-santo-ant%C3%B4nio-campina/912034",
+    "verificado_em": "2026-11-12",
+    "observacoes": "PEV oficial Green Eletron (TAM P) + Green Recicla Pilha + ABREE (ID 149949). CEP corrigido de 68010-095 (erro na API) para 66010-095. Recebe eletroeletrônicos de pequeno porte (até 50 cm x 70 cm), pilhas e baterias portáteis. Tiendeo registra Seg–Sáb 08:00–18:00 (Lojas24 lista 08:30–18:30); CNPJ raiz 33.041.260 ativo. SAC nacional: 4003-4336."
+  },
+  {
+    "id": "casas-bahia-xv-novembro",
+    "nome": "Casas Bahia — Campina (XV de Novembro)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rua Quinze de Novembro",
+      "numero": "138",
+      "bairro": "Campina",
+      "cep": "66013-060"
+    },
+    "coordenadas": {
+      "lat": -1.4526889,
+      "lon": -48.5023705
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "08:30",
+        "fecha": "18:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.casasbahia.com.br"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/ | https://www.lojas24.com/belem/casas-bahia/rua-xv-de-novembro-138-1/",
+    "verificado_em": "2026-11-12",
+    "observacoes": "PEV oficial Green Eletron (TAM P) + Green Recicla Pilha + ABREE (ID 149600). Recebe eletroeletrônicos de pequeno porte (até 50 cm x 70 cm), pilhas e baterias. Horário Seg–Sáb 08:30–18:00 via Lojas24 (CNPJ 33.041.260/1877-28 ativo). SAC nacional: 4003-4336."
+  },
+  {
+    "id": "casas-bahia-castanheira",
+    "nome": "Casas Bahia — Castanheira Shopping",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rodovia BR-316 (Castanheira Shopping, 2º andar)",
+      "numero": "Km 01",
+      "bairro": "Castanheira",
+      "cep": "66645-001"
+    },
+    "coordenadas": {
+      "lat": -1.4029846,
+      "lon": -48.4307905
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "14:00",
+        "fecha": "22:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://greeneletron.org.br/onde-descartar/"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/",
+    "verificado_em": "2026-11-12",
+    "observacoes": "PEV oficial Green Eletron (TAM P) + Green Recicla Pilha (inclui entrada duplicada 'Castanheira 2 / Bernardo Sayão, 6130' consolidada aqui). Coordenadas ajustadas para o Castanheira Shopping. Recebe eletroeletrônicos pequenos (até 50 cm x 70 cm), pilhas e baterias."
+  },
+  {
+    "id": "casas-bahia-guama",
+    "nome": "Casas Bahia — Guamá",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rua Barão de Igarapé-Miri",
+      "numero": "154",
+      "bairro": "Guamá",
+      "cep": "66075-000"
+    },
+    "coordenadas": {
+      "lat": -1.4673717,
+      "lon": -48.4624853
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "08:30",
+        "fecha": "18:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.casasbahia.com.br"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/ | https://www.lojas24.com/belem/casas-bahia/rua-barao-de-igarape-miri-151-0/",
+    "verificado_em": "2026-11-12",
+    "observacoes": "PEV oficial Green Eletron (TAM P) + Green Recicla Pilha + ABREE (ID 149629). Coordenadas obtidas via ABREE (API Green Eletron listava 0,0). Recebe eletroeletrônicos de pequeno porte (até 50 cm x 70 cm), pilhas e baterias. Horário Seg–Sáb 08:30–18:00 via Lojas24 (CNPJ 33.041.260/1878-09 ativo). SAC nacional: 4003-4336."
+  },
+  {
+    "id": "casas-bahia-cruzeiro-icoaraci",
+    "nome": "Casas Bahia — Icoaraci (Cruzeiro)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Travessa Doutor Lopo de Castro",
+      "numero": "292",
+      "bairro": "Cruzeiro",
+      "cep": "66810-000"
+    },
+    "coordenadas": {
+      "lat": -1.2986882,
+      "lon": -48.4868108
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "08:30",
+        "fecha": "18:30"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.casasbahia.com.br"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/ | https://www.lojas24.com/belem/casas-bahia/travessa-doutor-lopo-de-castro-298-7/",
+    "verificado_em": "2026-11-12",
+    "observacoes": "PEV oficial Green Eletron (TAM P) + Green Recicla Pilha + ABREE (ID 149953). Coordenadas obtidas via ABREE (API Green Eletron listava 0,0). Recebe eletroeletrônicos pequenos (até 50 cm x 70 cm), pilhas e baterias. CNPJ 33.041.260/1962-04 ativo; SAC nacional: 4003-4336."
+  },
+  {
+    "id": "casas-bahia-bosque-grao-para",
+    "nome": "Casas Bahia — Parque Verde (Shopping Bosque Grão-Pará)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rodovia dos Trabalhadores (Av. Centenário)",
+      "numero": "1986",
+      "bairro": "Parque Verde",
+      "cep": "66635-894"
+    },
+    "coordenadas": {
+      "lat": -1.3901236,
+      "lon": -48.4651456
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "12:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://greeneletron.org.br/onde-descartar/"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/",
+    "verificado_em": "2026-11-12",
+    "observacoes": "PEV oficial Green Eletron (TAM P) + Green Recicla Pilha + ABREE (ID 149948, onde aparece erroneamente rotulada como 'Cumbica'). Coordenadas ajustadas para o Shopping Bosque Grão-Pará (API Green Eletron listava 0,0)."
+  },
+  {
+    "id": "casas-bahia-pedreira",
+    "nome": "Casas Bahia — Pedreira",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Pedro Miranda",
+      "numero": "1521",
+      "bairro": "Pedreira",
+      "cep": "66085-023"
+    },
+    "coordenadas": {
+      "lat": -1.4260661,
+      "lon": -48.4707667
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "08:30",
+        "fecha": "18:30"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.casasbahia.com.br"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/ | https://www.lojas24.com/belem/casas-bahia/avenida-pedro-miranda-1521-3/",
+    "verificado_em": "2026-11-12",
+    "observacoes": "PEV oficial Green Eletron (TAM P) + Green Recicla Pilha + ABREE (ID 149952). Recebe eletroeletrônicos de pequeno porte (até 50 cm x 70 cm), pilhas e baterias portáteis. Lojas24 registra Seg–Sáb 08:30–18:30 (Tiendeo lista Seg–Sáb 08:00–18:00 e Dom 08:00–14:00); CNPJ 33.041.260/1883-76 ativo. SAC nacional: 4003-4336."
+  },
+  {
+    "id": "casas-bahia-sacramenta-telegrafo",
+    "nome": "Casas Bahia — Telégrafo / Sacramenta",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Senador Lemos",
+      "numero": "1619",
+      "bairro": "Telégrafo",
+      "cep": "66113-080"
+    },
+    "coordenadas": {
+      "lat": -1.4292469,
+      "lon": -48.4854107
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.casasbahia.com.br"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/ | https://www.oliberal.com/economia/casas-bahia-sindicato-preve-fechamento-de-cinco-lojas-em-belem-e-prepara-acao-contra-demissoes-1.1159442",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO - alerta de fechamento em agosto/2026: reportagem de O Liberal (21/08/2026) confirmou o encerramento de loja das Casas Bahia na Av. Senador Lemos (sindicato Fetracom-PA/AP previa fechamento de 5 unidades em Belém); confirmar presencialmente se a filial do nº 1619 (CNPJ 33.041.260/2082-37) segue ativa. PEV oficial Green Eletron + Green Recicla Pilha + ABREE (ID 149954, porte P+G). Coordenadas obtidas via ABREE (API Green Eletron listava 0,0). Recebe eletroeletrônicos, pilhas e baterias."
+  },
+  {
+    "id": "claro-boulevard-shopping",
+    "nome": "Claro — Boulevard Shopping Belém",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Avenida Visconde de Souza Franco (Boulevard Shopping)",
+      "numero": "776",
+      "bairro": "Reduto",
+      "cep": "66053-000"
+    },
+    "coordenadas": {
+      "lat": -1.4463292,
+      "lon": -48.4897197
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "13:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.claro.com.br/institucional/claro-recicla"
+    },
+    "fonte": "https://www.claro.com.br/institucional/claro-recicla",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO presencialmente (confiança média). Regulamento oficial Claro Recicla (07/2024) prevê coleta gratuita de celulares, baterias, pilhas, tablets, carregadores e fones em todas as lojas próprias. Confirmar urna na loja."
+  },
+  {
+    "id": "claro-castanheira-shopping",
+    "nome": "Claro — Castanheira Shopping",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Rodovia BR-316 (Castanheira Shopping)",
+      "numero": "Km 01",
+      "bairro": "Castanheira",
+      "cep": "66645-001"
+    },
+    "coordenadas": {
+      "lat": -1.4029846,
+      "lon": -48.4307905
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "14:00",
+        "fecha": "22:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.claro.com.br/institucional/claro-recicla"
+    },
+    "fonte": "https://www.claro.com.br/institucional/claro-recicla",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Programa Claro Recicla (regulamento 07/2024) + loja confirmada no site oficial castanheirashopping.com.br. Recebe celulares, baterias, pilhas, tablets, carregadores e fones."
+  },
+  {
+    "id": "claro-bras-de-aguiar",
+    "nome": "Claro — Loja de Rua Brás de Aguiar",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Avenida Comandante Brás de Aguiar",
+      "numero": "436",
+      "bairro": "Nazaré",
+      "cep": "66035-405"
+    },
+    "coordenadas": {
+      "lat": -1.4548747,
+      "lon": -48.4878611
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.claro.com.br/institucional/claro-recicla"
+    },
+    "fonte": "https://www.claro.com.br/institucional/claro-recicla | lojas.claro.com.br",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO - loja ausente do localizador oficial vigente da Claro (lojas.claro.com.br), embora o CNPJ 40.432.544/0421-41 conste ativo na Receita/Serasa; confirmar presencialmente se segue aberta e com coletor. (Registro anterior: NÃO CONFIRMADO presencialmente (confiança média). Regulamento Claro Recicla (07/2024) + guias locais; confirmar se a unidade segue ativa e com coletor no endereço.)"
+  },
+  {
+    "id": "claro-presidente-vargas",
+    "nome": "Claro — Loja de Rua Presidente Vargas",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Avenida Presidente Vargas",
+      "numero": "382",
+      "bairro": "Campina",
+      "cep": "66017-000"
+    },
+    "coordenadas": {
+      "lat": -1.4509951,
+      "lon": -48.4970185
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.claro.com.br/institucional/claro-recicla"
+    },
+    "fonte": "https://www.claro.com.br/institucional/claro-recicla | lojas.claro.com.br",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO - loja ausente do localizador oficial vigente da Claro (lojas.claro.com.br), embora o CNPJ 40.432.544/0418-46 conste ativo na Receita/Serasa (possível filial técnica/administrativa ou loja encerrada); confirmar presencialmente. (Registro anterior: NÃO CONFIRMADO presencialmente (confiança média). Regulamento Claro Recicla (07/2024) + guias locais; confirmar se a unidade segue ativa e com coletor no endereço.)"
+  },
+  {
+    "id": "claro-parque-shopping",
+    "nome": "Claro — Parque Shopping Belém",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Rodovia Augusto Montenegro (Parque Shopping Belém, 1º Piso)",
+      "numero": "4300",
+      "bairro": "Parque Verde",
+      "cep": "66635-110"
+    },
+    "coordenadas": {
+      "lat": -1.371311,
+      "lon": -48.4472259
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "12:00",
+        "fecha": "22:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.claro.com.br/institucional/claro-recicla"
+    },
+    "fonte": "https://www.claro.com.br/institucional/claro-recicla",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Programa Claro Recicla (regulamento 07/2024) + loja confirmada no site oficial parqueshoppingbelem.com.br. Recebe celulares, baterias, pilhas, tablets, carregadores e fones."
+  },
+  {
+    "id": "claro-bosque-grao-para",
+    "nome": "Claro — Shopping Bosque Grão-Pará",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Avenida Centenário (Shopping Bosque Grão-Pará, Térreo)",
+      "numero": "1052",
+      "bairro": "Val-de-Cans",
+      "cep": "66640-840"
+    },
+    "coordenadas": {
+      "lat": -1.3901236,
+      "lon": -48.4651456
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "12:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 98463-0249",
+      "site": "https://www.bosquegraopara.com.br/loja/claro/"
+    },
+    "fonte": "https://www.claro.com.br/institucional/claro-recicla",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Programa Claro Recicla (regulamento de 07/2024 prevê coleta gratuita em todas as lojas próprias para clientes e não-clientes) + loja confirmada no site do shopping. Recebe celulares, baterias, pilhas, tablets, carregadores e fones. Confirmar no balcão se há urna visível ou entrega ao atendente."
+  },
+  {
+    "id": "claro-patio-belem",
+    "nome": "Claro — Shopping Pátio Belém",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Travessa Padre Eutíquio (Shopping Pátio Belém)",
+      "numero": "1078",
+      "bairro": "Batista Campos",
+      "cep": "66023-710"
+    },
+    "coordenadas": {
+      "lat": -1.458131,
+      "lon": -48.4948548
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "13:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.claro.com.br/institucional/claro-recicla"
+    },
+    "fonte": "https://www.claro.com.br/institucional/claro-recicla",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO presencialmente (confiança média). Regulamento oficial Claro Recicla (07/2024) prevê coleta gratuita em lojas próprias. Confirmar urna na loja."
+  },
+  {
+    "id": "concaves-terra-firme",
+    "nome": "CONCAVES (Cooperativa de Catadores)",
+    "tipo_local": "cooperativa",
+    "endereco": {
+      "logradouro": "Passagem Brasília",
+      "numero": "125",
+      "bairro": "Terra Firme",
+      "cep": "66077-291"
+    },
+    "coordenadas": {
+      "lat": -1.4581984,
+      "lon": -48.4516368
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "17:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 98116-6185",
+      "site": null
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Ponto oficial cadastrado na ABREE (ID 143376, atualizado em 2026-09-03, porte P+G) e listado pela Prefeitura/UFPA; sede reformada pela Sezel em 03/2025. Recomenda-se confirmar por telefone antes de levar grandes volumes."
+  },
+  {
+    "id": "correios-ac-cabanagem",
+    "nome": "Correios — AC Cabanagem (Postagem ABREE)",
+    "tipo_local": "orgao_publico",
+    "endereco": {
+      "logradouro": "Avenida Almirante Barroso",
+      "numero": "5045",
+      "bairro": "Castanheira",
+      "cep": "66645-972"
+    },
+    "coordenadas": {
+      "lat": -1.4091992,
+      "lon": -48.4404762
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "09:00",
+        "fecha": "17:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3211-3060",
+      "site": "https://www.correios.com.br"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | loggi.com, guiadoscorreios.com.br, encomendador.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ATENÇÃO: exige geração prévia de código de postagem reversa gratuita no site da ABREE (abree.org.br/pontos-de-recebimento) e embalagem do item antes da entrega no balcão; não possui urna avulsa. ID ABREE 157167 (Correios, porte P: celulares, carregadores/power bank, cabos, fones, mouse e relógio smart). Tel. alternativo: (91) 3243-0272; CEP Clique e Retire: 66645-959."
+  },
+  {
+    "id": "correios-ac-central-belem",
+    "nome": "Correios — AC Central de Belém (Postagem ABREE)",
+    "tipo_local": "orgao_publico",
+    "endereco": {
+      "logradouro": "Avenida Presidente Vargas",
+      "numero": "498",
+      "bairro": "Campina",
+      "cep": "66017-970"
+    },
+    "coordenadas": {
+      "lat": -1.451533,
+      "lon": -48.496679
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "09:00",
+        "fecha": "17:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3211-3147",
+      "site": "https://www.correios.com.br"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | loggi.com, guiadoscorreios.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ATENÇÃO: exige geração prévia de código de postagem reversa gratuita no site da ABREE (abree.org.br/pontos-de-recebimento) e embalagem do item antes da entrega no balcão; não possui urna avulsa. ID ABREE 157085 (Correios, porte P: celulares, carregadores/power bank, cabos, fones, mouse e relógio smart). CEP Clique e Retire: 66017-959."
+  },
+  {
+    "id": "correios-ac-icoaraci",
+    "nome": "Correios — AC Icoaraci (Postagem ABREE)",
+    "tipo_local": "orgao_publico",
+    "endereco": {
+      "logradouro": "Rua Manoel Barata",
+      "numero": "659",
+      "bairro": "Cruzeiro",
+      "cep": "66810-970"
+    },
+    "coordenadas": {
+      "lat": -1.30019,
+      "lon": -48.48735
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "09:00",
+        "fecha": "17:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3211-3164",
+      "site": "https://www.correios.com.br"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | loggi.com, encomendador.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ATENÇÃO: exige geração prévia de código de postagem reversa gratuita no site da ABREE (abree.org.br/pontos-de-recebimento) e embalagem do item antes da entrega no balcão; não possui urna avulsa. ID ABREE 157135 (Correios, porte P: celulares, carregadores/power bank, cabos, fones, mouse e relógio smart). Tel. alternativo: (91) 3227-2331."
+  },
+  {
+    "id": "correios-ac-jurunas",
+    "nome": "Correios — AC Jurunas (Postagem ABREE)",
+    "tipo_local": "orgao_publico",
+    "endereco": {
+      "logradouro": "Avenida Roberto Camelier",
+      "numero": "950",
+      "bairro": "Jurunas",
+      "cep": "66025-972"
+    },
+    "coordenadas": {
+      "lat": -1.4684093,
+      "lon": -48.4877731
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "09:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "13:30",
+        "fecha": "17:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3272-4856",
+      "site": "https://www.correios.com.br"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | loggi.com, correiosweb.com.br, encomendador.com.br, near-place.com",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ATENÇÃO: exige geração prévia de código de postagem reversa gratuita no site da ABREE (abree.org.br/pontos-de-recebimento) e embalagem do item antes da entrega no balcão; não possui urna avulsa. ID ABREE 157188 (Correios, porte P: celulares, carregadores/power bank, cabos, fones, mouse e relógio smart). Tel. alternativo: (91) 3211-3145; CEP Clique e Retire: 66025-959."
+  },
+  {
+    "id": "correios-ac-nazare",
+    "nome": "Correios — AC Nazaré (Postagem ABREE)",
+    "tipo_local": "orgao_publico",
+    "endereco": {
+      "logradouro": "Avenida Governador Magalhães Barata",
+      "numero": "192",
+      "bairro": "Nazaré",
+      "cep": "66040-970"
+    },
+    "coordenadas": {
+      "lat": -1.4524249,
+      "lon": -48.4789688
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "09:00",
+        "fecha": "17:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3224-1739",
+      "site": "https://www.correios.com.br"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | loggi.com, horario-correios.com, guiadoscorreios.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ATENÇÃO: exige geração prévia de código de postagem reversa gratuita no site da ABREE (abree.org.br/pontos-de-recebimento) e embalagem do item antes da entrega no balcão; não possui urna avulsa. ID ABREE 157169 (Correios, porte P: celulares, carregadores/power bank, cabos, fones, mouse e relógio smart). CEP Clique e Retire: 66040-959."
+  },
+  {
+    "id": "correios-ac-pedreira",
+    "nome": "Correios — AC Pedreira (Postagem ABREE)",
+    "tipo_local": "orgao_publico",
+    "endereco": {
+      "logradouro": "Avenida Pedro Miranda",
+      "numero": "1741",
+      "bairro": "Pedreira",
+      "cep": "66080-970"
+    },
+    "coordenadas": {
+      "lat": -1.432958,
+      "lon": -48.475647
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "09:00",
+        "fecha": "17:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3244-5025",
+      "site": "https://www.correios.com.br"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | loggi.com, encomendador.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ATENÇÃO: exige geração prévia de código de postagem reversa gratuita no site da ABREE (abree.org.br/pontos-de-recebimento) e embalagem do item antes da entrega no balcão; não possui urna avulsa. ID ABREE 157189 (Correios, porte P: celulares, carregadores/power bank, cabos, fones, mouse e relógio smart). CEP Clique e Retire: 66080-959."
+  },
+  {
+    "id": "correios-ac-telegrafo",
+    "nome": "Correios — AC Telégrafo Sem Fio (Postagem ABREE)",
+    "tipo_local": "orgao_publico",
+    "endereco": {
+      "logradouro": "Avenida Senador Lemos",
+      "numero": "1749",
+      "bairro": "Telégrafo",
+      "cep": "66113-970"
+    },
+    "coordenadas": {
+      "lat": -1.428103,
+      "lon": -48.484908
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "09:00",
+        "fecha": "17:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3211-3134",
+      "site": "https://www.correios.com.br"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | loggi.com, encomendador.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ATENÇÃO: exige geração prévia de código de postagem reversa gratuita no site da ABREE (abree.org.br/pontos-de-recebimento) e embalagem do item antes da entrega no balcão; não possui urna avulsa. ID ABREE 157170 (Correios, porte P: celulares, carregadores/power bank, cabos, fones, mouse e relógio smart). Tel. alternativo: (91) 3244-4470; CEP Clique e Retire: 66113-959."
+  },
+  {
+    "id": "correios-agf-boulevard",
+    "nome": "Correios — AGF Boulevard Shopping (Postagem ABREE)",
+    "tipo_local": "orgao_publico",
+    "endereco": {
+      "logradouro": "Avenida Visconde de Souza Franco (Boulevard Shopping, Piso G1, Loja 4)",
+      "numero": "776",
+      "bairro": "Reduto",
+      "cep": "66053-972"
+    },
+    "coordenadas": {
+      "lat": -1.4463292,
+      "lon": -48.4897197
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "10:00",
+        "fecha": "19:00"
+      },
+      {
+        "dias": [
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "14:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3223-1026",
+      "site": "https://www.boulevardbelem.com.br"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | loggi.com, guiadoscorreios.com.br, boulevardbelem.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ATENÇÃO: exige geração prévia de código de postagem reversa gratuita no site da ABREE (abree.org.br/pontos-de-recebimento) e embalagem do item antes da entrega no balcão; não possui urna avulsa. ID ABREE 161338 (Correios, porte P: celulares, carregadores/power bank, cabos, fones, mouse e relógio smart). Tel. alternativo: (91) 3223-6441."
+  },
+  {
+    "id": "correios-agf-dezesseis-novembro",
+    "nome": "Correios — AGF Dezesseis de Novembro (Postagem ABREE)",
+    "tipo_local": "orgao_publico",
+    "endereco": {
+      "logradouro": "Avenida Dezesseis de Novembro",
+      "numero": "443",
+      "bairro": "Cidade Velha",
+      "cep": "66023-971"
+    },
+    "coordenadas": {
+      "lat": -1.4595279,
+      "lon": -48.4986296
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "09:00",
+        "fecha": "17:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3276-2600",
+      "site": "https://www.correios.com.br"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | horario-correios.com, cidadevelha.com.br, encomendador.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ATENÇÃO: exige geração prévia de código de postagem reversa gratuita no site da ABREE (abree.org.br/pontos-de-recebimento) e embalagem do item antes da entrega no balcão; não possui urna avulsa. ID ABREE 161438 (Correios, porte P: celulares, carregadores/power bank, cabos, fones, mouse e relógio smart). Tels. alternativos: (91) 3241-4361 / (91) 3246-9984."
+  },
+  {
+    "id": "correios-agf-duque-caxias",
+    "nome": "Correios — AGF Duque de Caxias (Postagem ABREE)",
+    "tipo_local": "orgao_publico",
+    "endereco": {
+      "logradouro": "Avenida Duque de Caxias",
+      "numero": "1139",
+      "bairro": "Marco",
+      "cep": "66093-972"
+    },
+    "coordenadas": {
+      "lat": -1.4298724,
+      "lon": -48.4622655
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "09:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "14:00",
+        "fecha": "17:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3015-3282",
+      "site": "https://www.correios.com.br"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | loggi.com, correiosweb.com.br, guia.belem.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ATENÇÃO: exige geração prévia de código de postagem reversa gratuita no site da ABREE (abree.org.br/pontos-de-recebimento) e embalagem do item antes da entrega no balcão; não possui urna avulsa. ID ABREE 161339 (Correios, porte P: celulares, carregadores/power bank, cabos, fones, mouse e relógio smart). CEP Clique e Retire: 66093-959."
+  },
+  {
     "id": "descarte-correto-marco",
     "nome": "Descarte Correto (Marco)",
     "tipo_local": "cooperativa",
@@ -7,7 +1570,7 @@
       "logradouro": "Travessa Barão do Triunfo",
       "numero": "4596",
       "bairro": "Marco",
-      "cep": null
+      "cep": "66095-050"
     },
     "coordenadas": {
       "lat": -1.4329128,
@@ -28,31 +1591,3756 @@
           4,
           5
         ],
-        "abre": "09:00",
-        "fecha": "17:00"
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "13:00",
+        "fecha": "17:30"
+      }
+    ],
+    "contato": {
+      "telefone": "(92) 99132-7981",
+      "site": "https://descartecorreto.com.br"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Confirmado ativo em 2026 no sistema oficial Green Recicla Pilha (Ambipar/Green Eletron) e em ações de 10/2026 (CNPJ 13.815.353/0003-53). Substituiu o antigo endereço da Av. João Paulo II, 1134. Recebe gratuitamente celulares, tablets, computadores, monitores, impressoras, TVs, eletrodomésticos pequenos, cabos, pilhas e baterias. Não aceita geladeiras, cartuchos nem resíduos químicos."
+  },
+  {
+    "id": "drogasil-conselheiro-1267",
+    "nome": "Drogasil — Batista Campos (Conselheiro Furtado)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Conselheiro Furtado",
+      "numero": "1267",
+      "bairro": "Batista Campos",
+      "cep": "66035-350"
+    },
+    "coordenadas": {
+      "lat": -1.4571113,
+      "lon": -48.487325
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99347-1254",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501404761588 | https://farmaciaqui.net/drogasil-belem-pa-28620",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). PaginaAmarela lista 24h e tel alt (91) 3230-1609; CNES 4761588 e FarmáciAQUI confirmam 07:00-23:00."
+  },
+  {
+    "id": "drogasil-fernando-guilhon-1386",
+    "nome": "Drogasil — Batista Campos (Fernando Guilhon)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Engenheiro Fernando Guilhon",
+      "numero": "1386",
+      "bairro": "Batista Campos",
+      "cep": "66033-447"
+    },
+    "coordenadas": {
+      "lat": -1.4656352,
+      "lon": -48.4860482
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 98407-5063",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501408451052",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CNES 8451052 registra apenas seg-sáb 07:00-23:00 (domingo não informado no CNES nem verificado externamente)."
+  },
+  {
+    "id": "drogasil-mundurucus-1619",
+    "nome": "Drogasil — Batista Campos (Mundurucus)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rua dos Mundurucus",
+      "numero": "1619",
+      "bairro": "Batista Campos",
+      "cep": "66033-716"
+    },
+    "coordenadas": {
+      "lat": -1.4614254,
+      "lon": -48.4902028
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99323-9338",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501400960926 | https://wanderboat.ai/local-businesses/brazil/regi%C3%A3o-geogr%C3%A1fica-imediata-de-bel%C3%A9m/drogasil/1k6i_AEgRA2sMJX41r_E-Q",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CNES 0960926 (nº 1631) e Wanderboat/GMaps indicam 07:00-23:00; FarmáciAQUI 29016 lista Sempre Aberto (24h). Tel alt Tiendeo: (91) 3347-4396."
+  },
+  {
+    "id": "drogasil-serzedelo-1075",
+    "nome": "Drogasil — Batista Campos (Serzedelo Corrêa)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Serzedelo Corrêa",
+      "numero": "1075",
+      "bairro": "Batista Campos",
+      "cep": "66033-770"
+    },
+    "coordenadas": {
+      "lat": -1.4619774,
+      "lon": -48.4871179
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99342-5037",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501404400348 | https://farmaciaqui.net/drogasil-belem-pa-28878",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: POI Drogasil (OSM). CNES 4400348 e FarmáciAQUI 28878 confirmam 07:00-23:00."
+  },
+  {
+    "id": "drogasil-icoaraci-oito-setembro",
+    "nome": "Drogasil — Campina de Icoaraci",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rua Oito de Setembro",
+      "numero": "272",
+      "bairro": "Campina de Icoaraci",
+      "cep": "66813-010"
+    },
+    "coordenadas": {
+      "lat": -1.2990783,
+      "lon": -48.4748823
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
       }
     ],
     "contato": {
       "telefone": null,
-      "site": null
+      "site": "https://www.drogasil.com.br/nossas-lojas"
     },
-    "fonte": "https://diariodopara.com.br/para/o-que-fazer-com-aqueles-eletronicos-que-nao-servem-mais/",
-    "verificado_em": null,
-    "observacoes": "NÃO CONFIRMADO (confiança média). Matéria do Diário do Pará de 05/07/2025, lida em 2026-11-01. Gratuito, entrega presencial. Aceita também TVs e eletrodomésticos pequenos; não aceita geladeiras, cartuchos de tinta nem resíduos químicos. O site da empresa lista só um endereço em Manaus. Confirmar por telefone. O Nominatim só localizou a rua, não o número 4596: posição aproximada. Coordenadas aproximadas, obtidas pelo endereço no Nominatim (OpenStreetMap) em 2026-11-01: conferir no Google Maps."
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501408107815 | https://guia.ltda/local/4707-bl-c-icoaraci-1-campina-de-icoaraci-belem",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: ViaCEP 66813-010 + Nominatim. CNES 8107815 (alvará 13227/25 de 29/08/2025) e Guia.ltda confirmam 07:00-23:00. CNES traz apenas tel matriz (11) 3769-5731; central 3004-8007."
   },
   {
-    "id": "horto-municipal-belem",
-    "nome": "Horto Municipal de Belém (Semma)",
-    "tipo_local": "orgao_publico",
+    "id": "drogasil-canudos-ceara",
+    "nome": "Drogasil — Canudos",
+    "tipo_local": "varejo",
     "endereco": {
-      "logradouro": "Rua dos Mundurucus (Praça Milton Trindade)",
-      "numero": null,
+      "logradouro": "Avenida Ceará",
+      "numero": "434",
+      "bairro": "Canudos",
+      "cep": "66070-080"
+    },
+    "coordenadas": {
+      "lat": -1.4475234,
+      "lon": -48.4579811
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501408056994",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Aproximada na via (Nominatim). CNES 8056994 (alvará 13364/2025 de 02/06/2025) confirma 07:00-23:00. CNES traz apenas matriz (11) 3769-5678."
+  },
+  {
+    "id": "drogasil-condor-padre-eutiquio",
+    "nome": "Drogasil — Condor",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Travessa Padre Eutíquio",
+      "numero": "3542",
+      "bairro": "Condor",
+      "cep": "66045-225"
+    },
+    "coordenadas": {
+      "lat": -1.4715581,
+      "lon": -48.4764167
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501408056803",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CNES 8056803 (alvará 13165/25 de 13/06/2025) confirma 07:00-23:00. CNES traz apenas matriz (11) 3769-5678."
+  },
+  {
+    "id": "drogasil-coqueiro-aug-montenegro",
+    "nome": "Drogasil — Coqueiro (Augusto Montenegro)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rodovia Augusto Montenegro",
+      "numero": "9",
+      "bairro": "Coqueiro",
+      "cep": "66823-010"
+    },
+    "coordenadas": {
+      "lat": -1.3315997,
+      "lon": -48.4495106
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99215-7566",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501404737822 | https://unisus.com.br/cnes/estabelecimento/4737822-drogasil-bl-coqueiro-i",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: POI Drogasil (OSM). CNES 4737822 (BL Coqueiro I, Km 08-10 Loja 01) registra CEP 66823-010 (pontos.json tem 66823-061 do OSM)."
+  },
+  {
+    "id": "drogasil-cremacao-mundurucus",
+    "nome": "Drogasil — Cremação",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rua dos Mundurucus",
+      "numero": "3326",
+      "bairro": "Cremação",
+      "cep": "66040-033"
+    },
+    "coordenadas": {
+      "lat": -1.4580781,
+      "lon": -48.4760389
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99155-6748",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501404500245 | https://unisus.com.br/cnes/estabelecimento/4500245-drogasil-cremacao",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CNES 4500245 e Wanderboat/GMaps confirmam 07:00-23:00."
+  },
+  {
+    "id": "drogasil-mangueirao-aug-montenegro",
+    "nome": "Drogasil — Mangueirão (Augusto Montenegro)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rodovia Augusto Montenegro",
+      "numero": "39",
+      "bairro": "Mangueirão",
+      "cep": "66640-000"
+    },
+    "coordenadas": {
+      "lat": -1.3841959,
+      "lon": -48.4371509
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501404737776 | https://seuguiadesaude.com.br/farmacias/farmacia/raia-drogasil-61585865-2843/",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: POI Drogasil (OSM). CNES 4737776 (BL Mnagueirao I, CNPJ 61.585.865/2843-20, atualizado 29/10/2026) confirma Rod. Augusto Montenegro, 39, CEP 66640-000 (pontos.json tem 66640-425 do OSM) e horário 07:00-23:00. Tel CNES é adm (62) 3286-4638."
+  },
+  {
+    "id": "drogasil-marambaia-tavares-bastos",
+    "nome": "Drogasil — Marambaia",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Tavares Bastos",
+      "numero": "1456",
+      "bairro": "Marambaia",
+      "cep": "66615-005"
+    },
+    "coordenadas": {
+      "lat": -1.4027186,
+      "lon": -48.4516176
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99229-0924",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501408056870 | https://farmaciaqui.net/drogasil-marambaia-belem-pa-94697",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CNES 8056870 e FarmáciAQUI 94697 confirmam 07:00-23:00. Tel alt PaginaAmarela: (91) 3225-1453."
+  },
+  {
+    "id": "drogasil-marco-duque-caxias",
+    "nome": "Drogasil — Marco (Duque de Caxias)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Duque de Caxias",
+      "numero": "622",
+      "bairro": "Marco",
+      "cep": "66093-026"
+    },
+    "coordenadas": {
+      "lat": -1.4378993,
+      "lon": -48.4668557
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "00:00",
+        "fecha": "24:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99202-9017",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | https://farmaciaqui.net/drogasil-belem-pa-66505 | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501408056951",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). 24h confirmado por FarmáciAQUI 66505 (Sempre Aberto), Guia.ltda, Nool e PaginaAmarela (CNES 8056951 registra 07:00-23:59). Tel alt Nool: (91) 3038-4896."
+  },
+  {
+    "id": "drogasil-marco-joao-paulo",
+    "nome": "Drogasil — Marco (João Paulo II)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida João Paulo II",
+      "numero": "672",
+      "bairro": "Marco",
+      "cep": "66095-492"
+    },
+    "coordenadas": {
+      "lat": -1.4427716,
+      "lon": -48.4587285
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501408056471",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CNES 8056471 (alvará 13998/25 de 02/06/2025) registra seg-sáb 07:00-23:00 (domingo não consta no CNES). Tel CNES apenas matriz (11) 3769-5731."
+  },
+  {
+    "id": "drogasil-marco-mauriti",
+    "nome": "Drogasil — Marco (Mauriti)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Travessa Mauriti",
+      "numero": "3095",
+      "bairro": "Marco",
+      "cep": "66093-681"
+    },
+    "coordenadas": {
+      "lat": -1.4370458,
+      "lon": -48.4582396
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99393-2632",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501404826094",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: POI Drogasil (OSM). CNES 4826094 registra dom-sáb 07:00-23:00; AppLocal lista 24h."
+  },
+  {
+    "id": "drogasil-nazare-generalissimo-1585",
+    "nome": "Drogasil — Nazaré (Generalíssimo Deodoro)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Generalíssimo Deodoro",
+      "numero": "1585",
+      "bairro": "Nazaré",
+      "cep": "66035-090"
+    },
+    "coordenadas": {
+      "lat": -1.4549324,
+      "lon": -48.4826221
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99300-1891",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501404872347",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CNES 4872347 (alvará 15848/24 de 02/06/2025) confirma 07:00-23:00 e tel local."
+  },
+  {
+    "id": "drogasil-nazare-jose-malcher-1764",
+    "nome": "Drogasil — Nazaré (José Malcher 1764)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Governador José Malcher",
+      "numero": "1764",
+      "bairro": "Nazaré",
+      "cep": "66060-230"
+    },
+    "coordenadas": {
+      "lat": -1.4486676,
+      "lon": -48.4779668
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99103-0418",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501404404319 | https://guia.ltda",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CNES 4404319 e Guia.ltda confirmam 07:00-23:00; tel via LocalFitness e Guia.ltda."
+  },
+  {
+    "id": "drogasil-nazare-jose-malcher-554",
+    "nome": "Drogasil — Nazaré (José Malcher 554)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Governador José Malcher",
+      "numero": "554",
+      "bairro": "Nazaré",
+      "cep": "66040-282"
+    },
+    "coordenadas": {
+      "lat": -1.4517887,
+      "lon": -48.4885696
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99155-2756",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501404404459 | https://farmaciaqui.net/drogasil-belem-pa-28613",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CNES 4404459 e FarmáciAQUI 28613 confirmam 07:00-23:00. Tel alt Tiendeo: (91) 3230-1081."
+  },
+  {
+    "id": "drogasil-pedreira-dr-freitas",
+    "nome": "Drogasil — Pedreira (Dr. Freitas)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Doutor Freitas",
+      "numero": "1122",
+      "bairro": "Pedreira",
+      "cep": "66087-810"
+    },
+    "coordenadas": {
+      "lat": -1.4167275,
+      "lon": -48.4637411
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501408057044",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CNES 8057044 (alvará 11062/2025 de 22/09/2025) confirma 07:00-23:00. CNES traz apenas matriz (11) 3769-5731."
+  },
+  {
+    "id": "drogasil-pedreira-humaita",
+    "nome": "Drogasil — Pedreira (Humaitá)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Travessa Humaitá",
+      "numero": "1073",
+      "bairro": "Pedreira",
+      "cep": "66083-340"
+    },
+    "coordenadas": {
+      "lat": -1.4345154,
+      "lon": -48.4728947
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99317-7873",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501404815718 | https://unisus.com.br/cnes/estabelecimento/4815718-drogasil-bl-pedreira-1-humaita",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CNES 4815718 (alvará 2995/25 de 14/08/2025) traz CEP 66083-330 (SeuGuiaDeSaúde lista 66083-340). CEP 66083-340 confirmado via ViaCEP para Tv. Humaitá, 1073 (CNES 4815718 registrava 66083-330)."
+  },
+  {
+    "id": "drogasil-pedreira-pedro-miranda",
+    "nome": "Drogasil — Pedreira (Pedro Miranda)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Pedro Miranda",
+      "numero": "712",
+      "bairro": "Pedreira",
+      "cep": "66085-021"
+    },
+    "coordenadas": {
+      "lat": -1.4329533,
+      "lon": -48.4751153
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99265-2846",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501404737857 | https://wanderboat.ai/local-businesses/brazil/regi%C3%A3o-geogr%C3%A1fica-imediata-de-bel%C3%A9m/drogasil/Zaa4-F24Qq6S9obn5KAPLw",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CNES 4737857 e Wanderboat/GMaps confirmam 07:00-23:00 (AppLocal lista 24h). Tel CNES traz (91) 99265-5846; Guia.ltda/AppLocal/Opendi trazem (91) 99265-2846. CEP alt GMaps: 66085-021. CEP 66085-021 confirmado via ViaCEP para Av. Pedro Miranda, 712 (CNES 4737857 registrava 66085-005)."
+  },
+  {
+    "id": "drogasil-reduto-boulevard",
+    "nome": "Drogasil — Reduto (Boulevard Shopping)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Visconde de Souza Franco (Boulevard Shopping)",
+      "numero": "776",
+      "bairro": "Reduto",
+      "cep": "66053-000"
+    },
+    "coordenadas": {
+      "lat": -1.4463292,
+      "lon": -48.4897197
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "13:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://greeneletron.org.br/green-recicla-pilha/"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Boulevard Shopping (OSM)."
+  },
+  {
+    "id": "drogasil-reduto-doca-863",
+    "nome": "Drogasil — Reduto (Doca 863)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Visconde de Souza Franco",
+      "numero": "863",
+      "bairro": "Reduto",
+      "cep": "66053-000"
+    },
+    "coordenadas": {
+      "lat": -1.4417978,
+      "lon": -48.492947
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "00:00",
+        "fecha": "24:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99304-8139",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | https://farmaciaqui.net/drogasil-belem-pa-87914 | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501404438930",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Aproximada na via (Nominatim). 24h confirmado por FarmáciAQUI 87914 (Sempre Aberto) e CNES 4438930 (alvará 15198/25 de 05/04/2025: 00:00-23:59 seg-sáb, 00:00-23:00 dom). Tel alt Tiendeo: (91) 3230-0752."
+  },
+  {
+    "id": "drogasil-souza-almirante",
+    "nome": "Drogasil — Souza",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Almirante Barroso",
+      "numero": "3204",
+      "bairro": "Souza",
+      "cep": "66613-710"
+    },
+    "coordenadas": {
+      "lat": -1.4240472,
+      "lon": -48.4502216
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99264-8850",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501404445090 | https://localfitness.com.br/local/2727-bl-souza-1-souza",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CNES 4445090 e LocalFitness confirmam 07:00-23:00. Tel alt AppLocal: (91) 3276-6794."
+  },
+  {
+    "id": "drogasil-sao-bras-gentil",
+    "nome": "Drogasil — São Brás (Gentil Bittencourt)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Gentil Bittencourt",
+      "numero": "2110",
+      "bairro": "São Brás",
+      "cep": "66063-018"
+    },
+    "coordenadas": {
+      "lat": -1.4548693,
+      "lon": -48.4734452
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99350-3189",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501404436768",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CNES 4436768 registra 07:00-23:00; AppLocal lista 24h e tel (91) 99350-3189."
+  },
+  {
+    "id": "drogasil-sao-bras-magalhaes-barata",
+    "nome": "Drogasil — São Brás (Magalhães Barata)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Governador Magalhães Barata",
+      "numero": "521",
+      "bairro": "São Brás",
+      "cep": "66040-170"
+    },
+    "coordenadas": {
+      "lat": -1.4516107,
+      "lon": -48.4759311
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "00:00",
+        "fecha": "24:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99247-7164",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501404524411 | https://nool.com.br/page/3692/pa/belem/nazare/farmacia-e-drogaria/drogasil-nazare",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CONFLITO: CNES 4524411 registra 00:00-23:59 (24h) dom-sáb e Nool lista 24h, mas Wanderboat/Google Maps registra 07:00-23:00. Tel via LocalFitness."
+  },
+  {
+    "id": "drogasil-tapana-aug-montenegro",
+    "nome": "Drogasil — Tapanã (Icoaraci)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rodovia Augusto Montenegro",
+      "numero": "6955",
+      "bairro": "Tapanã",
+      "cep": "66833-000"
+    },
+    "coordenadas": {
+      "lat": -1.3487656,
+      "lon": -48.4530533
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99365-8486",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501404446186 | https://farmaciaqui.net/drogasil-belem-pa-61326",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: POI Drogasil (OSM). CNES 4446186 (alvará 15288/2025 de 05/04/2025), UniSUS, FarmáciAQUI 61326 e Guia.ltda confirmam 07:00-23:00. Tels alt: (91) 3268-1622 / (91) 3261-0070."
+  },
+  {
+    "id": "drogasil-umarizal-bernal-couto",
+    "nome": "Drogasil — Umarizal (Bernal do Couto)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rua Bernal do Couto",
+      "numero": "1109",
+      "bairro": "Umarizal",
+      "cep": "66055-080"
+    },
+    "coordenadas": {
+      "lat": -1.4390367,
+      "lon": -48.4808979
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501408546584",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CNES 8546584 confirma 07:00-23:00. CNES traz apenas matriz (11) 3769-5731."
+  },
+  {
+    "id": "drogasil-umarizal-generalissimo-868",
+    "nome": "Drogasil — Umarizal (Generalíssimo Deodoro)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Generalíssimo Deodoro",
+      "numero": "868",
+      "bairro": "Umarizal",
+      "cep": "66055-240"
+    },
+    "coordenadas": {
+      "lat": -1.4484766,
+      "lon": -48.4829148
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501408056757",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CNES 8056757 (alvará 14993/25) confirma 07:00-23:00. CNES traz apenas matriz (11) 3769-5678."
+  },
+  {
+    "id": "drogasil-umarizal-senador-lemos",
+    "nome": "Drogasil — Umarizal (Senador Lemos)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Senador Lemos",
+      "numero": "529",
+      "bairro": "Umarizal",
+      "cep": "66050-000"
+    },
+    "coordenadas": {
+      "lat": -1.4385438,
+      "lon": -48.4883151
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99338-2836",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501404438779 | https://wanderboat.ai/local-businesses/brazil/regi%C3%A3o-geogr%C3%A1fica-imediata-de-bel%C3%A9m/drogasil/B4QVtLLRTAy_y-KqVE5DPA",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CNES 4438779 e Wanderboat/GMaps confirmam 07:00-23:00 (PaginaAmarela lista 24h)."
+  },
+  {
+    "id": "drogasil-umarizal-wandenkolk",
+    "nome": "Drogasil — Umarizal (Wandenkolk)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Travessa Almirante Wandenkolk",
+      "numero": "1003",
+      "bairro": "Umarizal",
+      "cep": "66055-030"
+    },
+    "coordenadas": {
+      "lat": -1.4452436,
+      "lon": -48.4860912
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "23:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3230-1660",
+      "site": "https://www.drogasil.com.br/nossas-lojas"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | http://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=1501400832634 | https://unisus.com.br/cnes/estabelecimento/0832634-drogasil-bl-umarizal-1",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Coletor oficial Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis — não aceita eletroeletrônicos maiores. Coordenada: Exata (Nominatim). CNES 0832634 (alvará 3136/24 de 16/08/2024) e UniSUS confirmam 07:00-23:00. Tel alt LocalFitness: (91) 99295-7714."
+  },
+  {
+    "id": "eplus-reciclagem-assai-mario-covas",
+    "nome": "E+ Reciclagem: Assaí Mário Covas",
+    "tipo_local": "ecoponto",
+    "endereco": {
+      "logradouro": "Rodovia Mário Covas (Estacionamento Assaí Atacadista)",
+      "numero": "69",
+      "bairro": "Coqueiro",
+      "cep": "66650-000"
+    },
+    "coordenadas": {
+      "lat": -1.3592205,
+      "lon": -48.4300135
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "13:00",
+        "fecha": "17:00"
+      },
+      {
+        "dias": [
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      }
+    ],
+    "contato": {
+      "telefone": "0800 091 0196",
+      "site": "https://pa.equatorialenergia.com.br"
+    },
+    "fonte": "https://www.portalcultura.com.br/pt-br/campanha-no-para-garante-desconto-na-conta-de-energia-com-entrega-de-materiais-reciclaveis",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO em localizador oficial (confiança média; fonte Portal Cultura 18/06/2026 e O Liberal 02/07/2025). Recebe eletrônicos com placa, baterias e recicláveis secos (mínimo 3 kg; exige Conta Contrato Equatorial). NÃO aceita pilhas comuns nem cabos/fios soltos."
+  },
+  {
+    "id": "eplus-reciclagem-parque-shopping",
+    "nome": "E+ Reciclagem: Parque Shopping Belém",
+    "tipo_local": "ecoponto",
+    "endereco": {
+      "logradouro": "Rodovia Augusto Montenegro (Estacionamento Parque Shopping Belém)",
+      "numero": "4300",
+      "bairro": "Parque Verde",
+      "cep": "66635-110"
+    },
+    "coordenadas": {
+      "lat": -1.371311,
+      "lon": -48.4472259
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "10:00",
+        "fecha": "13:00"
+      },
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "14:00",
+        "fecha": "19:00"
+      },
+      {
+        "dias": [
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "14:00"
+      }
+    ],
+    "contato": {
+      "telefone": "0800 091 0196",
+      "site": "https://pa.equatorialenergia.com.br"
+    },
+    "fonte": "https://www.portalcultura.com.br/pt-br/campanha-no-para-garante-desconto-na-conta-de-energia-com-entrega-de-materiais-reciclaveis",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO em localizador oficial (confiança média; fonte Portal Cultura 18/06/2026 e O Liberal 02/07/2025). Recebe eletrônicos com placa, baterias e recicláveis secos (mínimo 3 kg; exige Conta Contrato Equatorial). NÃO aceita pilhas comuns nem cabos/fios soltos."
+  },
+  {
+    "id": "eplus-reciclagem-praca-benedito-monteiro",
+    "nome": "E+ Reciclagem: Praça Benedito Monteiro",
+    "tipo_local": "ecoponto",
+    "endereco": {
+      "logradouro": "Rua Barão de Igarapé-Miri (esq. Tv. Ezeriel Mônico de Matos)",
+      "numero": "s/n",
+      "bairro": "Guamá",
+      "cep": null
+    },
+    "coordenadas": {
+      "lat": -1.467547,
+      "lon": -48.4626207
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "13:00",
+        "fecha": "17:00"
+      },
+      {
+        "dias": [
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      }
+    ],
+    "contato": {
+      "telefone": "0800 091 0196",
+      "site": "https://pa.equatorialenergia.com.br"
+    },
+    "fonte": "https://www.portalcultura.com.br/pt-br/campanha-no-para-garante-desconto-na-conta-de-energia-com-entrega-de-materiais-reciclaveis",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO em localizador oficial (confiança média; fonte Portal Cultura 18/06/2026). ALERTA: em 18/06/2026 constava 'em reforma, previsão de entrega em 60 dias' — confirmar reabertura pelo 0800 091 0196. Exige Conta Contrato Equatorial; NÃO aceita pilhas comuns nem cabos soltos."
+  },
+  {
+    "id": "eplus-reciclagem-sede-equatorial",
+    "nome": "E+ Reciclagem: Sede Equatorial Belém",
+    "tipo_local": "ecoponto",
+    "endereco": {
+      "logradouro": "Rodovia Augusto Montenegro",
+      "numero": "Km 8,5",
+      "bairro": "Coqueiro",
+      "cep": null
+    },
+    "coordenadas": {
+      "lat": -1.3431049,
+      "lon": -48.4516545
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "07:30",
+        "fecha": "11:30"
+      },
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "13:00",
+        "fecha": "17:00"
+      },
+      {
+        "dias": [
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      }
+    ],
+    "contato": {
+      "telefone": "0800 091 0196",
+      "site": "https://pa.equatorialenergia.com.br"
+    },
+    "fonte": "https://www.portalcultura.com.br/pt-br/campanha-no-para-garante-desconto-na-conta-de-energia-com-entrega-de-materiais-reciclaveis",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO em localizador oficial (confiança média; fonte Portal Cultura 18/06/2026). ALERTA: em 18/06/2026 constava 'em reforma, previsão de entrega em 60 dias' — confirmar reabertura pelo 0800 091 0196. Exige Conta Contrato Equatorial; NÃO aceita pilhas comuns nem cabos soltos."
+  },
+  {
+    "id": "eplus-reciclagem-fiepa",
+    "nome": "E+ Reciclagem: Sede FIEPA",
+    "tipo_local": "ecoponto",
+    "endereco": {
+      "logradouro": "Travessa Rui Barbosa (Estacionamento Sede FIEPA)",
+      "numero": "s/n",
+      "bairro": "Nazaré",
+      "cep": null
+    },
+    "coordenadas": {
+      "lat": -1.452082,
+      "lon": -48.4879719
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "13:00",
+        "fecha": "17:00"
+      },
+      {
+        "dias": [
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      }
+    ],
+    "contato": {
+      "telefone": "0800 091 0196",
+      "site": "https://pa.equatorialenergia.com.br"
+    },
+    "fonte": "https://www.portalcultura.com.br/pt-br/campanha-no-para-garante-desconto-na-conta-de-energia-com-entrega-de-materiais-reciclaveis",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO em localizador oficial (confiança média; fonte Portal Cultura 18/06/2026 e O Liberal 02/07/2025). Recebe eletrônicos com placa (celulares, computadores), baterias e recicláveis secos (mínimo 3 kg; exige Conta Contrato Equatorial). NÃO aceita pilhas comuns nem cabos/fios soltos."
+  },
+  {
+    "id": "green-assistencia-tecnica-umarizal",
+    "nome": "Green Assistência Técnica",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Travessa Quatorze de Março",
+      "numero": "912",
+      "bairro": "Umarizal",
+      "cep": "66055-490"
+    },
+    "coordenadas": {
+      "lat": -1.4434152,
+      "lon": -48.480771
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "08:00",
+        "fecha": "18:00"
+      },
+      {
+        "dias": [
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "13:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3241-9915",
+      "site": "https://greeneletron.org.br/green-recicla-pilha/"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar | todosnegocios.com, consertabrasil.com",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Ponto oficial do programa Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis. consertabrasil.com registra pausa de almoço 12:00–14:00 de seg–sex."
+  },
+  {
+    "id": "assistencia-irlanda-s-souza",
+    "nome": "Irlanda S. Souza (Assistência Técnica)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Travessa Francisco Caldeira Castelo Branco",
+      "numero": "1304",
+      "bairro": "São Brás",
+      "cep": "66063-000"
+    },
+    "coordenadas": {
+      "lat": -1.4542706,
+      "lon": -48.4708197
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "14:00",
+        "fecha": "18:00"
+      },
+      {
+        "dias": [
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3259-4626",
+      "site": "https://abree.org.br/pontos-de-recebimento"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | todosnegocios.com, serasaexperian.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Assistência técnica credenciada na ABREE (ID 143542, atualizado em 2025-04-07, porte P+G). Recebe celulares, cabos, computadores, pilhas/baterias e eletroeletrônicos. Nome fantasia: Electrofrio (CNPJ 18.281.502/0001-01). Tels. alternativos: (91) 3269-3040 / (91) 3081-1138. Serasa indica Seg–Sex 08:00–17:00 sem expediente aos sábados."
+  },
+  {
+    "id": "kalunga-bosque-grao-para",
+    "nome": "Kalunga — Shopping Bosque Grão-Pará",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Centenário (Rod. dos Trabalhadores, s/n — Shopping Bosque Grão-Pará)",
+      "numero": "1052",
+      "bairro": "Parque Verde",
+      "cep": "66635-894"
+    },
+    "coordenadas": {
+      "lat": -1.3901236,
+      "lon": -48.4651456
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "14:00",
+        "fecha": "22:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://ri.kalunga.com.br/esg.html"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Todas as lojas físicas Kalunga operam 3 fluxos de logística reversa: pilhas e baterias (Green Recicla Pilha), eletrônicos e cartuchos/toners originais HP (HP Planet Partners). Coordenadas ajustadas para o Shopping Bosque Grão-Pará."
+  },
+  {
+    "id": "jadlog-lave-pegue-nazare",
+    "nome": "Lave Pegue Nazaré — Ponto Jadlog (Postagem ABREE)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Travessa Almirante Wandenkolk",
+      "numero": "809",
+      "bairro": "Nazaré",
+      "cep": "66055-030"
+    },
+    "coordenadas": {
+      "lat": -1.4497257,
+      "lon": -48.4850685
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "09:00",
+        "fecha": "19:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 98861-0906",
+      "site": "https://lavepeguenazare.com.br"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | https://lavepeguenazare.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ATENÇÃO: exige geração prévia de código de postagem reversa gratuita no site da ABREE (abree.org.br/pontos-de-recebimento) e embalagem do item antes da entrega no ponto parceiro; não possui urna avulsa. ID ABREE 153456 (Jadlog, porte P: celulares, carregadores/power bank, cabos, fones, mouse e relógio smart). Site oficial confirma Seg–Sáb 09:00–19:00 (domingo fechado); integrador atualcard.com.br listava pausa 12h–13h e dom 09h–18h."
+  },
+  {
+    "id": "lbv-paiva-netto-canudos",
+    "nome": "LBV — Centro Comunitário José de Paiva Netto (Eletrosolidário)",
+    "tipo_local": "ecoponto",
+    "endereco": {
+      "logradouro": "Travessa Francisco Monteiro",
+      "numero": "782",
+      "bairro": "Canudos",
+      "cep": null
+    },
+    "coordenadas": {
+      "lat": -1.4504966,
+      "lon": -48.460157
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "08:00",
+        "fecha": "17:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3253-7511",
+      "site": "https://lbv.org/belem-pa/"
+    },
+    "fonte": "https://www.oliberal.com/belem/campanha-da-lbv-incentiva-descarte-correto-de-eletrodomesticos-e-eletroeletronicos-na-grande-belem-1.915004",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO se a caixa coletora da Indústria Fox segue instalada em 2026 (confiança média; matéria O Liberal de 04/02/2025). Recebe eletrodomésticos e eletroeletrônicos; NÃO aceita pilhas, baterias ou lâmpadas. Confirmar por telefone antes de ir."
+  },
+  {
+    "id": "lbv-escola-jesus-batista-campos",
+    "nome": "LBV — Escola Jesus (Projeto Eletrosolidário)",
+    "tipo_local": "ecoponto",
+    "endereco": {
+      "logradouro": "Travessa Padre Eutíquio",
+      "numero": "1976",
       "bairro": "Batista Campos",
       "cep": null
     },
     "coordenadas": {
-      "lat": -1.4579479,
-      "lon": -48.4870942
+      "lat": -1.4627666,
+      "lon": -48.4879904
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "08:00",
+        "fecha": "17:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3225-0071",
+      "site": "https://lbv.org/belem-pa/"
+    },
+    "fonte": "https://www.oliberal.com/belem/campanha-da-lbv-incentiva-descarte-correto-de-eletrodomesticos-e-eletroeletronicos-na-grande-belem-1.915004",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO se a caixa coletora da Indústria Fox segue instalada em 2026 (confiança média; matéria O Liberal de 04/02/2025). Recebe eletrodomésticos e eletroeletrônicos; NÃO aceita pilhas, baterias ou lâmpadas. Confirmar por telefone antes de ir."
+  },
+  {
+    "id": "vivo-boulevard-shopping",
+    "nome": "Loja Vivo — Boulevard Shopping Belém",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Avenida Visconde de Souza Franco (Boulevard Shopping, Salas NS 117/118/119)",
+      "numero": "776",
+      "bairro": "Reduto",
+      "cep": "66053-300"
+    },
+    "coordenadas": {
+      "lat": -1.4463292,
+      "lon": -48.4897197
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "13:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://abree.org.br/pontos-de-recebimento"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Programa Vivo Recicle (ABREE IDs 144887/144888 consolidados). Recebe celulares, baterias, pilhas, carregadores, cabos e fones de ouvido (aberto a não-clientes)."
+  },
+  {
+    "id": "vivo-castanheira-shopping",
+    "nome": "Loja Vivo — Castanheira Shopping",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Rodovia BR-316 (Castanheira Shopping)",
+      "numero": "Km 01",
+      "bairro": "Castanheira",
+      "cep": "66645-001"
+    },
+    "coordenadas": {
+      "lat": -1.4029846,
+      "lon": -48.4307905
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "14:00",
+        "fecha": "22:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://greeneletron.org.br/onde-descartar/"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Programa Vivo Recicle (consta no espelho ABREE da Green Eletron e no diretório do Castanheira Shopping). Recebe celulares, baterias, pilhas, carregadores, cabos e fones."
+  },
+  {
+    "id": "vivo-icoaraci",
+    "nome": "Loja Vivo — Icoaraci",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Travessa Cristóvão Colombo",
+      "numero": "341-A",
+      "bairro": "Cruzeiro",
+      "cep": "66810-000"
+    },
+    "coordenadas": {
+      "lat": -1.2981291,
+      "lon": -48.4864264
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": "(91) 99353-2407",
+      "site": "https://www.aleavivo.com.br/"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | aleavivo.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Programa Vivo Recicle (ABREE ID 143708, loja de rua em Icoaraci). Recebe celulares, baterias, pilhas, carregadores, cabos e fones. Sem grade própria de horários publicada; parceira Alea Vivo (aleavivo.com.br) lista o endereço como Tv. Lopo de Castro, 341-A (ABREE registra Tv. Cristóvão Colombo, 341-A — conferir presencialmente)."
+  },
+  {
+    "id": "vivo-parque-shopping-belem",
+    "nome": "Loja Vivo — Parque Shopping Belém",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Rodovia Augusto Montenegro (Parque Shopping Belém, 1º Piso)",
+      "numero": "4300",
+      "bairro": "Parque Verde",
+      "cep": "66635-110"
+    },
+    "coordenadas": {
+      "lat": -1.371311,
+      "lon": -48.4472259
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "12:00",
+        "fecha": "22:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://abree.org.br/pontos-de-recebimento"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Programa Vivo Recicle (ABREE ID 145078). Coordenadas ajustadas para o Parque Shopping Belém. Recebe celulares, baterias, pilhas, carregadores, cabos e fones."
+  },
+  {
+    "id": "vivo-presidente-vargas",
+    "nome": "Loja Vivo — Presidente Vargas",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Avenida Presidente Vargas",
+      "numero": "552",
+      "bairro": "Campina",
+      "cep": "66017-000"
+    },
+    "coordenadas": {
+      "lat": -1.4519576,
+      "lon": -48.4965139
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": "(91) 99166-4033",
+      "site": "https://www.aleavivo.com.br/"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | aleavivo.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Programa Vivo Recicle (ABREE ID 143707, loja de rua). Recebe celulares, baterias, pilhas, carregadores, cabos e fones. Sem grade própria de horários publicada; parceira Alea Vivo registra o número 522 (Térrea) enquanto ABREE registra 552."
+  },
+  {
+    "id": "vivo-bosque-grao-para",
+    "nome": "Loja Vivo — Shopping Bosque Grão-Pará",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Avenida Centenário (Shopping Bosque Grão-Pará, Térreo, Lojas 21/22)",
+      "numero": "1052",
+      "bairro": "Val-de-Cans",
+      "cep": "66635-894"
+    },
+    "coordenadas": {
+      "lat": -1.3901236,
+      "lon": -48.4651456
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "12:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99366-3363",
+      "site": "https://www.bosquegraopara.com.br/loja/vivo/"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Programa Vivo Recicle (ABREE ID 144882 + site do shopping). Coordenadas ajustadas para o Shopping Bosque Grão-Pará. Recebe celulares, baterias, pilhas, carregadores, cabos e fones."
+  },
+  {
+    "id": "vivo-it-center",
+    "nome": "Loja Vivo — Shopping IT Center",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Avenida Senador Lemos (IT Center, Quiosque 71)",
+      "numero": "3153",
+      "bairro": "Sacramenta",
+      "cep": "66120-000"
+    },
+    "coordenadas": {
+      "lat": -1.4172483,
+      "lon": -48.4788947
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.instagram.com/itcenteroficial/"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | buser.com.br, lojas24.com",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Programa Vivo Recicle (ABREE ID 144990, quiosque no IT Center). Recebe celulares, baterias, pilhas, carregadores, cabos e fones. Sem grade própria divulgada para o quiosque; horário de referência do Shopping IT Center: Seg–Sáb 09:00–22:00, Dom 09:00–15:00 (admin. shopping: (91) 3201-2000; central Vivo: 1058)."
+  },
+  {
+    "id": "vivo-shopping-patio-belem",
+    "nome": "Loja Vivo — Shopping Pátio Belém",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Travessa Padre Eutíquio (Shopping Pátio Belém, Piso 1, Loja 104B)",
+      "numero": "1078",
+      "bairro": "Batista Campos",
+      "cep": "66023-710"
+    },
+    "coordenadas": {
+      "lat": -1.458131,
+      "lon": -48.4948548
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "13:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://abree.org.br/pontos-de-recebimento"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Programa Vivo Recicle (ABREE ID 145277). Coordenadas corrigidas para o Shopping Pátio Belém (a API ABREE apontava erroneamente para Parque Verde). Recebe celulares, baterias, pilhas, carregadores, cabos e fones."
+  },
+  {
+    "id": "vivo-supermercado-formosa",
+    "nome": "Loja Vivo — Supermercado Formosa",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Rodovia Augusto Montenegro (Supermercado Formosa)",
+      "numero": "s/n",
+      "bairro": "Parque Verde",
+      "cep": "66635-110"
+    },
+    "coordenadas": {
+      "lat": -1.3626745,
+      "lon": -48.4501185
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.formosa.com.br/"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | formosa.com.br, paginaamarela.com.br, applocal.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Programa Vivo Recicle (ABREE ID 145337, ponto Vivo dentro do supermercado). Recebe celulares, baterias, pilhas, carregadores, cabos e fones. Sem grade própria para o ponto Vivo; horário de referência do Supermercado Formosa Augusto Montenegro Km 7: Seg–Sáb 08:00–22:00, Dom 08:00–14:00 (SAC Formosa: (91) 3348-9007). CEP atualizado para 66635-110 via ViaCEP (ABREE usava 66625-630)."
+  },
+  {
+    "id": "vivo-supermercado-mais-barato",
+    "nome": "Loja Vivo — Supermercado Mais Barato",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Avenida Governador José Malcher (Sala 102)",
+      "numero": "2388",
+      "bairro": "São Brás",
+      "cep": "66060-232"
+    },
+    "coordenadas": {
+      "lat": -1.4484662,
+      "lon": -48.4721861
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": "(91) 99116-4467",
+      "site": "https://www.aleavivo.com.br/"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | aleavivo.com.br, sympla.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Programa Vivo Recicle (ABREE ID 145338, em galeria de supermercado). Recebe celulares, baterias, pilhas, carregadores, cabos e fones. Sem grade própria divulgada para a Sala 102 (parceira Alea Vivo); prédio-âncora atual é o +B Supermercados Plaza (antigo Mais Barato), com referência Seg–Sáb 07:00–22:00 e Dom 07:30–21:00."
+  },
+  {
+    "id": "americanas-joao-paulo-ii",
+    "nome": "Lojas Americanas — Avenida João Paulo II",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida João Paulo II",
+      "numero": "101",
+      "bairro": "Marco",
+      "cep": "66095-491"
+    },
+    "coordenadas": {
+      "lat": -1.4366444,
+      "lon": -48.4546706
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.americanas.com.br"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/ | americanas.com.br/api/checkout/pub/pickup-points",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO - loja ausente da API oficial ativa de retirada da Americanas e com CNPJ 33.014.556/1207-60 BAIXADO na Receita Federal (sem CNPJ ativo para o nº 101); confirmar presencialmente. PEV oficial Green Eletron (TAM P) + Green Recicla Pilha + ABREE (ID 149364). Coordenadas corrigidas via POI oficial no OpenStreetMap (a API listava erroneamente CEP 68447-000 de Barcarena e coordenada deslocada no Souza)."
+  },
+  {
+    "id": "americanas-campina-padre-eutiquio",
+    "nome": "Lojas Americanas — Batista Campos / Campina",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Travessa Padre Eutíquio",
+      "numero": "1760",
+      "bairro": "Batista Campos",
+      "cep": "66033-720"
+    },
+    "coordenadas": {
+      "lat": -1.461778,
+      "lon": -48.4895086
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.americanas.com.br"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/ | https://parawebnews.com/em-crise-americanas-fecha-ponto-em-belem/",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO - possível encerramento permanente: fechamento noticiado pelo ParaWebNews em 15/05/2023, ausente da API oficial ativa da Americanas e CNPJ 33.014.556/1194-01 BAIXADO (filial ativa próxima no Shopping Pátio Belém). PEV oficial Green Eletron (TAM P) + Green Recicla Pilha + ABREE (ID 149366). Recebe eletroeletrônicos até 50 cm x 70 cm, pilhas e baterias portáteis."
+  },
+  {
+    "id": "americanas-boulevard-shopping",
+    "nome": "Lojas Americanas — Boulevard Shopping Belém",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Visconde de Souza Franco (Boulevard Shopping, Piso G1, Loja 15)",
+      "numero": "776",
+      "bairro": "Reduto",
+      "cep": "66055-005"
+    },
+    "coordenadas": {
+      "lat": -1.4463292,
+      "lon": -48.4897197
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "13:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://greeneletron.org.br/onde-descartar/"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/",
+    "verificado_em": "2026-11-12",
+    "observacoes": "PEV oficial Green Eletron (TAM P) + Green Recicla Pilha + ABREE (ID 149367). Recebe eletroeletrônicos até 50 cm x 70 cm, pilhas e baterias portáteis."
+  },
+  {
+    "id": "americanas-castanheira-shopping",
+    "nome": "Lojas Americanas — Castanheira Shopping",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rodovia BR-316 (Castanheira Shopping)",
+      "numero": "Km 01",
+      "bairro": "Castanheira",
+      "cep": "66645-003"
+    },
+    "coordenadas": {
+      "lat": -1.4029846,
+      "lon": -48.4307905
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "14:00",
+        "fecha": "22:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://greeneletron.org.br/onde-descartar/"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/",
+    "verificado_em": "2026-11-12",
+    "observacoes": "PEV oficial Green Eletron (TAM P) + Green Recicla Pilha + ABREE (ID 149416). Recebe eletroeletrônicos até 50 cm x 70 cm, pilhas e baterias portáteis."
+  },
+  {
+    "id": "americanas-icoaraci",
+    "nome": "Lojas Americanas — Icoaraci",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rua Manoel Barata",
+      "numero": "612",
+      "bairro": "Cruzeiro",
+      "cep": "66810-100"
+    },
+    "coordenadas": {
+      "lat": -1.2998536,
+      "lon": -48.4877962
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "20:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "08:00",
+        "fecha": "14:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.americanas.com.br"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/ | americanas.com.br/api/checkout/pub/pickup-points (americanasl421_l421)",
+    "verificado_em": "2026-11-12",
+    "observacoes": "PEV oficial Green Eletron (TAM P) + Green Recicla Pilha + ABREE (ID 149368). Recebe eletroeletrônicos até 50 cm x 70 cm, pilhas e baterias portáteis. Confirmada ativa na API oficial da Americanas (WhatsApp nacional: (21) 4042-0321)."
+  },
+  {
+    "id": "americanas-it-center",
+    "nome": "Lojas Americanas — Shopping IT Center",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Senador Lemos (IT Center)",
+      "numero": "3153",
+      "bairro": "Sacramenta",
+      "cep": "66120-000"
+    },
+    "coordenadas": {
+      "lat": -1.4172483,
+      "lon": -48.4788947
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "09:00",
+        "fecha": "21:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "09:00",
+        "fecha": "15:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.americanas.com.br"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/ | americanas.com.br/api/checkout/pub/pickup-points (americanasl282_l282)",
+    "verificado_em": "2026-11-12",
+    "observacoes": "PEV oficial Green Eletron (TAM M) + Green Recicla Pilha + ABREE (ID 149369, porte P+G). Recebe eletroeletrônicos de pequeno/médio porte, pilhas e baterias portáteis. Confirmada ativa na API oficial da Americanas e CNPJ 00.776.574/1128-92 ativo (WhatsApp nacional: (21) 4042-0321)."
+  },
+  {
+    "id": "americanas-umarizal",
+    "nome": "Lojas Americanas — Umarizal",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Travessa Dom Pedro I",
+      "numero": "1104",
+      "bairro": "Umarizal",
+      "cep": "66050-100"
+    },
+    "coordenadas": {
+      "lat": -1.4391006,
+      "lon": -48.4841557
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.americanas.com.br"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/ | americanas.com.br/api/checkout/pub/pickup-points",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO - loja ausente da API oficial ativa de retirada da Americanas e com CNPJ antigo 33.014.556/1384-65 BAIXADO na Receita Federal (sem notícia pública de encerramento específico; confirmar presencialmente). PEV oficial Green Eletron (TAM P) + Green Recicla Pilha + ABREE (ID 149365). Recebe eletroeletrônicos até 50 cm x 70 cm, pilhas e baterias portáteis."
+  },
+  {
+    "id": "magalu-1266-telegrafo",
+    "nome": "Magazine Luiza — Filial 1266 (Telégrafo)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Senador Lemos",
+      "numero": "1541",
+      "bairro": "Telégrafo",
+      "cep": "66113-000"
+    },
+    "coordenadas": {
+      "lat": -1.4299644,
+      "lon": -48.4856764
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "09:00",
+        "fecha": "18:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "09:00",
+        "fecha": "13:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3184-2800",
+      "site": "https://lojas.magazineluiza.com.br/filiais/1266/belem"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | https://lojas.magazineluiza.com.br/filiais/1266/belem",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ABREE ID 145460 (porte P+G) + lojas.magazineluiza.com.br. Recebe celulares, cabos, computadores, periféricos, pilhas/baterias e eletrodomésticos; aberto a não-clientes."
+  },
+  {
+    "id": "magalu-1268-pedreira",
+    "nome": "Magazine Luiza — Filial 1268 (Pedreira)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Pedro Miranda",
+      "numero": "1276",
+      "bairro": "Pedreira",
+      "cep": "66085-022"
+    },
+    "coordenadas": {
+      "lat": -1.4287944,
+      "lon": -48.4722789
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "09:00",
+        "fecha": "18:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "09:00",
+        "fecha": "12:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3184-2950",
+      "site": "https://lojas.magazineluiza.com.br/filiais/1268/belem"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | https://lojas.magazineluiza.com.br/filiais/1268/belem",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ABREE ID 145459 (porte P+G) + lojas.magazineluiza.com.br. Recebe celulares, cabos, computadores, periféricos, pilhas/baterias e eletrodomésticos; aberto a não-clientes."
+  },
+  {
+    "id": "magalu-1269-guama",
+    "nome": "Magazine Luiza — Filial 1269 (Guamá)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rua Barão de Igarapé-Miri",
+      "numero": "344",
+      "bairro": "Guamá",
+      "cep": "66075-748"
+    },
+    "coordenadas": {
+      "lat": -1.4674529,
+      "lon": -48.4655279
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "09:00",
+        "fecha": "18:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "09:00",
+        "fecha": "13:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3184-7150",
+      "site": "https://lojas.magazineluiza.com.br/filiais/1269/belem"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | https://lojas.magazineluiza.com.br/filiais/1269/belem",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ABREE ID 147442 (porte P+G) + lojas.magazineluiza.com.br. Recebe celulares, cabos, computadores, periféricos, pilhas/baterias e eletrodomésticos; aberto a não-clientes."
+  },
+  {
+    "id": "magalu-1271-campina",
+    "nome": "Magazine Luiza — Filial 1271 (Campina)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rua Santo Antônio",
+      "numero": "273",
+      "bairro": "Campina",
+      "cep": "66010-105"
+    },
+    "coordenadas": {
+      "lat": -1.4498902,
+      "lon": -48.498719
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "09:00",
+        "fecha": "18:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3342-6259",
+      "site": "https://lojas.magazineluiza.com.br/filiais/1271/belem"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | https://lojas.magazineluiza.com.br/filiais/1271/belem",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ABREE ID 145461 (porte P+G) + lojas.magazineluiza.com.br. Coordenadas corrigidas via Nominatim para a Rua Santo Antônio, 273, Campina (a API ABREE apontava erroneamente para Outeiro/Icoaraci e a Green Eletron citava Cabanagem)."
+  },
+  {
+    "id": "magalu-1272-icoaraci",
+    "nome": "Magazine Luiza — Filial 1272 (Icoaraci)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Travessa Doutor Lopo de Castro",
+      "numero": "420",
+      "bairro": "Cruzeiro",
+      "cep": "66810-191"
+    },
+    "coordenadas": {
+      "lat": -1.2984577,
+      "lon": -48.4854125
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "09:00",
+        "fecha": "18:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3184-3850",
+      "site": "https://lojas.magazineluiza.com.br/filiais/1272/belem"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | https://lojas.magazineluiza.com.br/filiais/1272/belem",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ABREE ID 145463 (porte P+G) + lojas.magazineluiza.com.br. Recebe celulares, cabos, computadores, periféricos, pilhas/baterias e eletrodomésticos; aberto a não-clientes."
+  },
+  {
+    "id": "magalu-1284-campina-xv",
+    "nome": "Magazine Luiza — Filial 1284 (Campina - XV de Novembro)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rua Quinze de Novembro",
+      "numero": "64",
+      "bairro": "Campina",
+      "cep": "66013-060"
+    },
+    "coordenadas": {
+      "lat": -1.4530335,
+      "lon": -48.5028915
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "09:00",
+        "fecha": "18:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3321-4650",
+      "site": "https://lojas.magazineluiza.com.br/filiais/1284/belem"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | https://lojas.magazineluiza.com.br/filiais/1284/belem",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ABREE ID 145458 (porte P+G) + lojas.magazineluiza.com.br. Recebe celulares, cabos, computadores, periféricos, pilhas/baterias e eletrodomésticos; aberto a não-clientes."
+  },
+  {
+    "id": "magalu-1339-parque-shopping",
+    "nome": "Magazine Luiza — Filial 1339 (Parque Shopping Belém)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rodovia Augusto Montenegro (Parque Shopping Belém, Piso 1, Lojas 1029/1030)",
+      "numero": "4300",
+      "bairro": "Parque Verde",
+      "cep": "66635-110"
+    },
+    "coordenadas": {
+      "lat": -1.371311,
+      "lon": -48.4472259
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "12:00",
+        "fecha": "22:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3232-0754",
+      "site": "https://especiais.magazineluiza.com.br/sustentavel/"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ABREE ID 145464 (porte P+G) + lojas.magazineluiza.com.br. Coordenadas corrigidas para o Parque Shopping Belém (ABREE apontava para o norte/Tenoné e Green Eletron geocodificou em Montenegro, Europa)."
+  },
+  {
+    "id": "magalu-1340-castanheira",
+    "nome": "Magazine Luiza — Filial 1340 (Castanheira Shopping)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rodovia BR-316 (Castanheira Shopping, Piso 2, Loja 102)",
+      "numero": "Km 01",
+      "bairro": "Castanheira",
+      "cep": "66645-900"
+    },
+    "coordenadas": {
+      "lat": -1.4029846,
+      "lon": -48.4307905
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "14:00",
+        "fecha": "22:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3184-2850",
+      "site": "https://especiais.magazineluiza.com.br/sustentavel/"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ABREE ID 145462 (porte P+G) + lojas.magazineluiza.com.br. Coordenadas ajustadas para o Castanheira Shopping."
+  },
+  {
+    "id": "magalu-1365-boulevard",
+    "nome": "Magazine Luiza — Filial 1365 (Boulevard Shopping)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Visconde de Souza Franco (Boulevard Shopping)",
+      "numero": "776",
+      "bairro": "Reduto",
+      "cep": "66053-000"
+    },
+    "coordenadas": {
+      "lat": -1.4463292,
+      "lon": -48.4897197
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "13:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://especiais.magazineluiza.com.br/sustentavel/"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ABREE ID 147467 (porte P+G) + lojas.magazineluiza.com.br. Recebe celulares, cabos, computadores, periféricos, pilhas/baterias e eletrodomésticos; aberto a não-clientes."
+  },
+  {
+    "id": "mateus-super-marambaia",
+    "nome": "Mateus Supermercados — Super Marambaia",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Tavares Bastos",
+      "numero": "1234",
+      "bairro": "Marambaia",
+      "cep": "66615-005"
+    },
+    "coordenadas": {
+      "lat": -1.4042064,
+      "lon": -48.4487613
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "21:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "07:00",
+        "fecha": "14:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3182-3151",
+      "site": "https://ofertasmateus.com/lojas/mateus-marambaia"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | https://ofertasmateus.com/lojas/mateus-marambaia | locaisdobrasil.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ABREE ID 147264 (atualizado em 2025-07-01, porte P+G). Recebe celulares, cabos, computadores, periféricos, pilhas/baterias e eletrodomésticos. SAC WhatsApp Grupo Mateus: (98) 99202-0090."
+  },
+  {
+    "id": "jadlog-mercantil-bico-de-ouro",
+    "nome": "Mercantil Bico de Ouro — Ponto Jadlog (Postagem ABREE)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Passagem São Pedro",
+      "numero": "465",
+      "bairro": "Sacramenta",
+      "cep": "66123-230"
+    },
+    "coordenadas": {
+      "lat": -1.4100564,
+      "lon": -48.4704626
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "21:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "08:00",
+        "fecha": "14:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 98992-1103",
+      "site": "https://abree.org.br/pontos-de-recebimento"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | atualcard.com.br, rallydevendas.com.br, correios.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ATENÇÃO: exige geração prévia de código de postagem reversa gratuita no site da ABREE (abree.org.br/pontos-de-recebimento) e embalagem do item antes da entrega no ponto parceiro; não possui urna avulsa. ID ABREE 154533 (Jadlog, porte P: celulares, carregadores/power bank, cabos, fones, mouse e relógio smart). Horário via rallydevendas.com.br/atualcard.com.br; correios.com.br (Ponto de Coleta) lista Sáb 08:00–20:00 e Dom 08:00–12:00."
+  },
+  {
+    "id": "mix-mateus-tenone",
+    "nome": "Mix Mateus — Belém / Tenoné",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Augusto Montenegro",
+      "numero": "s/n",
+      "bairro": "Tenoné",
+      "cep": "66820-000"
+    },
+    "coordenadas": {
+      "lat": -1.3540736,
+      "lon": -48.4534908
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "21:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "08:00",
+        "fecha": "14:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3182-3050",
+      "site": "https://ofertasmateus.com/lojas/mix-icoaraci"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | https://ofertasmateus.com/lojas/mix-icoaraci | waze.com",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ABREE ID 165221 (atualizado em 2026-09-03, porte P+G). Recebe celulares, cabos, computadores, periféricos, pilhas/baterias e eletrodomésticos. SAC WhatsApp Grupo Mateus: (98) 99202-0090."
+  },
+  {
+    "id": "mix-mateus-parque-verde-bengui",
+    "nome": "Mix Mateus — Parque Verde / Benguí",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Estrada do Benguí",
+      "numero": "938",
+      "bairro": "Parque Verde",
+      "cep": "66630-248"
+    },
+    "coordenadas": {
+      "lat": -1.3710552,
+      "lon": -48.4485671
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [],
+    "contato": {
+      "telefone": "(98) 99202-0090",
+      "site": "https://ofertasmateus.com/lojas/mix-bengui"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | https://ofertasmateus.com/lojas/mix-bengui",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ABREE ID 147232 (atualizado em 2025-06-27, porte P+G; nº 938-942). Recebe celulares, cabos, computadores, periféricos, pilhas/baterias e eletrodomésticos. Sem horário público verificável na API oficial ofertasmateus.com nem em diretórios locais (telefone informado é o SAC WhatsApp oficial do Grupo Mateus)."
+  },
+  {
+    "id": "mix-mateus-pedreira",
+    "nome": "Mix Mateus — Pedreira (Dr. Freitas)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Doutor Freitas",
+      "numero": "s/n",
+      "bairro": "Pedreira",
+      "cep": "66087-810"
+    },
+    "coordenadas": {
+      "lat": -1.4158159,
+      "lon": -48.4656736
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "07:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "08:00",
+        "fecha": "18:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(98) 99202-0090",
+      "site": "https://ofertasmateus.com/lojas/mix-pedreira"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | https://ofertasmateus.com/lojas/mix-pedreira | waze.com",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ABREE ID 147229 (atualizado em 2025-06-27, porte P+G). Recebe celulares, cabos, computadores, periféricos, pilhas/baterias e eletrodomésticos. Telefone informado é o SAC WhatsApp oficial do Grupo Mateus."
+  },
+  {
+    "id": "emaus-crc-bengui",
+    "nome": "Movimento República de Emaús (CRC - Bengui)",
+    "tipo_local": "cooperativa",
+    "endereco": {
+      "logradouro": "Rua Padre Bruno Sechi",
+      "numero": "17",
+      "bairro": "Bengui",
+      "cep": "66630-420"
+    },
+    "coordenadas": {
+      "lat": -1.3630268,
+      "lon": -48.4585501
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "08:00",
+        "fecha": "17:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3285-7693",
+      "site": "https://www.movimentodeemaus.org/v2/emaus/?id=107"
+    },
+    "fonte": "https://www.movimentodeemaus.org/v2/emaus/?id=107 | cylex.com.br, oliberal.com, saude.pa.gov.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Centro de Recondicionamento de Computadores (CRC) em funcionamento no horário comercial (confirmar horário exato pelos telefones (91) 3285-7693 ou WhatsApp (91) 98170-8721). Recebe computadores, notebooks, monitores, impressoras, periféricos e eletroeletrônicos para recondicionamento e inclusão digital; também promove a Grande Coleta anual. Site oficial menciona horário comercial; 08:00–17:00 Seg–Sex registrado em cylex.com.br e reportagens locais (oliberal.com / saude.pa.gov.br). Outros contatos oficiais: (91) 98170-8721 / WhatsApp (91) 98075-0401."
+  },
+  {
+    "id": "multicoisas-192-parque-shopping",
+    "nome": "Multicoisas — Loja 192 (Parque Shopping Belém)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rodovia Augusto Montenegro (Parque Shopping Belém)",
+      "numero": "4300",
+      "bairro": "Parque Verde",
+      "cep": "66635-110"
+    },
+    "coordenadas": {
+      "lat": -1.371311,
+      "lon": -48.4472259
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "12:00",
+        "fecha": "22:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://greeneletron.org.br/green-recicla-pilha/"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Ponto oficial do programa Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis."
+  },
+  {
+    "id": "multicoisas-302-patio-belem",
+    "nome": "Multicoisas — Loja 302 (Shopping Pátio Belém)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Travessa Padre Eutíquio (Shopping Pátio Belém)",
+      "numero": "1078",
+      "bairro": "Batista Campos",
+      "cep": "66023-710"
+    },
+    "coordenadas": {
+      "lat": -1.458131,
+      "lon": -48.4948548
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "13:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://greeneletron.org.br/green-recicla-pilha/"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Ponto oficial do programa Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis."
+  },
+  {
+    "id": "multicoisas-317-boulevard",
+    "nome": "Multicoisas — Loja 317 (Boulevard Shopping Belém)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Avenida Visconde de Souza Franco (Boulevard Shopping)",
+      "numero": "776",
+      "bairro": "Reduto",
+      "cep": "66053-000"
+    },
+    "coordenadas": {
+      "lat": -1.4463292,
+      "lon": -48.4897197
+    },
+    "tipos_aceitos": [
+      "pilhas_baterias"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "13:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://greeneletron.org.br/green-recicla-pilha/"
+    },
+    "fonte": "https://sistema.reciclelog.com.br/info/green?search_state=PA&search_city=BEL%C3%89M&commit=Filtrar",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Ponto oficial do programa Green Recicla Pilha (Ambipar/Green Eletron). Recebe exclusivamente pilhas e baterias portáteis."
+  },
+  {
+    "id": "jadlog-premiere-papelaria",
+    "nome": "Premiere Papelaria — Ponto Jadlog (Postagem ABREE)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rua Vinte e Um",
+      "numero": "191",
+      "bairro": "Maracangalha",
+      "cep": "66110-012"
+    },
+    "coordenadas": {
+      "lat": -1.4002822,
+      "lon": -48.4821908
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "08:00",
+        "fecha": "13:00"
+      },
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "14:00",
+        "fecha": "18:00"
+      },
+      {
+        "dias": [
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99144-1987",
+      "site": "https://abree.org.br/pontos-de-recebimento"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | rallydevendas.com.br, wish.com, atualcard.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ATENÇÃO: exige geração prévia de código de postagem reversa gratuita no site da ABREE (abree.org.br/pontos-de-recebimento) e embalagem do item antes da entrega no ponto parceiro; não possui urna avulsa. ID ABREE 153004 (Jadlog, porte P: celulares, carregadores/power bank, cabos, fones, mouse e relógio smart). atualcard.com.br registra variação 07:30–13:00, 14:30–18:00 e Sáb 08:00–13:00."
+  },
+  {
+    "id": "samsung-experience-boulevard",
+    "nome": "Samsung Experience Store — Boulevard Shopping Belém",
+    "tipo_local": "fabricante",
+    "endereco": {
+      "logradouro": "Avenida Visconde de Souza Franco (Boulevard Shopping, Piso 1)",
+      "numero": "776",
+      "bairro": "Reduto",
+      "cep": "66053-000"
+    },
+    "coordenadas": {
+      "lat": -1.4463292,
+      "lon": -48.4897197
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "13:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.samsung.com/br/support/programa-reciclagem/"
+    },
+    "fonte": "https://www.samsung.com/br/support/programa-reciclagem/",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO presencialmente (confiança média). O programa Samsung Recicla inclui urnas de pequeno porte em lojas participantes, sendo necessário confirmar no balcão se esta Experience Store possui coletor ativo."
+  },
+  {
+    "id": "samsung-experience-parque-shopping",
+    "nome": "Samsung Experience Store — Parque Shopping Belém",
+    "tipo_local": "fabricante",
+    "endereco": {
+      "logradouro": "Rodovia Augusto Montenegro (Parque Shopping Belém, 1º Piso)",
+      "numero": "4300",
+      "bairro": "Parque Verde",
+      "cep": "66635-110"
+    },
+    "coordenadas": {
+      "lat": -1.371311,
+      "lon": -48.4472259
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "12:00",
+        "fecha": "22:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.samsung.com/br/support/programa-reciclagem/"
+    },
+    "fonte": "https://www.samsung.com/br/support/programa-reciclagem/",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO presencialmente (confiança média). O programa Samsung Recicla inclui urnas de pequeno porte em lojas participantes, sendo necessário confirmar no balcão se esta Experience Store possui coletor ativo."
+  },
+  {
+    "id": "samsung-experience-patio-belem",
+    "nome": "Samsung Experience Store — Shopping Pátio Belém",
+    "tipo_local": "fabricante",
+    "endereco": {
+      "logradouro": "Travessa Padre Eutíquio (Shopping Pátio Belém, 1º Piso)",
+      "numero": "1078",
+      "bairro": "Batista Campos",
+      "cep": "66023-710"
+    },
+    "coordenadas": {
+      "lat": -1.458131,
+      "lon": -48.4948548
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "13:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.samsung.com/br/support/programa-reciclagem/"
+    },
+    "fonte": "https://www.samsung.com/br/support/programa-reciclagem/",
+    "verificado_em": null,
+    "observacoes": "NÃO CONFIRMADO presencialmente (confiança média). O programa Samsung Recicla inclui urnas de pequeno porte em lojas participantes, sendo necessário confirmar no balcão se esta Experience Store possui coletor ativo."
+  },
+  {
+    "id": "samsung-unidade-belem",
+    "nome": "Samsung — Centro de Serviço Unidade Belém",
+    "tipo_local": "fabricante",
+    "endereco": {
+      "logradouro": "Rua dos Mundurucus",
+      "numero": "4243",
+      "bairro": "Guamá",
+      "cep": "66073-040"
+    },
+    "coordenadas": {
+      "lat": -1.4571329,
+      "lon": -48.4665916
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "09:00",
+        "fecha": "17:30"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3241-5060",
+      "site": "https://www.samsung.com/br/support/service-center/samsung-service-center/unidade-belem-pa/"
+    },
+    "fonte": "https://www.samsung.com/br/support/programa-reciclagem/",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Centro de Serviço Autorizado Samsung participante do programa Samsung Recicla. Recebe gratuitamente eletrônicos de pequeno/médio porte de qualquer marca (celulares, tablets, notebooks, pilhas, baterias, carregadores e fones). Grandes eletrodomésticos/TVs >40\" dependem de agendamento online."
+  },
+  {
+    "id": "jadlog-santana-transportes",
+    "nome": "Santana Transportes — Ponto Jadlog (Postagem ABREE)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rua Chaves",
+      "numero": "15",
+      "bairro": "Marambaia",
+      "cep": "66620-060"
+    },
+    "coordenadas": {
+      "lat": -1.3972896,
+      "lon": -48.4599014
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "14:00",
+        "fecha": "18:00"
+      },
+      {
+        "dias": [
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://abree.org.br/pontos-de-recebimento"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | atualcard.com.br, graficonauta.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ATENÇÃO: exige geração prévia de código de postagem reversa gratuita no site da ABREE (abree.org.br/pontos-de-recebimento) e embalagem do item antes da entrega no ponto parceiro; não possui urna avulsa. ID ABREE 154497 (Jadlog, porte P: celulares, carregadores/power bank, cabos, fones, mouse e relógio smart). Horário via atualcard.com.br/graficonauta.com.br (sem telefone público divulgado)."
+  },
+  {
+    "id": "servamaz-ceta-epson",
+    "nome": "Servamaz — CETA (Autorizada Epson)",
+    "tipo_local": "fabricante",
+    "endereco": {
+      "logradouro": "Travessa Nove de Janeiro",
+      "numero": "1813",
+      "bairro": "São Brás",
+      "cep": "66060-575"
+    },
+    "coordenadas": {
+      "lat": -1.4557318,
+      "lon": -48.4754625
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "abre": "14:00",
+        "fecha": "17:00"
+      },
+      {
+        "dias": [
+          5
+        ],
+        "abre": "08:00",
+        "fecha": "17:00"
+      },
+      {
+        "dias": [
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "11:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3259-1586",
+      "site": "https://greeneletron.org.br/onde-descartar/"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/ | consertabrasil.com, todosnegocios.com",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Assistência técnica autorizada Epson e PEV oficial Green Eletron (TAM P) + Green Recicla Pilha. Recebe eletroeletrônicos de pequeno porte (até 50 cm x 70 cm), pilhas e baterias portáteis. Tel. alternativo: (91) 99187-5935; todosnegocios.com indica intervalo 12:00–14:00 também às sextas."
+  },
+  {
+    "id": "sesc-belem-campina",
+    "nome": "Sesc Belém — Campina",
+    "tipo_local": "ecoponto",
+    "endereco": {
+      "logradouro": "Avenida Assis de Vasconcelos",
+      "numero": "359",
+      "bairro": "Campina",
+      "cep": "66010-010"
+    },
+    "coordenadas": {
+      "lat": -1.4489938,
+      "lon": -48.4951274
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "08:30",
+        "fecha": "17:30"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 4005-9501",
+      "site": "https://sesc-pa.com.br/unidades/sede-administrativa"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/ | https://sesc-pa.com.br/unidades/sede-administrativa",
+    "verificado_em": "2026-11-12",
+    "observacoes": "PEV oficial Green Eletron (coletor TAM P). Recebe eletroeletrônicos de pequeno/médio porte (até 50 cm x 70 cm), cabos, carregadores, celulares, periféricos, pilhas e baterias portáteis. Não aceita lâmpadas nem baterias automotivas."
+  },
+  {
+    "id": "sesc-casa-de-artes",
+    "nome": "Sesc Casa de Artes Cênicas",
+    "tipo_local": "ecoponto",
+    "endereco": {
+      "logradouro": "Boulevard Castilhos França",
+      "numero": "722",
+      "bairro": "Campina",
+      "cep": "66010-020"
+    },
+    "coordenadas": {
+      "lat": -1.4487803,
+      "lon": -48.4986884
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "09:00",
+        "fecha": "21:00"
+      },
+      {
+        "dias": [
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 4005-9501",
+      "site": "https://sesc-pa.com.br/unidades/sesc-casa-de-artes-cenicas"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/ | https://sesc-pa.com.br/unidades/sesc-casa-de-artes-cenicas",
+    "verificado_em": "2026-11-12",
+    "observacoes": "PEV oficial Green Eletron (coletor TAM P). Recebe eletroeletrônicos de pequeno/médio porte (até 50 cm x 70 cm), cabos, carregadores, celulares, periféricos, pilhas e baterias portáteis. Não aceita lâmpadas nem baterias automotivas. Tels. diretos citados em editais: (91) 3015-9773 / (91) 98414-1760."
+  },
+  {
+    "id": "sesc-ver-o-peso",
+    "nome": "Sesc Ver-o-Peso",
+    "tipo_local": "ecoponto",
+    "endereco": {
+      "logradouro": "Boulevard Castilhos França",
+      "numero": "523",
+      "bairro": "Campina",
+      "cep": "66010-020"
+    },
+    "coordenadas": {
+      "lat": -1.4489001,
+      "lon": -48.4997716
     },
     "tipos_aceitos": [
       "celulares_tablets",
@@ -67,141 +5355,217 @@
           3,
           4,
           5,
-          6,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "20:00"
+      },
+      {
+        "dias": [
           0
         ],
         "abre": "09:00",
-        "fecha": "14:00"
+        "fecha": "13:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 4005-9501",
+      "site": "https://sesc-pa.com.br/unidades/sesc-ver-o-peso"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/ | https://sesc-pa.com.br/unidades/sesc-ver-o-peso",
+    "verificado_em": "2026-11-12",
+    "observacoes": "PEV oficial Green Eletron (coletor TAM P). Recebe eletroeletrônicos de pequeno/médio porte (até 50 cm x 70 cm), cabos, carregadores, celulares, periféricos, pilhas e baterias portáteis. Não aceita lâmpadas nem baterias automotivas. Segunda-feira fechado para manutenção (entrada até 19h30 de ter–sáb; recepção: (91) 3252-0227 / (91) 3224-5654)."
+  },
+  {
+    "id": "sesc-teatro-isaura-campos",
+    "nome": "Sesc — Teatro Isaura Campos",
+    "tipo_local": "ecoponto",
+    "endereco": {
+      "logradouro": "Travessa Quintino Bocaiúva",
+      "numero": "569",
+      "bairro": "Reduto",
+      "cep": "66053-240"
+    },
+    "coordenadas": {
+      "lat": -1.4467252,
+      "lon": -48.4909094
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          0,
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "16:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 4005-9501",
+      "site": "https://sesc-pa.com.br/unidades/teatro-isaura-campos"
+    },
+    "fonte": "https://greeneletron.org.br/onde-descartar/ | https://sesc-pa.com.br/unidades/teatro-isaura-campos",
+    "verificado_em": "2026-11-12",
+    "observacoes": "PEV oficial Green Eletron (coletor TAM P). Recebe eletroeletrônicos de pequeno/médio porte (até 50 cm x 70 cm), cabos, carregadores, celulares, periféricos, pilhas e baterias portáteis. Não aceita lâmpadas nem baterias automotivas. Tabela oficial informa Sáb–Dom 08:00–16:00 (seg–sex opera conforme programação de espetáculos; anexo Sesc Casa da Música na Tv. Quintino Bocaiúva, 589 funciona Seg–Sex 08:00–18:00 e Sáb 08:00–12:00, tel. (91) 98157-7271)."
+  },
+  {
+    "id": "jadlog-tech-fuzion",
+    "nome": "Tech Fuzion Informática — Ponto Jadlog (Postagem ABREE)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Travessa Padre Eutíquio",
+      "numero": "1760",
+      "bairro": "Batista Campos",
+      "cep": "66033-590"
+    },
+    "coordenadas": {
+      "lat": -1.461778,
+      "lon": -48.4895086
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "09:00",
+        "fecha": "18:00"
+      },
+      {
+        "dias": [
+          6
+        ],
+        "abre": "09:00",
+        "fecha": "13:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 98577-9803",
+      "site": "https://abree.org.br/pontos-de-recebimento"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | atualcard.com.br, cybo.com",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ATENÇÃO: exige geração prévia de código de postagem reversa gratuita no site da ABREE (abree.org.br/pontos-de-recebimento) e embalagem do item antes da entrega no ponto parceiro; não possui urna avulsa. ID ABREE 152178 (Jadlog, porte P: celulares, carregadores/power bank, cabos, fones, mouse e relógio smart)."
+  },
+  {
+    "id": "telecel-boulevard-shopping",
+    "nome": "Telecel (Parceiro TIM) — Boulevard Shopping",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Avenida Visconde de Souza Franco (Boulevard Shopping, Loja 133)",
+      "numero": "776",
+      "bairro": "Reduto",
+      "cep": "66053-000"
+    },
+    "coordenadas": {
+      "lat": -1.4463292,
+      "lon": -48.4897197
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "13:00",
+        "fecha": "21:00"
       }
     ],
     "contato": {
       "telefone": null,
-      "site": null
+      "site": "https://abree.org.br/pontos-de-recebimento"
     },
-    "fonte": "https://diariodopara.com.br/para/horto-municipal-conta-com-ponto-de-coleta-de-lixo-eletronico/",
-    "verificado_em": null,
-    "observacoes": "NÃO CONFIRMADO (confiança baixa). Matéria do Diário do Pará de 21/06/2023, lida em 2026-11-01, sem confirmação de que o ponto segue ativo. Segunda sem coleta. Outra matéria (DOL, 08/09/2023) diz \"horário comercial\": horários divergentes. Ligar para a Semma antes de publicar. Coordenadas aproximadas, obtidas pelo endereço no Nominatim (OpenStreetMap) em 2026-11-01: conferir no Google Maps."
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Loja parceira TIM cadastrada na ABREE (ID 148354, atualizado em 2026-11-10), distinta da loja própria TIM (Lojas 105/106/107). Recebe celulares, carregadores, fones, pilhas, baterias e cabos."
   },
   {
-    "id": "boulevard-coletor-drive-thru",
-    "nome": "Boulevard Shopping: coletor de eletrônicos (drive-thru)",
-    "tipo_local": "varejo",
-    "endereco": {
-      "logradouro": "Avenida Visconde de Souza Franco",
-      "numero": "776",
-      "bairro": "Reduto",
-      "cep": null
-    },
-    "coordenadas": {
-      "lat": -1.4463292,
-      "lon": -48.4897197
-    },
-    "tipos_aceitos": [
-      "celulares_tablets",
-      "computadores_perifericos",
-      "cabos_carregadores"
-    ],
-    "horarios": [],
-    "contato": {
-      "telefone": null,
-      "site": null
-    },
-    "fonte": "https://diariodopara.com.br/varejo-sustentavel/shopping-de-belem-recicla-150-toneladas-de-lixo-por-mes-e-zera-envio-a-aterros/",
-    "verificado_em": null,
-    "observacoes": "NÃO CONFIRMADO (confiança média). Matéria do Diário do Pará de 26/07/2025, lida em 2026-11-01. Subsolo G1 do estacionamento, entrega do carro, gratuito para clientes. Aceita também impressoras e micro-ondas. Horário e gestora não informados; o site do shopping deu erro 403. O endereço vem da lista da TIM (2022) e o bairro, do OpenStreetMap. Coordenadas aproximadas, obtidas pelo endereço no Nominatim (OpenStreetMap) em 2026-11-01: conferir no Google Maps."
-  },
-  {
-    "id": "boulevard-pilhas-espaco-cliente",
-    "nome": "Boulevard Shopping: pilhas e baterias (Espaço Cliente)",
-    "tipo_local": "varejo",
-    "endereco": {
-      "logradouro": "Avenida Visconde de Souza Franco",
-      "numero": "776",
-      "bairro": "Reduto",
-      "cep": null
-    },
-    "coordenadas": {
-      "lat": -1.4463292,
-      "lon": -48.4897197
-    },
-    "tipos_aceitos": [
-      "pilhas_baterias"
-    ],
-    "horarios": [],
-    "contato": {
-      "telefone": null,
-      "site": null
-    },
-    "fonte": "https://diariodopara.com.br/varejo-sustentavel/shopping-de-belem-recicla-150-toneladas-de-lixo-por-mes-e-zera-envio-a-aterros/",
-    "verificado_em": null,
-    "observacoes": "NÃO CONFIRMADO (confiança média). Mesma matéria de 26/07/2025, lida em 2026-11-01. Local exato dentro do shopping e horário não informados. O endereço vem da lista da TIM (2022) e o bairro, do OpenStreetMap. Coordenadas aproximadas, obtidas pelo endereço no Nominatim (OpenStreetMap) em 2026-11-01: conferir no Google Maps."
-  },
-  {
-    "id": "descarte-correto-joao-paulo-ii",
-    "nome": "Descarte Correto: Av. João Paulo II (a confirmar)",
-    "tipo_local": "cooperativa",
-    "endereco": {
-      "logradouro": "Avenida João Paulo II",
-      "numero": "1134",
-      "bairro": "Marco",
-      "cep": null
-    },
-    "coordenadas": {
-      "lat": -1.439077,
-      "lon": -48.4562905
-    },
-    "tipos_aceitos": [
-      "pilhas_baterias",
-      "celulares_tablets",
-      "computadores_perifericos"
-    ],
-    "horarios": [],
-    "contato": {
-      "telefone": null,
-      "site": null
-    },
-    "fonte": "https://dol.com.br/noticias/para/826792/de-pilha-a-computador-onde-descartar-seu-lixo-eletronico?d=1",
-    "verificado_em": null,
-    "observacoes": "NÃO CONFIRMADO (confiança baixa). Matéria do DOL de 08/09/2023, lida em 2026-11-01, que diz só \"João Paulo, Nº1134\" e \"horário comercial\". POSSÍVEL ENDEREÇO ANTIGO ou duplicata do Descarte Correto (Marco). Não publicar sem confirmar. O bairro vem do OpenStreetMap. Coordenadas aproximadas, obtidas pelo endereço no Nominatim (OpenStreetMap) em 2026-11-01: conferir no Google Maps."
-  },
-  {
-    "id": "tim-boulevard-shopping",
-    "nome": "TIM: Boulevard Shopping Belém",
+    "id": "telecel-castanheira",
+    "nome": "Telecel (Parceiro TIM) — Castanheira Shopping",
     "tipo_local": "operadora",
     "endereco": {
-      "logradouro": "Avenida Visconde de Souza Franco",
-      "numero": "776",
-      "bairro": "Reduto",
-      "cep": null
+      "logradouro": "Rodovia BR-316 (Castanheira Shopping, Térreo, Sala 73)",
+      "numero": "Km 01",
+      "bairro": "Castanheira",
+      "cep": "66645-003"
     },
     "coordenadas": {
-      "lat": -1.4463292,
-      "lon": -48.4897197
+      "lat": -1.4029846,
+      "lon": -48.4307905
     },
     "tipos_aceitos": [
       "celulares_tablets",
       "pilhas_baterias",
-      "computadores_perifericos",
       "cabos_carregadores"
     ],
-    "horarios": [],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "14:00",
+        "fecha": "22:00"
+      }
+    ],
     "contato": {
       "telefone": null,
-      "site": null
+      "site": "https://abree.org.br/pontos-de-recebimento"
     },
-    "fonte": "https://tecnoblog.net/noticias/tim-deixa-voce-descartar-celulares-e-pcs-antigos-em-150-lojas-veja-lista/",
-    "verificado_em": null,
-    "observacoes": "NÃO CONFIRMADO (confiança baixa). Urna de um programa da TIM de 2022; matéria de 15/03/2022, lida em 2026-11-01. A lista da matéria é geral, não específica de Belém; não se sabe se a urna continua. Horário não informado. Confirmar na loja. Lojas 105, 106 e 107. Coordenadas aproximadas, obtidas pelo endereço no Nominatim (OpenStreetMap) em 2026-11-01: conferir no Google Maps."
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Loja parceira TIM cadastrada na ABREE (ID 167914, atualizado em 2026-11-11), distinta da loja própria TIM (Lojas 141/142). Recebe celulares, carregadores, fones, pilhas, baterias e cabos."
   },
   {
-    "id": "tim-parque-shopping-belem",
-    "nome": "TIM: Parque Shopping Belém",
+    "id": "telecel-parque-shopping",
+    "nome": "Telecel (Parceiro TIM) — Parque Shopping Belém",
     "tipo_local": "operadora",
     "endereco": {
-      "logradouro": "Rodovia Augusto Montenegro",
+      "logradouro": "Rodovia Augusto Montenegro (Parque Shopping Belém, Loja 1036)",
       "numero": "4300",
       "bairro": "Parque Verde",
-      "cep": null
+      "cep": "66635-110"
     },
     "coordenadas": {
       "lat": -1.371311,
@@ -210,27 +5574,74 @@
     "tipos_aceitos": [
       "celulares_tablets",
       "pilhas_baterias",
-      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "12:00",
+        "fecha": "22:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://abree.org.br/pontos-de-recebimento"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Loja parceira TIM cadastrada na ABREE (ID 148355, atualizado em 2026-11-10), distinta da loja própria TIM (Loja 1004). Coordenadas ajustadas para o Parque Shopping Belém. Recebe celulares, carregadores, fones, pilhas, baterias e cabos."
+  },
+  {
+    "id": "telecel-it-center",
+    "nome": "Telecel (Parceiro TIM) — Shopping IT Center",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Avenida Senador Lemos (IT Center, Loja EUC 55)",
+      "numero": "3153",
+      "bairro": "Sacramenta",
+      "cep": "66120-000"
+    },
+    "coordenadas": {
+      "lat": -1.4172483,
+      "lon": -48.4788947
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
       "cabos_carregadores"
     ],
     "horarios": [],
     "contato": {
       "telefone": null,
-      "site": null
+      "site": "https://abree.org.br/pontos-de-recebimento"
     },
-    "fonte": "https://tecnoblog.net/noticias/tim-deixa-voce-descartar-celulares-e-pcs-antigos-em-150-lojas-veja-lista/",
-    "verificado_em": null,
-    "observacoes": "NÃO CONFIRMADO (confiança baixa). Urna de um programa da TIM de 2022; matéria de 15/03/2022, lida em 2026-11-01. A lista da matéria é geral, não específica de Belém; não se sabe se a urna continua. Horário não informado. Confirmar na loja. Loja 1004. Coordenadas aproximadas, obtidas pelo endereço no Nominatim (OpenStreetMap) em 2026-11-01: conferir no Google Maps."
+    "fonte": "https://abree.org.br/pontos-de-recebimento | buser.com.br, lojas24.com",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Loja parceira TIM cadastrada na ABREE (ID 167913, atualizado em 2026-11-11). Recebe celulares, carregadores, fones, pilhas, baterias e cabos. Sem grade própria divulgada para a loja EUC 55; horário de referência do Shopping IT Center: Seg–Sáb 09:00–22:00, Dom 09:00–15:00 (admin. shopping: (91) 3201-2000)."
   },
   {
-    "id": "tim-shopping-patio-belem",
-    "nome": "TIM: Shopping Pátio Belém",
+    "id": "telecel-patio-belem",
+    "nome": "Telecel (Parceiro TIM) — Shopping Pátio Belém 3º Piso",
     "tipo_local": "operadora",
     "endereco": {
-      "logradouro": "Travessa Padre Eutíquio",
+      "logradouro": "Travessa Padre Eutíquio (Shopping Pátio Belém, 3º Piso, Loja 316)",
       "numero": "1078",
       "bairro": "Batista Campos",
-      "cep": null
+      "cep": "66023-710"
     },
     "coordenadas": {
       "lat": -1.458131,
@@ -239,16 +5650,540 @@
     "tipos_aceitos": [
       "celulares_tablets",
       "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "13:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://abree.org.br/pontos-de-recebimento"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Loja parceira TIM cadastrada na ABREE (ID 148353, atualizado em 2026-11-10), no 3º piso — distinta da loja própria TIM do 1º piso. Recebe celulares, carregadores, fones, pilhas, baterias e cabos."
+  },
+  {
+    "id": "tim-boulevard-shopping",
+    "nome": "TIM: Boulevard Shopping Belém",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Avenida Visconde de Souza Franco (Boulevard Shopping, Piso 1, Lojas 105/106/107)",
+      "numero": "776",
+      "bairro": "Reduto",
+      "cep": "66053-000"
+    },
+    "coordenadas": {
+      "lat": -1.4463292,
+      "lon": -48.4897197
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "13:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 98113-0172",
+      "site": "https://www.tim.com.br/celular/aparelhos-e-acessorios"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Confirmada ativa na ABREE (ID 146120) e no site oficial da TIM. Recebe celulares, baterias, pilhas, carregadores, fones e cabos."
+  },
+  {
+    "id": "tim-castanheira-shopping",
+    "nome": "TIM: Castanheira Shopping",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Rodovia BR-316 (Castanheira Shopping, Lojas 141/142)",
+      "numero": "Km 01",
+      "bairro": "Castanheira",
+      "cep": "66645-900"
+    },
+    "coordenadas": {
+      "lat": -1.4029846,
+      "lon": -48.4307905
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "14:00",
+        "fecha": "22:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.tim.com.br/ajuda/lojas"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Confirmada ativa na ABREE (ID 146119; base ABREE registra erroneamente como Atalaia/Ananindeua, mas o shopping fica no bairro Castanheira em Belém). Recebe celulares, baterias, pilhas, carregadores, fones e cabos."
+  },
+  {
+    "id": "tim-parque-shopping-belem",
+    "nome": "TIM: Parque Shopping Belém",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Rodovia Augusto Montenegro (Parque Shopping Belém, Loja 1004)",
+      "numero": "4300",
+      "bairro": "Parque Verde",
+      "cep": "66635-110"
+    },
+    "coordenadas": {
+      "lat": -1.371311,
+      "lon": -48.4472259
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "12:00",
+        "fecha": "22:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.tim.com.br/celular/aparelhos-e-acessorios"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Confirmada ativa na ABREE (ID 146118) e no site oficial da TIM. Coordenadas corrigidas para o Parque Shopping Belém. Recebe celulares, baterias, pilhas, carregadores, fones e cabos."
+  },
+  {
+    "id": "tim-bosque-grao-para",
+    "nome": "TIM: Shopping Bosque Grão-Pará",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Avenida Centenário (Shopping Bosque Grão-Pará, Térreo, Loja EUC 30)",
+      "numero": "1052",
+      "bairro": "Val-de-Cans",
+      "cep": "66635-894"
+    },
+    "coordenadas": {
+      "lat": -1.3901236,
+      "lon": -48.4651456
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "12:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 98047-0011",
+      "site": "https://www.bosquegraopara.com.br/loja/tim/"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Confirmada ativa na ABREE (ID 167915, atualizado em 2026-11-11) e no site oficial do shopping. Recebe celulares, baterias, pilhas, carregadores, fones e cabos."
+  },
+  {
+    "id": "tim-shopping-patio-belem",
+    "nome": "TIM: Shopping Pátio Belém",
+    "tipo_local": "operadora",
+    "endereco": {
+      "logradouro": "Travessa Padre Eutíquio (Shopping Pátio Belém, 1º Piso, Lojas 105/106)",
+      "numero": "1078",
+      "bairro": "Batista Campos",
+      "cep": "66023-710"
+    },
+    "coordenadas": {
+      "lat": -1.458131,
+      "lon": -48.4948548
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "10:00",
+        "fecha": "22:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "13:00",
+        "fecha": "21:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://www.tim.com.br/ajuda/lojas"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Confirmada ativa na ABREE (ID 146130) e no site oficial da TIM. Recebe celulares, baterias, pilhas, carregadores, fones e cabos."
+  },
+  {
+    "id": "tramontina-t-store-boulevard",
+    "nome": "Tramontina — T Store Boulevard Belém",
+    "tipo_local": "fabricante",
+    "endereco": {
+      "logradouro": "Avenida Visconde de Souza Franco (Boulevard Shopping, Lojas 204/205)",
+      "numero": "776",
+      "bairro": "Reduto",
+      "cep": "66053-000"
+    },
+    "coordenadas": {
+      "lat": -1.4463292,
+      "lon": -48.4897197
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
       "computadores_perifericos",
       "cabos_carregadores"
     ],
-    "horarios": [],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "08:45",
+        "fecha": "18:15"
+      },
+      {
+        "dias": [
+          6
+        ],
+        "abre": "08:45",
+        "fecha": "17:00"
+      },
+      {
+        "dias": [
+          0
+        ],
+        "abre": "13:00",
+        "fecha": "17:30"
+      }
+    ],
     "contato": {
       "telefone": null,
-      "site": null
+      "site": "https://abree.org.br/pontos-de-recebimento"
     },
-    "fonte": "https://tecnoblog.net/noticias/tim-deixa-voce-descartar-celulares-e-pcs-antigos-em-150-lojas-veja-lista/",
-    "verificado_em": null,
-    "observacoes": "NÃO CONFIRMADO (confiança baixa). Urna de um programa da TIM de 2022; matéria de 15/03/2022, lida em 2026-11-01. A lista da matéria é geral, não específica de Belém; não se sabe se a urna continua. Horário não informado. Confirmar na loja. Lojas 105 e 106, 1º piso. Coordenadas aproximadas, obtidas pelo endereço no Nominatim (OpenStreetMap) em 2026-11-01: conferir no Google Maps."
+    "fonte": "https://abree.org.br/pontos-de-recebimento",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Ponto oficial cadastrado na ABREE (ID 165184, atualizado em 2026-09-03, porte P+G). Horário informado diretamente na base oficial da ABREE."
+  },
+  {
+    "id": "jadlog-unidade-belem-02",
+    "nome": "Unidade Jadlog Belém 02 (Postagem ABREE)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Rua Passagem Dalva",
+      "numero": "229",
+      "bairro": "Marambaia",
+      "cep": "66615-080"
+    },
+    "coordenadas": {
+      "lat": -1.4032214,
+      "lon": -48.4472612
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "14:00",
+        "fecha": "18:00"
+      },
+      {
+        "dias": [
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 3246-2308",
+      "site": "https://www.jadlog.com.br/siteInstitucional/unidades.jad"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | https://www.jadlog.com.br/siteInstitucional/unidades.jad | atualcard.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ATENÇÃO: exige geração prévia de código de postagem reversa gratuita no site da ABREE (abree.org.br/pontos-de-recebimento) e embalagem do item antes da entrega no ponto parceiro; não possui urna avulsa. ID ABREE 153528 (Jadlog, porte P: celulares, carregadores/power bank, cabos, fones, mouse e relógio smart). CEP 66615-080 mantido (ViaCEP confirma Passagem Dalva até 1039/1040 para o nº 229; portal Jadlog registra 66623-610 da faixa final da via). Outros tels. na unidade: (91) 3234-0370 / (91) 98108-2276 / (91) 3257-2333."
+  },
+  {
+    "id": "jadlog-valkavs",
+    "nome": "Valkavs Serviços — Ponto Jadlog (Postagem ABREE)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Passagem do Una",
+      "numero": "58",
+      "bairro": "Una",
+      "cep": "66652-150"
+    },
+    "coordenadas": {
+      "lat": -1.3755245,
+      "lon": -48.4290845
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "abre": "14:30",
+        "fecha": "20:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 99127-2363",
+      "site": "https://abree.org.br/pontos-de-recebimento"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | atualcard.com.br, rallydevendas.com.br, guia.belem.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ATENÇÃO: exige geração prévia de código de postagem reversa gratuita no site da ABREE (abree.org.br/pontos-de-recebimento) e embalagem do item antes da entrega no ponto parceiro; não possui urna avulsa. ID ABREE 152201 / 153972 (deduplicado) (Jadlog, porte P: celulares, carregadores/power bank, cabos, fones, mouse e relógio smart)."
+  },
+  {
+    "id": "jadlog-vipcell",
+    "nome": "Vipcell — Ponto Jadlog (Postagem ABREE)",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Conjunto Pedro Teixeira",
+      "numero": "2",
+      "bairro": "Coqueiro",
+      "cep": "66670-030"
+    },
+    "coordenadas": {
+      "lat": -1.346487,
+      "lon": -48.449169
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "15:00",
+        "fecha": "17:30"
+      },
+      {
+        "dias": [
+          6
+        ],
+        "abre": "08:00",
+        "fecha": "12:00"
+      }
+    ],
+    "contato": {
+      "telefone": null,
+      "site": "https://abree.org.br/pontos-de-recebimento"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | atualcard.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "ATENÇÃO: exige geração prévia de código de postagem reversa gratuita no site da ABREE (abree.org.br/pontos-de-recebimento) e embalagem do item antes da entrega no ponto parceiro; não possui urna avulsa. ID ABREE 154142 (Jadlog, porte P: celulares, carregadores/power bank, cabos, fones, mouse e relógio smart)."
+  },
+  {
+    "id": "voce-solar-umarizal",
+    "nome": "Você Solar",
+    "tipo_local": "varejo",
+    "endereco": {
+      "logradouro": "Travessa Quatorze de Março",
+      "numero": "655",
+      "bairro": "Umarizal",
+      "cep": "66055-490"
+    },
+    "coordenadas": {
+      "lat": -1.4413121,
+      "lon": -48.4803267
+    },
+    "tipos_aceitos": [
+      "celulares_tablets",
+      "pilhas_baterias",
+      "computadores_perifericos",
+      "cabos_carregadores"
+    ],
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "abre": "08:00",
+        "fecha": "18:00"
+      }
+    ],
+    "contato": {
+      "telefone": "(91) 98197-6216",
+      "site": "https://abree.org.br/pontos-de-recebimento"
+    },
+    "fonte": "https://abree.org.br/pontos-de-recebimento | site5.com.br, solartask.com.br",
+    "verificado_em": "2026-11-12",
+    "observacoes": "Ponto oficial cadastrado na ABREE (ID 165498, atualizado em 2026-09-03, porte P+G, registro local). Recebe celulares, cabos, computadores, periféricos, pilhas/baterias e eletroeletrônicos. CEP corrigido para 66055-490 via ViaCEP (ABREE registrava 66055-495, inexistente nos Correios). Tel. alternativo: (91) 98193-8287."
   }
 ]
