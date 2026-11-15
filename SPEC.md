@@ -322,7 +322,7 @@ Site e API são publicados de forma unificada na **Vercel** usando **Vercel Serv
 
 | Parte | Onde | Observação |
 |---|---|---|
-| Site (`web`) | Vercel (build estático em `web/build/`) | SvelteKit com `adapter-static` e `prerender = true`, atendendo `/(.*)` — inclui `/` e a rota estática `/privacidade` (corrigida com `cleanUrls: true` e rewrite `/privacidade/?` → `/privacidade.html` em `vercel.json`). Fontes locais em `web/static/fontes/` |
+| Site (`web`) | Vercel (build estático em `web/build/`) | SvelteKit com `adapter-static` e `prerender = true`, atendendo `/(.*)` — inclui `/` e a rota estática `/privacidade` (entregue via `cleanUrls: true` e `trailingSlash: false` em `vercel.json`). Fontes locais em `web/static/fontes/` |
 | API (`api`) | Vercel (serviço FastAPI em `api/aplicacao/principal.py`, também exposto em `api/main.py`) | Atende `/api/(.*)` sob a mesma origem do site, eliminando CORS entre domínios e evitando a hibernação de 30–50s do plano anterior |
 | Persistência em serverless | Memória + `/tmp/recircuito/` (efêmero) | A pasta do código na Vercel é somente leitura: o cache de geocodificação atua prioritariamente em memória; envios de `POST /api/avaliacoes` e `POST /api/sugestoes` usam `/tmp/recircuito/` como reserva efêmera em produção e `api/dados/` localmente |
 | Domínios | `https://recircuito.info` e `https://recircuito.vercel.app` | Domínio próprio configurado com HTTPS automático na Vercel |

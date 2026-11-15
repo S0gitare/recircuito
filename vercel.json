@@ -11,12 +11,7 @@
       "framework": "sveltekit-1",
       "outputDirectory": "build",
       "cleanUrls": true,
-      "rewrites": [
-        {
-          "source": "/privacidade/?",
-          "destination": "/privacidade.html"
-        }
-      ]
+      "trailingSlash": false
     }
   },
   "rewrites": [
