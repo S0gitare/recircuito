@@ -27,7 +27,7 @@ A seção **`#impacto`** da página inicial exibe métricas reais de cobertura d
 
 Site e API são publicados de forma unificada na **Vercel** a partir de [`vercel.json`](vercel.json) (**Vercel Services**), sob os domínios **[https://recircuito.info](https://recircuito.info)** e **[https://recircuito.vercel.app](https://recircuito.vercel.app)**:
 
-- **Serviço `web`:** serve o build estático gerado em `web/build/` (incluindo `/` e a rota estática `/privacidade`, entregue via `cleanUrls: true` e `trailingSlash: false` em `vercel.json`) para `/(.*)`.
+- **Serviço `web`:** serve o build estático gerado em `web/build/` (incluindo `/` e a rota estática `/privacidade`, entregue via `trailingSlash: false` e rewrite `/privacidade` → `/privacidade.html` em `vercel.json`) para `/(.*)`.
 - **Serviço `api`:** executa a aplicação FastAPI (`api/aplicacao/principal.py`, também exposta em `api/main.py`) para `/api/(.*)`.
 - Como ambos respondem sob a mesma origem em produção, o site chama `/api/...` diretamente (sem necessidade de URL externa nem bloqueios de CORS entre domínios).
 

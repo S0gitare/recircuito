@@ -4,7 +4,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 /**
  * O site é publicado de forma estática na Vercel (configurado em `vercel.json`),
  * usando o `adapter-static`: no build, cada rota vira um arquivo HTML pronto
- * (prerender) em `build/`, servido com `cleanUrls` e `trailingSlash: false` sem servidor Node.
+ * (prerender) em `build/`, servido com `trailingSlash: false` e rewrite para `/privacidade`.
  *
  * Dica: se o site for publicado num subcaminho (ex.: /recircuito),
  * defina a variável BASE_PATH=/recircuito no build. Sem isso, os links para

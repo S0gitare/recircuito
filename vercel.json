@@ -10,8 +10,13 @@
       "root": "web",
       "framework": "sveltekit-1",
       "outputDirectory": "build",
-      "cleanUrls": true,
-      "trailingSlash": false
+      "trailingSlash": false,
+      "rewrites": [
+        {
+          "source": "/privacidade",
+          "destination": "/privacidade.html"
+        }
+      ]
     }
   },
   "rewrites": [
