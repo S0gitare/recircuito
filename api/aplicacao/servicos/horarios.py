@@ -1,6 +1,6 @@
 """Cálculo do "aberto agora" de um ponto de coleta (RF05).
 
-O servidor da API (Render) roda em UTC, mas o horário que importa é o de Belém.
+O ambiente da API em produção (Vercel) roda em UTC, mas o horário que importa é o de Belém.
 Por isso todo cálculo converte "agora" para o fuso America/Belem antes de
 comparar. Um fuso (time zone) é a regra que diz quantas horas um lugar está
 adiantado ou atrasado em relação ao UTC; Belém fica em UTC-3 o ano todo.

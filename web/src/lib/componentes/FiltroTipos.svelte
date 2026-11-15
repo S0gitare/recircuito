@@ -41,6 +41,9 @@
 	}
 
 	.chip {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		min-height: 44px;
 		padding: 0 8px;
 		border: 1px solid var(--line);
@@ -52,12 +55,7 @@
 		text-align: center;
 	}
 
-	/* No desktop o protótipo usa linhas de 36px; no toque, 44px (RNF01). */
-	@media (min-width: 768px) {
-		.chip {
-			min-height: 36px;
-		}
-	}
+	/* RNF01: área de toque mínima de 44px mantida em todos os tamanhos de tela. */
 
 	.chip[aria-pressed='true'] {
 		background: var(--ink);

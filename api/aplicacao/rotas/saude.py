@@ -1,4 +1,4 @@
-"""Rota de saúde, usada pela hospedagem (Render) para saber se a API subiu."""
+"""Rota de saúde, usada pela hospedagem (Vercel) e monitoramento da API para saber se subiu."""
 
 from fastapi import APIRouter
 

@@ -1,8 +1,8 @@
 """Configurações lidas de variáveis de ambiente.
 
-Ficam num só lugar para que a hospedagem (Render) mude o comportamento da API
-sem alterar código. Os nomes têm o prefixo RECIRCUITO_ para não colidir com
-variáveis de outros programas.
+Ficam num só lugar para que a hospedagem em produção (Vercel Services) mude o
+comportamento da API sem alterar código. Os nomes têm o prefixo RECIRCUITO_
+para não colidir com variáveis de outros programas.
 """
 
 import os

@@ -155,10 +155,4 @@
 			height: 48px;
 		}
 	}
-
-	@media (min-width: 768px) and (pointer: fine) {
-		.localizacao {
-			min-height: 32px;
-		}
-	}
 </style>

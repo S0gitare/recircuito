@@ -8,10 +8,13 @@ nenhuma chamada externa.
 Privacidade (LGPD, RNF06): o cache guarda SÓ o par "consulta normalizada ->
 localização". Nada de IP, horário da busca ou qualquer dado de quem pesquisou.
 
-O cache vive na memória, com validade de 30 dias. Opcionalmente também é
-gravado em arquivo (pasta api/.cache/, ignorada pelo Git), para sobreviver a
-uma reinicialização da API. Atenção: na hospedagem gratuita do Render o disco é
-apagado a cada deploy, então o arquivo ajuda, mas não é garantia.
+O cache vive na memória, com validade de 30 dias. Em execução local, também é
+gravado em arquivo (pasta api/.cache/, ignorada pelo Git) para sobreviver a
+reinicializações da API. No ambiente serverless da Vercel a pasta do código é
+somente leitura (e eventual arquivo via RECIRCUITO_ARQUIVO_CACHE em /tmp é
+efêmero entre instâncias e deploys — diferente de avaliações/sugestões em
+registro_json.py, que usam /tmp/recircuito como reserva), então em produção o
+cache opera prioritariamente em memória.
 """
 
 import json
@@ -119,5 +122,5 @@ class CacheDeGeocodificacao:
             temporario.write_text(json.dumps(self._entradas, ensure_ascii=False), encoding="utf-8")
             temporario.replace(self._arquivo)
         except OSError:
-            # Sem permissão de escrita (comum em hospedagem): seguimos só com a memória.
+            # Pasta somente leitura (ex.: ambiente serverless na Vercel): seguimos só com a memória.
             pass

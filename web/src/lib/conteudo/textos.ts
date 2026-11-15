@@ -152,14 +152,14 @@ export const pontosDeColeta = {
 	}
 } as const;
 
-/** Os `valor` são FICTÍCIOS: trocar pelos dados reais antes de publicar (SPEC §14). */
+/** Números reais verificados da base atual (api/dados/pontos.json). */
 export const impacto = {
-	titulo: 'O que já tiramos do lixo comum',
+	titulo: 'O que já mapeamos em Belém',
 	numeros: [
-		{ valor: 1240, unidade: 'kg', rotulo: 'de eletrônicos coletados' },
-		{ valor: 18, unidade: '', rotulo: 'escolas visitadas' },
 		{ valor: 140, unidade: '', rotulo: 'pontos de coleta mapeados' },
-		{ valor: 4500, unidade: '', rotulo: 'pessoas alcançadas' }
+		{ valor: 32, unidade: '', rotulo: 'bairros de Belém cobertos' },
+		{ valor: 119, unidade: '', rotulo: 'pontos confirmados em fontes oficiais' },
+		{ valor: 4, unidade: '', rotulo: 'grupos de resíduos aceitos' }
 	]
 } as const;
 

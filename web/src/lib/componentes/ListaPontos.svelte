@@ -225,8 +225,8 @@
 		text-underline-offset: 3px;
 	}
 
-	/* Desktop com mouse: itens mais baixos para caber mais pontos ao lado do mapa.
-	   No toque, o "Como chegar" mantém os 44px de área (RNF01). */
+	/* Desktop: itens com tipografia mais compacta para caber mais pontos ao lado do mapa.
+	   O "Como chegar" mantém 44px de área mínima em todos os dispositivos (RNF01). */
 	@media (min-width: 768px) {
 		li {
 			padding: 14px 4px 4px;
@@ -242,12 +242,6 @@
 
 		.detalhes {
 			font-size: 0.8125rem;
-		}
-	}
-
-	@media (min-width: 768px) and (pointer: fine) {
-		.rota {
-			min-height: 32px;
 		}
 	}
 </style>

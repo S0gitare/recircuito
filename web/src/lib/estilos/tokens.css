@@ -17,7 +17,7 @@
 	--line-soft: #dce3dd;
 
 	/* Verdes */
-	--green: #1f9d55; /* detalhes, faixas com texto ≥ 24px e links */
+	--green: #1f9d55; /* detalhes e faixas com texto ≥ 24px (para links use --green-strong) */
 	--green-strong: #157a41; /* fundo de botão com texto branco (5,4:1) */
 	--green-dark-mode: #3fbf73; /* verde sobre fundo escuro (rodapé) */
 

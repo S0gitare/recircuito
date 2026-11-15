@@ -319,7 +319,9 @@
 
 	.limpar,
 	.tentar {
-		padding: 0;
+		display: inline-flex;
+		align-items: center;
+		padding: 8px 0;
 		border: 0;
 		background: none;
 		min-height: 44px;
@@ -401,7 +403,10 @@
 
 	/* Botão com cara de link: abre o modal, não leva a outra página. */
 	.link-sugerir {
-		padding: 0;
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+		padding: 8px 0;
 		background: none;
 		border: none;
 		font: inherit;

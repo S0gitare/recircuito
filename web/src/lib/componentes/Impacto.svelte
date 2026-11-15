@@ -51,7 +51,7 @@
 
 	.numero {
 		font-weight: 500;
-		/* No celular a coluna tem ~165px: "1.240 kg" a 44px encostava no vizinho.
+		/* No celular a coluna tem ~165px: evita que números grandes encostem no vizinho.
 		   Acompanha a largura da tela, entre 32px e 44px. */
 		font-size: clamp(32px, 9vw, 44px);
 		line-height: 1.1;

@@ -43,7 +43,10 @@
 	}
 
 	.logo {
-		display: block;
+		display: inline-flex;
+		align-items: center;
+		min-width: 44px;
+		min-height: 44px;
 		line-height: 0;
 	}
 
@@ -57,6 +60,9 @@
 	}
 
 	.links a {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
 		font-family: var(--font-interface);
 		font-weight: 500;
 		font-size: 16px;

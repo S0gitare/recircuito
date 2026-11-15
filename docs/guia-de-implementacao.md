@@ -20,7 +20,7 @@ Complemento da `SPEC.md`: medidas do protótipo (FigCraft), geometria dos desenh
 - `iniciarLenis(): () => void` liga a rolagem suave (GSAP ticker + ScrollTrigger) com `virtualScroll: ({ event }) => !event.defaultPrevented` (isolando o scroll de contêineres com `data-lenis-prevent`, como o mapa) e devolve a função que desliga. Com movimento reduzido, não liga nada.
 - `rolarPara(alvo: string): void` rola até uma âncora (`'#sobre'`); com Lenis, `lenis.scrollTo`; senão `scrollIntoView`.
 - `revelar` é uma *action* Svelte: `<h2 use:revelar>` ou `use:revelar={{ atraso: 0.1 }}`. Sobe 16px enquanto aparece, uma vez, ao entrar na tela (0,6s).
-- `contarAte` é uma *action*: `<span use:contarAte={{ valor: 1240 }}></span>`. Escreve o número formatado em pt-BR e conta de 0 até o valor (1,2s, uma vez, ao entrar na tela).
+- `contarAte` é uma *action*: `<span use:contarAte={{ valor: 140 }}></span>`. Escreve o número formatado em pt-BR e conta de 0 até o valor (1,2s, uma vez, ao entrar na tela).
 - `prefereMovimentoReduzido(): boolean` já está pronto em `movimentoReduzido.ts`.
 
 **`$lib/ilustracoes/` (dona: sessão de ilustrações).** Componentes **sem props obrigatórias** que já se animam sozinhos (`onMount`, só quando visíveis, parando fora da tela, respeitando movimento reduzido): `CelularExplodido`, `PassoSepare`, `PassoApague`, `PassoPonto`, `PassoEntregue`, `ItemCelulares`, `ItemPilhas`, `ItemComputadores`, `ItemCabos`. Todos aceitam a prop opcional `titulo?: string` (texto alternativo; há um padrão).

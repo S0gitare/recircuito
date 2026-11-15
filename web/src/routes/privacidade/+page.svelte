@@ -61,6 +61,13 @@
 		font-family: var(--font-interface);
 	}
 
+	.logo {
+		display: inline-flex;
+		align-items: center;
+		min-width: 44px;
+		min-height: 44px;
+	}
+
 	.logo img {
 		display: block;
 		height: 24px;
@@ -153,6 +160,9 @@
 	}
 
 	.contato a {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
 		color: var(--green-strong);
 		font-weight: 600;
 	}

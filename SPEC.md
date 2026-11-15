@@ -5,11 +5,11 @@ Projeto de Atividade Extensionista II (UNINTER, Ciência da Computação).
 
 | | |
 |---|---|
-| **Status** | Site e API implementados (seções, desenhos animados, mapa, busca, cookies); falta dados reais, formulários, Analytics com ID real, testes de acessibilidade e publicação |
+| **Status** | Site e API implementados e publicados na Vercel ([recircuito.info](https://recircuito.info) e [recircuito.vercel.app](https://recircuito.vercel.app)); base com 140 pontos em 32 bairros de Belém (119 confirmados e 21 pendentes); resta conferência presencial/telefônica dos 21 pontos pendentes (e 14 grades de horário), configuração opcional do ID real de produção em `VITE_ID_GOOGLE_ANALYTICS` e divulgação contínua em Belém |
 | **Protótipo** | `ReCircuito - Prototipo.figcraft` (FigCraft): frames "Home — Desktop", "Home — Mobile", "Menu aberto — Mobile" e "Banner de cookies" (desktop e mobile) |
-| **Logo** | Canva, design "Logo ReCircuito"; arquivos em `logos/final/` |
+| **Logo** | Canva, design "Logo ReCircuito"; arquivos em `logos/final/` (ativos do site em `web/static/logos/`) |
 | **Proposta enviada** | `Proposta de Tema - Alecsander Lima - Guia de Descarte Eletronico.pdf` |
-| **Nome** | "ReCircuito" (provisório até a validação final) |
+| **Nome** | "ReCircuito" |
 
 Este documento registra **o que** será construído e **por que** cada decisão foi tomada. Ele é a fonte única para o desenvolvimento: quando o protótipo e este texto divergirem, vale o texto, e o protótipo deve ser corrigido.
 
@@ -31,7 +31,7 @@ Este documento registra **o que** será construído e **por que** cada decisão 
 
 **Como saber que deu certo.**
 - Uma pessoa encontra o ponto de coleta mais próximo que aceita o que ela quer descartar em menos de 1 minuto, pelo celular.
-- O site passa nas validações de acessibilidade (WCAG 2.1 AA, WAVE e ASES).
+- O site passa nas validações de acessibilidade (WCAG 2.1 AA, inspeção automatizada em navegador real e navegação por teclado).
 - Os acessos e as avaliações podem ser medidos (Google Analytics e formulário de avaliação).
 
 ## 2. Escopo
@@ -65,8 +65,8 @@ A ordem é a mesma no desktop e no mobile. Os itens do menu levam às âncoras c
 | 3 | Como descartar | `#como-descartar` | 4 passos: Separe, Apague os dados, Ache um ponto, Entregue. Cada um com faixa verde, número, ilustração em traço e descrição | Ilustrações em loop. **Desktop:** 4 colunas. **Mobile:** empilhado |
 | 4 | O que descartar | `#o-que-descartar` | Título centralizado e grade 2×2: celulares e tablets, pilhas e baterias, computadores e periféricos, cabos e carregadores | Movimento leve em cada ilustração |
 | 5 | Pontos de coleta | `#pontos-de-coleta` | Busca, "Usar minha localização", filtro por tipo, mapa, lista de pontos ordenada por distância (cada um com "Como chegar") e link "Sugerir um ponto" | Ver seção 4. O filtro é uma grade de 2 linhas que ocupa a largura toda: "Todos", "Cabos", "Pilhas" / "Computadores", "Celulares". A lista de pontos fica contida em uma janela com rolagem vertical própria (`max-height: 380px`, `overflow-x: hidden`, `data-lenis-prevent`) e linhas delimitadoras, permitindo exibir ~2,5 a 3 itens sem alongar a página. **Mobile:** busca, filtro, mapa e lista, nessa ordem |
-| 6 | Impacto | `#impacto` | 4 números: kg coletados, escolas visitadas, pontos mapeados, pessoas alcançadas | Números contam de 0 até o valor ao entrar na tela. **Os valores do protótipo são fictícios** |
-| — | Rodapé | — | Logo escuro, frase, navegação, contato, "Projeto de Extensão II · 2026" e link do formulário de avaliação | Estático |
+| 6 | Impacto | `#impacto` | 4 métricas reais de cobertura do mapeamento: **140** pontos de coleta mapeados, **32** bairros de Belém cobertos, **119** pontos confirmados em fontes oficiais e **4** grupos de resíduos aceitos | Números contam de 0 até o valor real ao entrar na tela (substituindo os valores fictícios iniciais do protótipo) |
+| — | Rodapé | — | Logo escuro, frase, navegação, contato, link para `/privacidade`, "Projeto de Extensão II · 2026" e botão "Avaliar o site" (modal de avaliação) | Estático |
 
 Menções a "projeto de extensão": só na seção "O projeto" e nos créditos do rodapé.
 
@@ -84,14 +84,14 @@ Menções a "projeto de extensão": só na seção "O projeto" e nos créditos d
 | RF08 | O link "Sugerir um ponto" abre um modal com nome do local, endereço ou bairro, tipos de resíduo aceitos (pelo menos um) e observação opcional. O envio vai para `POST /api/sugestoes`, que grava em `api/dados/sugestoes.json`. A sugestão **não** aparece no mapa sozinha: a equipe confere e cadastra à mão em `pontos.json`. O formulário não pede contato (e-mail, telefone), para não coletar dado pessoal (RNF06). |
 | RF09 | Os links do menu rolam suavemente até a seção. No mobile, o menu abre em tela cheia e fecha ao escolher um item. |
 | RF10 | Na primeira visita, um **banner de cookies** ("Sua privacidade importa") pede consentimento para o Analytics, com os botões "Recusar" e "Aceitar" do mesmo tamanho e da mesma cor. Ele não prende o foco do teclado, fica no início da ordem de tabulação e é anunciado como região ("Aviso de cookies") para leitores de tela. O Google Analytics só carrega se a pessoa aceitar. A escolha fica salva no navegador, e o banner não volta a aparecer. |
-| RF11 | O rodapé tem link para o formulário de avaliação do site (Google Forms). |
+| RF11 | O rodapé tem o botão "Avaliar o site", que abre um modal no próprio site (nota, se encontrou o ponto e comentário opcional) e envia para `POST /api/avaliacoes`, gravando em `api/dados/avaliacoes.json`. |
 | RF12 | Busca sem resultado, erro de rede e permissão de localização negada mostram mensagens claras, nunca uma lista vazia sem explicação. |
 
 ## 5. Requisitos não funcionais
 
 | ID | Requisito |
 |---|---|
-| RNF01 | **Acessibilidade:** WCAG 2.1 nível AA, validado com WAVE e ASES. Contraste mínimo de 4,5:1 em texto normal, navegação completa por teclado com foco visível, textos alternativos nas ilustrações e áreas de toque de pelo menos 44×44px. |
+| RNF01 | **Acessibilidade:** WCAG 2.1 nível AA, validado via inspeção automatizada em navegador real (contraste e teclado). Contraste mínimo de 4,5:1 em texto normal, navegação completa por teclado com foco visível, textos alternativos nas ilustrações e áreas de toque de pelo menos 44×44px. |
 | RNF02 | **Animação acessível:** com `prefers-reduced-motion`, o Lenis fica desligado, as ilustrações aparecem no estado final e os loops param. |
 | RNF03 | **Responsivo:** funciona de 360px a 1920px de largura. As referências do protótipo são 390px (mobile) e 1440px (desktop). |
 | RNF04 | **Desempenho:** Lighthouse ≥ 90 em desempenho no mobile e LCP abaixo de 2,5s em 4G. |
@@ -195,14 +195,14 @@ Navegador ──► Site estático (SvelteKit) ──► arquivos (HTML, CSS, JS
 | Bootstrap 5 | CSS próprio, com tokens | O Bootstrap impõe um visual genérico que conflita com a identidade definida no protótipo |
 | Leaflet + OpenStreetMap | MapLibre + OpenFreeMap (dados do OpenStreetMap) | Mesma base de dados, mas permite estilizar o mapa no visual do site |
 | Sem servidor; dados em JSON | API FastAPI lendo um JSON | Geocodificação com cache e regras de uso do Nominatim respeitadas num só lugar; os dados continuam num arquivo JSON, sem banco de dados |
-| Hospedagem no GitHub Pages | Site no GitHub Pages; API no Render (plano gratuito) | O GitHub Pages só serve arquivos estáticos e não roda a API |
+| Hospedagem no GitHub Pages | Deploy unificado na Vercel via `vercel.json` (**Vercel Services**: serviço estático `web` + API FastAPI `api`), sob `https://recircuito.info` e `https://recircuito.vercel.app` | O GitHub Pages só serve arquivos estáticos e não executa a API FastAPI; a Vercel unifica site e API na mesma origem, evita bloqueios de CORS entre domínios e elimina a hibernação de 30–50s do plano gratuito anterior |
 | Busca por bairro | Busca por CEP **ou** bairro, mais localização do aparelho | Ampliação do mesmo requisito |
-| Sugestão de ponto pelo Google Forms | Modal no site + `POST /api/sugestoes` | Mantém a pessoa no site, com o visual do projeto; a sugestão chega no mesmo formato dos pontos (tipos de resíduo com os mesmos códigos) |
+| Sugestão de ponto e avaliação pelo Google Forms | Modais no site + `POST /api/sugestoes` e `POST /api/avaliacoes` | Mantém a pessoa no site, com o visual do projeto; a sugestão chega no mesmo formato dos pontos (tipos de resíduo com os mesmos códigos) e dispensa redirecionamento externo |
 | Checklist de remoção de dados | Orientação em texto no passo 02 | Fora do escopo nesta versão (seção 2) |
 
 ## 9. Dados dos pontos de coleta
 
-Os dados ficam em `api/dados/pontos.json`. Cada ponto deve citar a fonte de onde a informação veio, para que possa ser conferida.
+Os dados ficam em `api/dados/pontos.json` (atualmente com **140 pontos mapeados em 32 bairros de Belém**: **119** confirmados em fontes oficiais em `2026-11-12` e **21** pendentes de confirmação presencial/telefônica com `verificado_em: null` e `"NÃO CONFIRMADO"` em `observacoes`; levantamento completo em `docs/pesquisa-pontos-de-coleta.md`). Cada ponto deve citar a fonte de onde a informação veio, para que possa ser conferida.
 
 ```json
 {
@@ -235,7 +235,7 @@ Os dados ficam em `api/dados/pontos.json`. Cada ponto deve citar a fonte de onde
 
 ## 10. API
 
-Base: `/api`. Respostas em JSON. Só leitura, sem autenticação. CORS liberado apenas para o domínio do site.
+Base: `/api`. Respostas em JSON, sem autenticação. Consultas via `GET` e envios de sugestões/avaliações via `POST`. Em desenvolvimento, o CORS libera apenas as origens configuradas em `RECIRCUITO_ORIGENS_PERMITIDAS`; em produção na Vercel, site e API respondem sob a mesma origem.
 
 **`GET /api/pontos`**: lista os pontos de coleta.
 
@@ -260,7 +260,15 @@ Resposta: `{ "pontos": [ { ...ponto, "distancia_km": 1.2, "aberto_agora": true }
 
 **`GET /api/tipos`**: lista os tipos de resíduo com nome de exibição.
 
-**`GET /api/saude`**: verificação simples para a hospedagem.
+**`POST /api/sugestoes`**: recebe a indicação de um ponto de coleta enviada pelo modal "Sugerir um ponto" (RF08).
+- Corpo JSON: `{ "nome", "endereco", "tipos", "observacao?" }` (`tipos` usa os códigos de `TipoResiduo`; sem campos pessoais como e-mail ou telefone).
+- Resposta (`201 Created`): registro salvo com `data` gerada pelo servidor, gravado em `api/dados/sugestoes.json` localmente (ou `/tmp/recircuito/sugestoes.json` como reserva efêmera em ambiente serverless somente leitura).
+
+**`POST /api/avaliacoes`**: recebe uma avaliação do site enviada pelo modal "Avaliar o site" (RF11).
+- Corpo JSON: `{ "nota" (1–5), "encontrou_ponto" ("sim" | "parcialmente" | "nao"), "comentario?", "data?" }`.
+- Resposta (`201 Created`): registro salvo com `data` ISO garantida, gravado em `api/dados/avaliacoes.json` localmente (ou `/tmp/recircuito/avaliacoes.json` como reserva efêmera em ambiente serverless somente leitura).
+
+**`GET /api/saude`**: verificação simples para a hospedagem (Vercel) e monitoramento da API.
 
 Erros seguem sempre o formato `{ "erro": "<codigo>", "mensagem": "<texto para a pessoa>" }`.
 
@@ -270,28 +278,33 @@ A pasta `recircuito/` é o repositório. O protótipo (`.figcraft`), a proposta 
 
 ```
 recircuito/
-├── .github/workflows/deploy-web.yml   # build e publicação do site no GitHub Pages
-├── docs/                              # diagramas UML e material do relatório
+├── vercel.json                        # deploy unificado na Vercel (Vercel Services: web + api)
+├── docs/                              # pesquisa consolidada dos pontos de coleta e guia de implementação
 ├── web/                               # SvelteKit (TypeScript)
 │   ├── src/
 │   │   ├── app.html, app.d.ts
-│   │   ├── routes/                    # +layout.svelte, +layout.ts (prerender), +page.svelte
+│   │   ├── routes/                    # +layout.svelte, +layout.ts (prerender = true), +page.svelte,
+│   │   │                              # privacidade/+page.svelte
 │   │   └── lib/
-│   │       ├── componentes/           # Cabecalho, MenuMobile, Hero, Sobre, ComoDescartar, Passo,
-│   │       │                          # OQueDescartar, Item, PontosDeColeta, Busca, FiltroTipos,
-│   │       │                          # Mapa, ListaPontos, Impacto, Rodape, BannerCookies, ModalAvaliacao
+│   │       ├── componentes/           # Abertura, Cabecalho, MenuMobile, Hero, Sobre, ComoDescartar,
+│   │       │                          # Passo, OQueDescartar, Item, PontosDeColeta, Busca, FiltroTipos,
+│   │       │                          # Mapa, ListaPontos, Impacto, Rodape, BannerCookies, ModalBase,
+│   │       │                          # ModalAvaliacao, ModalSugestao, ícones SVG
 │   │       ├── ilustracoes/           # SVGs em traço: CelularExplodido, Passo*, Item*
-│   │       ├── animacao/              # gsap.ts, lenis.ts, movimentoReduzido.ts
-│   │       ├── api/pontos.ts          # cliente da API
+│   │       ├── animacao/              # gsap.ts, lenis.ts, movimento.ts, movimentoReduzido.ts,
+│   │       │                          # abertura.ts, contador.ts, espera.ts, pausarForaDaTela.ts, revelar.ts
+│   │       ├── api/pontos.ts          # cliente da API (GET + POST)
 │   │       ├── conteudo/textos.ts     # textos do site num só lugar
+│   │       ├── analytics.ts           # consentimento de cookies e carregamento condicional do GA4
 │   │       └── estilos/               # tokens.css, fontes.css, base.css
-│   └── static/                        # favicon.svg, logos/, fontes/
+│   └── static/                        # favicon.svg, logos/, fontes/ (newsreader-variavel, plus-jakarta-sans-variavel)
 ├── api/                               # FastAPI (Python)
+│   ├── main.py                        # ponto de entrada compatível com a Vercel
 │   ├── aplicacao/
 │   │   ├── principal.py, configuracao.py, modelos.py
-│   │   ├── rotas/                     # pontos, geocodificacao, tipos, saude
-│   │   └── servicos/                  # geocodificador, cache, distancia, horarios
-│   ├── dados/pontos.json
+│   │   ├── rotas/                     # pontos, geocodificacao, tipos, saude, avaliacoes, sugestoes
+│   │   └── servicos/                  # geocodificador, cache, distancia, horarios, registro_json
+│   ├── dados/pontos.json              # 140 pontos mapeados em 32 bairros de Belém
 │   ├── testes/
 │   └── pyproject.toml
 ├── SPEC.md
@@ -303,13 +316,17 @@ recircuito/
 - **Exceções:** só os nomes impostos por ferramentas e frameworks (`+page.svelte`, `package.json`, `main.py`, `app = FastAPI()`, o prefixo `test_` do pytest, propriedades de bibliotecas como `gsap.to({ duration })`).
 - **Comentários** explicam o *porquê* e dão dicas para quem está aprendendo: o que a função resolve, por que aquela abordagem e que cuidado tomar ao mudar. Nada de comentário que só repete o código.
 
-## 12. Hospedagem
+## 12. Hospedagem e deploy
+
+Site e API são publicados de forma unificada na **Vercel** usando **Vercel Services** (`vercel.json`):
 
 | Parte | Onde | Observação |
 |---|---|---|
-| Site | GitHub Pages | Build estático via GitHub Actions |
-| API | Render (plano gratuito) | O servidor "dorme" sem uso; a primeira busca pode levar de 30 a 50s. O site deve mostrar "carregando" nesse caso |
-| Domínio | Endereço gratuito do GitHub Pages | Domínio próprio é opcional |
+| Site (`web`) | Vercel (build estático em `web/build/`) | SvelteKit com `adapter-static` e `prerender = true`, atendendo `/(.*)` — inclui `/` e a rota estática `/privacidade` (corrigida com `cleanUrls: true` e rewrite `/privacidade/?` → `/privacidade.html` em `vercel.json`). Fontes locais em `web/static/fontes/` |
+| API (`api`) | Vercel (serviço FastAPI em `api/aplicacao/principal.py`, também exposto em `api/main.py`) | Atende `/api/(.*)` sob a mesma origem do site, eliminando CORS entre domínios e evitando a hibernação de 30–50s do plano anterior |
+| Persistência em serverless | Memória + `/tmp/recircuito/` (efêmero) | A pasta do código na Vercel é somente leitura: o cache de geocodificação atua prioritariamente em memória; envios de `POST /api/avaliacoes` e `POST /api/sugestoes` usam `/tmp/recircuito/` como reserva efêmera em produção e `api/dados/` localmente |
+| Domínios | `https://recircuito.info` e `https://recircuito.vercel.app` | Domínio próprio configurado com HTTPS automático na Vercel |
+| Variáveis de ambiente | Vercel Project Settings | No site: `VITE_URL_DA_API` vazia em produção (mesma origem) e `VITE_ID_GOOGLE_ANALYTICS` opcional. Na API: `RECIRCUITO_ORIGENS_PERMITIDAS`, `RECIRCUITO_ARQUIVO_PONTOS`, `RECIRCUITO_CONTATO` (e-mail real para o Nominatim) e `RECIRCUITO_ARQUIVO_CACHE` |
 
 ## 13. Ordem de desenvolvimento
 
@@ -319,22 +336,26 @@ recircuito/
 4. **API:** rotas, geocodificação com cache e testes.
 5. **Mapa e busca:** MapLibre estilizado, busca, filtro, lista e "Como chegar".
 6. **Animações:** GSAP, Lenis e reduced-motion.
-7. **Formulários e Analytics:** Google Forms, GA4 e banner de cookies.
-8. **Qualidade:** WAVE, ASES, Lighthouse e testes em celulares reais.
-9. **Publicação e divulgação:** deploy, README e divulgação nos grupos de Belém.
+7. **Modais, privacidade e Analytics:** modais de sugestão/avaliação ligados à API, rota estática `/privacidade`, banner de cookies LGPD e suporte condicional a GA4.
+8. **Qualidade:** inspeção WCAG 2.1 AA em navegador real (contraste, teclado e áreas de toque ≥ 44px), `svelte-check`, `pytest` e testes em celulares reais.
+9. **Publicação e divulgação:** deploy unificado na Vercel (`vercel.json`), documentação atualizada e divulgação contínua em Belém.
 
 ## 14. Pendências e riscos
 
-**Pendências**
-- Confirmar os 8 pontos de coleta cadastrados em `api/dados/pontos.json` (levantamento em `docs/pesquisa-pontos-de-coleta.md`): todos estão **NÃO CONFIRMADOS** (confiança média ou baixa, sem fonte oficial), com coordenadas aproximadas obtidas pelo Nominatim. Ligar para cada local, conferir endereço, horário e itens aceitos, ajustar as coordenadas no Google Maps e só então preencher `verificado_em`. Procurar também pontos nos localizadores da Abree e da Green Eletron.
-- Trocar os números fictícios do Impacto por dados reais, ou tirar a seção até haver dados.
-- Nome da instituição e contatos reais no rodapé.
-- ~~Criar os dois Google Forms~~: substituídos por modais que gravam pela API (RF08 e RF11).
-- Criar uma página curta de política de privacidade e linkar no banner de cookies e no rodapé (boa prática da LGPD).
-- Confirmar o nome "ReCircuito".
+**Concluído recentemente**
+- ~~Confirmar e ampliar os 8 pontos iniciais fictícios/não confirmados~~: base atualizada para **140 pontos em 32 bairros de Belém** (`119` confirmados em fontes oficiais em `12/11/2026` e `21` marcados como pendentes).
+- ~~Trocar os números fictícios do Impacto por dados reais~~: seção `#impacto` atualizada para exibir métricas reais de cobertura do mapeamento (`140` pontos mapeados, `32` bairros atendidos, `119` pontos confirmados e `4` tipos de resíduo).
+- ~~Criar os dois Google Forms~~: substituídos por modais nativos no site gravando pela API (`POST /api/sugestoes` e `POST /api/avaliacoes`, RF08 e RF11).
+- ~~Criar e corrigir a página de política de privacidade~~: rota estática `/privacidade` implementada, linkada no banner de cookies e no rodapé, com entrega estática corrigida para o deploy na Vercel.
+- ~~Contatos reais no rodapé e nome do projeto~~: contatos reais e marca **ReCircuito** publicados em `https://recircuito.info` e `https://recircuito.vercel.app`.
+
+**Pendências atuais**
+- **Conferência presencial/telefônica dos 21 pontos pendentes e 14 grades de horário faltantes:** contatar ou visitar os 21 pontos marcados com `verificado_em: null` e aviso `"NÃO CONFIRMADO"` em `observacoes` (e os 14 pontos atualmente com `horarios: []`, exibidos como `"Horário não informado"`) para validar endereço, funcionamento, itens aceitos e preencher `verificado_em`.
+- **Configuração opcional do ID real de produção em `VITE_ID_GOOGLE_ANALYTICS`:** o fluxo de consentimento LGPD (banner de cookies, injeção condicional do `gtag.js` e opção "Rever minha escolha" em `/privacidade`) já está implementado; caso a equipe deseje ativar a medição em produção, basta definir um ID GA4 real em `VITE_ID_GOOGLE_ANALYTICS` nas variáveis de ambiente da Vercel.
+- **Divulgação contínua em Belém:** compartilhar o guia (`https://recircuito.info`) em escolas, cooperativas, associações de bairro e redes sociais locais, acompanhando novas sugestões e avaliações.
 
 **Riscos**
-- **Dados desatualizados:** pontos fecham ou mudam de horário. Mitigação: campo `verificado_em` e o formulário de sugestão.
-- **Hospedagem gratuita lenta na primeira busca:** a API "dorme". Mitigação: indicador de carregamento e lista inicial já embutida no site.
-- **Limites do Nominatim:** mitigação com cache e limite de requisições na API.
-- **Animações pesadas em celulares simples:** mitigação com loops pausados fora da tela e reduced-motion.
+- **Dados desatualizados:** pontos fecham ou mudam de horário. Mitigação: campo `verificado_em`, exibição explícita de `"Horário não informado"` quando `horarios` está vazio e o modal `"Sugerir um ponto"` (`POST /api/sugestoes`).
+- **Armazenamento efêmero em serverless (`/tmp`):** na Vercel, `POST /api/avaliacoes` e `POST /api/sugestoes` gravam em `/tmp/recircuito/` quando a pasta do código é somente leitura, não persistindo entre deploys ou novas instâncias. Mitigação: adequado ao volume inicial do projeto, com possibilidade de migração futura para armazenamento persistente se necessário.
+- **Limites do Nominatim:** mitigação com cache (30 dias em memória) e limite de 1 requisição por segundo na API.
+- **Animações pesadas em celulares simples:** mitigação com loops pausados fora da tela e `prefers-reduced-motion`.

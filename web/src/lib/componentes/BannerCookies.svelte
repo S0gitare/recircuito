@@ -78,7 +78,7 @@
 
 	button {
 		flex: 1;
-		height: 44px;
+		min-height: 44px;
 		border: 0;
 		background: var(--green-strong);
 		color: #fff;
@@ -101,6 +101,11 @@
 	}
 
 	.texto a {
+		display: flex;
+		align-items: center;
+		width: fit-content;
+		min-height: 44px;
+		margin-top: 2px;
 		font-weight: 600;
 		color: var(--green-strong);
 		text-decoration: underline;

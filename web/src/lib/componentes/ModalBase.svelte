@@ -579,7 +579,8 @@
 	}
 
 	.cartao :global(.chip) {
-		min-height: 40px;
+		min-height: 44px;
+		min-width: 44px;
 		padding: 0 16px;
 		background: var(--bg);
 		border: 1px solid var(--line);
@@ -652,7 +653,8 @@
 
 	.cartao :global(input.texto::placeholder),
 	.cartao :global(textarea::placeholder) {
-		color: #8e9e93;
+		color: var(--muted);
+		opacity: 1;
 	}
 
 	.cartao :global(input.texto:focus-visible),
@@ -714,7 +716,11 @@
 	}
 
 	.cartao :global(.botao-cancelar) {
-		height: 44px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 44px;
+		min-height: 44px;
 		padding: 0 16px;
 		background: transparent;
 		border: none;
@@ -738,7 +744,8 @@
 
 	.botao-principal,
 	.cartao :global(.botao-principal) {
-		height: 44px;
+		min-height: 44px;
+		min-width: 44px;
 		padding: 0 24px;
 		background: var(--green-strong);
 		border: none;
@@ -838,7 +845,7 @@
 		}
 
 		.cartao :global(.chip) {
-			min-height: 38px;
+			min-height: 44px;
 			padding: 0 14px;
 			font-size: 13px;
 		}

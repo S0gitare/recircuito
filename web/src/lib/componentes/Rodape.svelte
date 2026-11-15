@@ -115,7 +115,14 @@
 		list-style: none;
 		padding: 0;
 		font-size: 15px;
-		line-height: 30px;
+		line-height: 1.4;
+	}
+
+	footer a,
+	footer button.avaliar {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
 	}
 
 	footer a {
@@ -146,11 +153,25 @@
 
 	/* Divisória e créditos. */
 	.creditos {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0 6px;
 		margin-top: 32px;
-		padding-top: 24px;
+		padding-top: 14px;
 		border-top: 1px solid rgb(255 255 255 / 0.12);
 		font-size: 13px;
 		color: #7e9c89;
+	}
+
+	.creditos a {
+		color: #a9c7b4;
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+
+	.creditos a:hover {
+		color: #fff;
 	}
 
 	footer :focus-visible {
