@@ -8,6 +8,7 @@
 	import ModalBase from './ModalBase.svelte';
 	import IconeCarregando from './IconeCarregando.svelte';
 	import { aguardarComIndicador } from '$lib/animacao/espera';
+	import { registrarEvento } from '$lib/analytics';
 
 	type Objetivo = 'sim' | 'parcialmente' | 'nao';
 
@@ -94,6 +95,7 @@
 				}),
 				(visivel) => (esperando = visivel)
 			);
+			registrarEvento('avaliar_site', { nota, encontrou_ponto: encontrouPonto });
 			modal?.mostrarSucesso();
 		} catch (e) {
 			erro = e instanceof Error ? e.message : textos.erroEnvio;

@@ -5,6 +5,7 @@
 	import { quintOut } from 'svelte/easing';
 	import { PONTOS, atrasoEmCascata } from '$lib/animacao/movimento';
 	import { prefereMovimentoReduzido } from '$lib/animacao/movimentoReduzido';
+	import { registrarEvento } from '$lib/analytics';
 
 	interface Props {
 		pontos: PontoDeColeta[];
@@ -109,6 +110,7 @@
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="{textos.comoChegarAte} {ponto.nome}"
+				onclick={() => registrarEvento('como_chegar', { categoria: ponto.tipo_local })}
 			>
 				{textos.comoChegar}
 			</a>

@@ -8,6 +8,8 @@
 	import { apagarConsentimento } from '$lib/analytics';
 
 	let escolhaApagada = $state(false);
+	const urlCanonica = 'https://recircuito.info/privacidade';
+	const urlImagemOg = 'https://recircuito.info/og-image.png';
 
 	function reverEscolha() {
 		apagarConsentimento();
@@ -18,6 +20,15 @@
 <svelte:head>
 	<title>{textos.titulo} · ReCircuito</title>
 	<meta name="description" content={textos.descricao} />
+	<link rel="canonical" href={urlCanonica} />
+	<meta property="og:type" content="website" />
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:site_name" content="ReCircuito" />
+	<meta property="og:url" content={urlCanonica} />
+	<meta property="og:title" content="{textos.titulo} · ReCircuito" />
+	<meta property="og:description" content={textos.descricao} />
+	<meta property="og:image" content={urlImagemOg} />
+	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 <header class="topo">

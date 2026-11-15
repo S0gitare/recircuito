@@ -52,6 +52,16 @@ export function apagarConsentimento(): void {
 
 let jaCarregado = false;
 
+type ParametrosEvento = Record<string, string | number | boolean>;
+
+function dispararGtag(..._argumentos: unknown[]): void {
+	const janela = window as unknown as { dataLayer?: unknown[] };
+	janela.dataLayer = janela.dataLayer ?? [];
+	// O gtag.js exige o objeto `arguments` (e não um array) dentro do dataLayer.
+	// eslint-disable-next-line prefer-rest-params
+	janela.dataLayer.push(arguments);
+}
+
 /**
  * Injeta o gtag.js do Google Analytics 4. Só faz algo se a pessoa aceitou os
  * cookies E existe um ID configurado; chamar duas vezes não duplica o script.
@@ -60,18 +70,26 @@ export function carregarGoogleAnalytics(): void {
 	if (jaCarregado || !idGoogleAnalytics || lerConsentimento() !== 'aceito') return;
 	jaCarregado = true;
 
-	const janela = window as unknown as { dataLayer?: unknown[] };
-	janela.dataLayer = janela.dataLayer ?? [];
-	// O gtag.js exige o objeto `arguments` (e não um array) dentro do dataLayer.
-	function gtag(..._argumentos: unknown[]) {
-		// eslint-disable-next-line prefer-rest-params
-		janela.dataLayer!.push(arguments);
-	}
-	gtag('js', new Date());
-	gtag('config', idGoogleAnalytics);
+	dispararGtag('js', new Date());
+	dispararGtag('config', idGoogleAnalytics);
 
 	const script = document.createElement('script');
 	script.async = true;
 	script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(idGoogleAnalytics)}`;
 	document.head.appendChild(script);
+}
+
+/**
+ * Registra um evento agregado no GA4 (sem dados pessoais, RNF06).
+ * Só envia quando o Analytics já foi carregado após consentimento explícito.
+ */
+export function registrarEvento(nome: string, parametros?: ParametrosEvento): void {
+	if (typeof window === 'undefined' || !jaCarregado || !idGoogleAnalytics || lerConsentimento() !== 'aceito') {
+		return;
+	}
+	if (parametros) {
+		dispararGtag('event', nome, parametros);
+	} else {
+		dispararGtag('event', nome);
+	}
 }

@@ -1,0 +1,19 @@
+{
+	"name": "ReCircuito · Descarte de lixo eletrônico em Belém",
+	"short_name": "ReCircuito",
+	"description": "Guia gratuito para descartar celulares, pilhas, baterias, computadores e cabos em 140 pontos de coleta em Belém (PA).",
+	"lang": "pt-BR",
+	"start_url": "/",
+	"scope": "/",
+	"display": "standalone",
+	"theme_color": "#E8F1EA",
+	"background_color": "#E8F1EA",
+	"icons": [
+		{
+			"src": "/favicon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml",
+			"purpose": "any"
+		}
+	]
+}

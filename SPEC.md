@@ -295,9 +295,9 @@ recircuito/
 │   │       │                          # abertura.ts, contador.ts, espera.ts, pausarForaDaTela.ts, revelar.ts
 │   │       ├── api/pontos.ts          # cliente da API (GET + POST)
 │   │       ├── conteudo/textos.ts     # textos do site num só lugar
-│   │       ├── analytics.ts           # consentimento de cookies e carregamento condicional do GA4
+│   │       ├── analytics.ts           # consentimento de cookies, carregamento condicional e eventos agregados do GA4
 │   │       └── estilos/               # tokens.css, fontes.css, base.css
-│   └── static/                        # favicon.svg, logos/, fontes/ (newsreader-variavel, plus-jakarta-sans-variavel)
+│   └── static/                        # favicon.svg, og-image.png, robots.txt, sitemap.xml, manifest.webmanifest, logos/, fontes/
 ├── api/                               # FastAPI (Python)
 │   ├── main.py                        # ponto de entrada compatível com a Vercel
 │   ├── aplicacao/
@@ -348,6 +348,7 @@ Site e API são publicados de forma unificada na **Vercel** usando **Vercel Serv
 - ~~Criar os dois Google Forms~~: substituídos por modais nativos no site gravando pela API (`POST /api/sugestoes` e `POST /api/avaliacoes`, RF08 e RF11).
 - ~~Criar e corrigir a página de política de privacidade~~: rota estática `/privacidade` implementada, linkada no banner de cookies e no rodapé, com entrega estática corrigida para o deploy na Vercel.
 - ~~Contatos reais no rodapé e nome do projeto~~: contatos reais e marca **ReCircuito** publicados em `https://recircuito.info` e `https://recircuito.vercel.app`.
+- ~~SEO técnico, cartão social e eventos agregados de GA4~~: adicionados `og-image.png` (1200×630), tags Open Graph/Twitter Card, `<link rel="canonical">`, JSON-LD (`Schema.org`), `robots.txt`, `sitemap.xml`, `manifest.webmanifest`, cabeçalho `X-Robots-Tag: noindex` para `/api/*` e eventos agregados sem dados pessoais no GA4.
 
 **Pendências atuais**
 - **Conferência presencial/telefônica dos 21 pontos pendentes e 14 grades de horário faltantes:** contatar ou visitar os 21 pontos marcados com `verificado_em: null` e aviso `"NÃO CONFIRMADO"` em `observacoes` (e os 14 pontos atualmente com `horarios: []`, exibidos como `"Horário não informado"`) para validar endereço, funcionamento, itens aceitos e preencher `verificado_em`.

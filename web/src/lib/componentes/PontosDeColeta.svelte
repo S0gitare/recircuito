@@ -3,6 +3,7 @@
 	import { pontosDeColeta as textos } from '$lib/conteudo/textos';
 	import { revelar } from '$lib/animacao/revelar';
 	import { prefereMovimentoReduzido } from '$lib/animacao/movimentoReduzido';
+	import { registrarEvento } from '$lib/analytics';
 	import {
 		buscarPontos,
 		foiCancelado,
@@ -102,6 +103,7 @@
 		try {
 			const local = await geocodificar(termo, controleDaBusca.signal);
 			referencia = { lat: local.lat, lon: local.lon, rotulo: local.rotulo };
+			registrarEvento('busca_local', { tipo_busca: /^\d{5}-?\d{3}$/.test(termo) ? 'cep' : 'bairro' });
 		} catch (erro) {
 			if (foiCancelado(erro)) return;
 			mensagemDaBusca = (erro as Error).message;
@@ -130,6 +132,7 @@
 				};
 				mensagemDaBusca = null;
 				ocupadoNaBusca = false;
+				registrarEvento('usar_localizacao');
 			},
 			(erro) => {
 				// Código 1 = a pessoa negou a permissão; os demais são falha técnica (sem sinal, tempo esgotado).
@@ -151,12 +154,16 @@
 	function alternarTipo(tipo: TipoResiduo | null) {
 		if (tipo === null) {
 			tiposSelecionados = []; // "Todos" limpa os tipos
+			registrarEvento('filtro_residuo', { tipos: 'todos' });
 			return;
 		}
 		// Desmarcar o último tipo volta para "Todos": a lista vazia é exatamente isso.
 		tiposSelecionados = tiposSelecionados.includes(tipo)
 			? tiposSelecionados.filter((t) => t !== tipo)
 			: [...tiposSelecionados, tipo];
+		registrarEvento('filtro_residuo', {
+			tipos: tiposSelecionados.length > 0 ? tiposSelecionados.join(',') : 'todos'
+		});
 	}
 
 	// ---- Seleção sincronizada entre lista e mapa (RF06) --------------------

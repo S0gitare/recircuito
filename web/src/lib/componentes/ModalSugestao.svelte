@@ -12,6 +12,7 @@
 	import ModalBase from './ModalBase.svelte';
 	import IconeCarregando from './IconeCarregando.svelte';
 	import { aguardarComIndicador } from '$lib/animacao/espera';
+	import { registrarEvento } from '$lib/analytics';
 
 	let { aberto = $bindable(false) }: { aberto?: boolean } = $props();
 
@@ -97,6 +98,7 @@
 				}),
 				(visivel) => (esperando = visivel)
 			);
+			registrarEvento('sugerir_ponto', { quantidade_tipos: tipos.length });
 			modal?.mostrarSucesso();
 		} catch (e) {
 			erro = e instanceof Error ? e.message : textos.erroEnvio;

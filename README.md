@@ -1,8 +1,22 @@
 # ReCircuito
 
-Guia web para o descarte correto de lixo eletrônico em Belém (PA): explica por que o lixo eletrônico não vai no lixo comum, ensina o descarte em 4 passos, mostra os tipos de resíduo aceitos e encontra o ponto de coleta mais próximo, com filtro por tipo de resíduo.
+[![Site ao vivo](https://img.shields.io/badge/Site%20ao%20vivo-recircuito.info-157A41?style=flat-square)](https://recircuito.info)
+[![SvelteKit 2 + Svelte 5](https://img.shields.io/badge/Frontend-Svelte%205%20%2B%20TypeScript-FF3E00?style=flat-square)](web/)
+[![FastAPI + Python 3.12](https://img.shields.io/badge/Backend-Python%203.12%20%2B%20FastAPI-009688?style=flat-square)](api/)
+[![WCAG 2.1 AA + LGPD](https://img.shields.io/badge/Acessibilidade-WCAG%202.1%20AA%20%7C%20LGPD-0F1A14?style=flat-square)](SPEC.md)
 
-Projeto de Atividade Extensionista II (UNINTER, Ciência da Computação). Publicado em [https://recircuito.info](https://recircuito.info) (e [https://recircuito.vercel.app](https://recircuito.vercel.app)). A especificação completa está em [SPEC.md](SPEC.md).
+![ReCircuito — Guia gratuito de descarte de lixo eletrônico em Belém (PA)](web/static/og-image.png)
+
+Guia web gratuito e sem cadastro para o descarte correto de lixo eletrônico em **Belém (PA)**: explica por que o lixo eletrônico não vai no lixo comum, ensina o descarte em 4 passos, mostra os tipos de resíduo aceitos e encontra o ponto de coleta aberto mais próximo por CEP, bairro ou geolocalização.
+
+Projeto de Atividade Extensionista II (UNINTER, Ciência da Computação), alinhado às **ODS 11 e 12**. Publicado em **[https://recircuito.info](https://recircuito.info)** (e [recircuito.vercel.app](https://recircuito.vercel.app)). A especificação completa está em [SPEC.md](SPEC.md).
+
+## Destaques técnicos
+
+- **Dados auditados:** 140 pontos em 32 bairros de Belém, com horários no fuso `America/Belem`, CEPs e telefones validados.
+- **Back-end:** Python 3.12 + FastAPI, cálculo de distância (Haversine) e geocodificação ViaCEP + Nominatim/OSM com cache de 30 dias e rate limit.
+- **Front-end:** Svelte 5 + SvelteKit 2 (`adapter-static`), TypeScript, CSS próprio com design tokens, MapLibre GL JS (OpenFreeMap), GSAP 3 + Lenis com suporte a `prefers-reduced-motion`, WCAG 2.1 AA e banner de cookies LGPD.
+- **SEO & Compartilhamento:** URL canônica em `recircuito.info`, Open Graph / Twitter Card (`og-image.png`), `sitemap.xml`, `robots.txt` e dados estruturados Schema.org.
 
 ## Base de dados e cobertura
 
